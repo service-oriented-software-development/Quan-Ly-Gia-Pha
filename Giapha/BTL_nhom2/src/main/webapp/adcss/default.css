@@ -1,0 +1,294 @@
+.left_banner { width: 543px; height: 1600px; position: fixed; background: #554e74 url(/adv/adimgs/left_bn.jpg) no-repeat scroll right top; float:left; z-index: 0; left: 0 }
+.right_banner { width: 543px; height: 1600px; position: fixed; background: #5c8fce url(/adv/adimgs/right_bn.jpg) no-repeat scroll right top; float: right; z-index: 0; right: 0 }
+
+/*.box { overflow: hidden; margin-top: 8px; border: 1px solid #218886; padding: 1px 1px 10px 1px }*/
+
+.banner {background: url(/adv/adimgs/bn_loop.jpg) scroll repeat-x left center; margin-bottom: 1px}
+
+.top_news { height: 322px; background: url(/adv/adimgs/topnews_bg.png) scroll no-repeat center center; position: absolute; width: 100%; z-index: 20; top: -24px }
+.mid {height: 280px}
+.news_slide { width: 471px; height: 236px; background: url(/adv/adimgs/tnbd.png) scroll no-repeat center center; margin: 44px 0 0 160px }
+
+h3.bhead { background: url(/adv/adimgs/box_head.png) scroll no-repeat left top; font-size: 14px; padding: 7px 0; margin: 0 0 -12px 0; z-index: 10; position: relative }
+h3.cbhead { background: url(/adv/adimgs/cbox_head.png) scroll no-repeat left top; font-size: 14px; padding: 7px 0; margin: 0 0 -12px 0; z-index: 10; position: relative }
+h3.crbhead { background: url(/adv/adimgs/crbox_head.png) scroll no-repeat left top; font-size: 14px; padding: 7px 0; margin: 0 0 -12px 0; z-index: 10; position: relative }
+.rb h3.bhead { background: url(/adv/adimgs/box_head.png) scroll no-repeat right top; font-size: 14px; padding: 7px 0; margin: 0 0 -12px 0; z-index: 10; position: relative }
+
+/* utils/intro */
+.intro { background: url(/adv/adimgs/intro_bg.jpg) scroll no-repeat center top; width: 571px; height: 251px; padding: 100px 0 3px 100px  }
+h3.intro_head { text-align: center; font-size: 13px; text-transform: uppercase; color: red; padding: 5px 0; width: 469px }
+.intro_content { width: 474px; height: 215px; }
+.intro_content p { line-height: 18px; font-style: italic; font-weight: bold; padding: 3px 0}
+
+/* menu */
+#menu li {padding: 2px 1px}
+#menu li a { display: block; background: url(/adv/adimgs/dm_bt.png) scroll no-repeat center center; width: 179px; height: 32px; line-height: 32px; text-transform: uppercase; font-weight: bold; font-size: 11px }
+#menu li a.active, #menu li a:hover {background: url(/adv/adimgs/dm_hover.png)  scroll no-repeat center center; text-decoration: none; color: red}
+
+/* donghovn */
+#alphab { margin: 0 auto; width: 400px; border-bottom: 1px solid red; padding: 5px 0 5px 40px}
+#alphab div { float: left; width: 10px; text-decoration: underline; cursor: pointer; padding: 5px; font-weight: bold; font-size: 13px }
+.dhvn { padding: 15px 0px 15px 50px }
+#dhvn a { float: left; width: 80px; display: block; padding: 5px 5px 5px 0; text-align: left }
+.topdh { padding: 0 20px }
+.topdh h3 { margin: 0 auto; width: 300px; border-top: 1px solid red; padding: 5px 0}
+#dhngp a { padding: 3px 5px; display: inline-table }
+
+/* on_tomb */
+.vtomb { height: 130px; width:651px; overflow: hidden; margin:0px auto 10px auto; position: relative; top: 80px}
+.vtomb.full {position:initial;}
+.vtomb li { float: left; width: 230px; height: 120px; padding: 8px; overflow: hidden; background: url(/adv/adimgs/vtomb.png) scroll no-repeat center center}
+.vtomb>ul>li>a {display:block; padding: 23px 10px 0 13px; float: left}
+.vtomb img, .ntomb img { width: 50px; height: 60px; float: left; margin: 0 8px 5px 0; border: 1px solid #fff }
+.vtomb p, .ntomb p {text-align: left }
+.vtomb p:last-child, .ntomb p:last-child { clear: both; text-decoration: underline }
+.vtomb p.tname, .ntomb p.tname {font-weight: bold}
+.vtomb p.addr, .vtomb p:last-child, .ntomb p.addr, .ntomb p:last-child {color: #303030; font-style: italic; font-size: 11px}
+.ntomb { width:651px; overflow: hidden; margin:10px auto; position: relative; top: 80px}
+.ntomb li { width: 190px; height: 80px; margin: 10px 8px 0 8px; float: left; overflow: hidden; border: 1px solid #BA8144; background-color: #EEE5C6; padding: 4px}
+.ntomb h3 { margin: 0 auto; width: 300px; border-top: 1px solid red; padding: 5px 0}
+.ntomb p.more {text-align: right; padding: 10px 10px 0 0}
+.ntomb p.more a { text-decoration: underline; color: red; font-size: 12px;}
+
+.fnews {width: 315px; padding: 10px}
+.ofnews {width: 300px; padding: 10px}
+.fnews h4 {font-weight: normal; border-bottom: 1px solid #d31200; padding-bottom: 5px; width: 100%; overflow: hidden; font-style: italic}
+.fnews p { padding-top: 10px; text-align: justify; line-height: 18px}
+.fnews p.headline {font-weight: bold; font-size: 14px}
+.fnews p.ndate {text-align: right; font-style: italic; color: #d31200}
+.ofnews li { padding: 8px; border: 1px solid #BA8144; margin-bottom: 8px;box-shadow: 3px 3px 5px #6F3218; width: 280px; overflow: hidden; text-align: justify; }
+.ofnews li p.source {white-space: nowrap; overflow: hidden; padding-top: 10px; color: gray; font-style: italic; font-size: 11px}
+.ofnews li span {float: right; color: #0e0e0e; font-size: 11px}
+
+/* on_tomb */
+.cencol.tomb {position: relative}
+.temple { background: url(/adv/adimgs/tomb_bg.png) scroll no-repeat top center; width: 671px; height: 122px; position: absolute; z-index: 12; top: 6px}
+
+/* support */
+.spitem {text-align: left; padding: 10px }
+.spitem p {padding: 5px 3px}
+.spskype {background: #6F3218 url(/adv/adimgs/skype24.png) scroll no-repeat right center; color: #fbc71e; font-weight: bold}
+.spphone {background: #BA8144 url(/adv/adimgs/phone.png) scroll no-repeat left center; padding-left: 30px !important; font-weight: normal; color: #fff}
+.spgmail {background: #6F3218 url(/adv/adimgs/gmail.png) scroll no-repeat right center; color: #fbc71e; font-weight: bold}
+.spfb {background: #6F3218 url(/adv/adimgs/facebook.png) scroll no-repeat right center; color: #fbc71e; font-weight: bold}
+
+/* statistic */
+.stat_ft, .stat_sys {padding: 0 5px 15px 5px}
+.stat_ft h4, .stat_sys h4 {padding-bottom: 3px; text-align: left}
+.stat tr td {font-size: 11px; vertical-align: middle; border-color: #BA8144}
+.stat tr td:first-child {width: 70%; text-align: left }
+.stat a {width: 100%; height: 30px; overflow: hidden;display:block}
+.stat tr td:last-child {width: 20%; text-align: right }
+
+/* weblink */
+#weblink {padding-left: 5px}
+#weblink li {background: url(/adv/adimgs/wlbg.png) scroll no-repeat left center; text-align: left; padding-left: 20px}
+#weblink a {background: none; color: #fbc71e; text-transform: none; font-size: 12px; line-height: 30px; font-weight: bold; display:block}
+#weblink a:hover {color: #fff}
+
+/* newtree */
+#newtree {padding-left: 5px}
+#newtree li {background: url(/adv/adimgs/ntbg.png) scroll no-repeat left center; text-align: left; padding: 2px 0 2px 12px; height: 30px; overflow: hidden}
+#newtree a {background: none; color: #000; text-transform: none; font-size: 11px; line-height: 30px; font-weight: bold; display:block}
+#newtree a:hover {color: yellow}
+
+/* Dialog */
+.dialog {display: none}
+.dlg_title { color: #000; font-weight: bold; padding: 8px 5px; font-size: 14px; border-radius: 8px 8px 0 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b7ad70+0,d5cea6+48 */
+background: rgb(183,173,112); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(183,173,112,1) 0%, rgba(213,206,166,1) 48%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(183,173,112,1) 0%,rgba(213,206,166,1) 48%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(183,173,112,1) 0%,rgba(213,206,166,1) 48%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7ad70', endColorstr='#d5cea6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.dlg_content { padding: 5px 15px}
+.dlg_content td { padding: 3px !important}
+.legend {font-style: italic; color: gray}
+.frm_loadstatus { position: absolute; left: 0px; z-index: 300; width: 100%; height: 260px; background: #fff url(/adv/adimgs/tloading.gif) scroll no-repeat center center; opacity: 0.9}
+.error {color:red}
+div.success { padding: 5px 5px 5px 45px;border: 1px solid #8DD420; background: url(/adv/adimgs/success.png) no-repeat scroll 15px center; color: #009C24; font-size: 12px; }
+div.error { padding: 5px 5px 5px 45px; border: 1px solid #D71111; background: #FDF6F2 url(/adv/adimgs/error.gif) no-repeat scroll 15px center; color: red; font-size: 12px; }
+#imgSec {cursor: pointer}
+
+/* dongho_book */
+#dh_menu {padding-left: 5px}
+#dh_menu li {background: url(/adv/adimgs/ntbg.png) scroll no-repeat left center; text-align: left; padding: 2px 0 2px 12px; height: 30px; overflow: hidden;line-height: 30px; font-weight: bold; cursor: pointer}
+#dh_menu li:hover, #dh_menu li.active {background: url(/adv/adimgs/ntbg_hover.png) scroll no-repeat left center; color: red}
+#dh_menu li:hover a {color:red; text-decoration:none}
+.dhbn { width: 100%; border-radius: 5px; margin-bottom:1px;    
+        background: rgba(255,246,76,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255,246,76,1) 0%, rgba(255,246,76,0.35) 50%, rgba(255,244,75,0.34) 51%, rgba(255,146,10,0.34) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,246,76,1)), color-stop(50%, rgba(255,246,76,0.35)), color-stop(51%, rgba(255,244,75,0.34)), color-stop(100%, rgba(255,146,10,0.34)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255,246,76,1) 0%, rgba(255,246,76,0.35) 50%, rgba(255,244,75,0.34) 51%, rgba(255,146,10,0.34) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(255,246,76,1) 0%, rgba(255,246,76,0.35) 50%, rgba(255,244,75,0.34) 51%, rgba(255,146,10,0.34) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(255,246,76,1) 0%, rgba(255,246,76,0.35) 50%, rgba(255,244,75,0.34) 51%, rgba(255,146,10,0.34) 100%);
+        background: radial-gradient(ellipse at center, rgba(255,246,76,1) 0%, rgba(255,246,76,0.35) 50%, rgba(255,244,75,0.34) 51%, rgba(255,146,10,0.34) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff64c', endColorstr='#ff920a', GradientType=1 );
+    }
+.dhbnbody {background: url(/adv/adimgs/dhbnloop.png) scroll repeat-x left center; float: left; height: 38px; width: 1005px; font-size: 20px; font-weight: bold; text-transform: uppercase; color: red; text-align: center; padding-top: 13px }
+.dhbnhead, .dhbnend {width: 24px; height: 51px} 
+.dhbnhead {background: url(/adv/adimgs/dhbn.png) scroll no-repeat left center; float: left}
+.dhbnend {background: url(/adv/adimgs/dhbn.png) scroll no-repeat right center; float: right}
+#ft_ct {text-align: left; padding: 20px; min-height: 400px; background: #fff }
+#ft_ct p.dhtitle {padding: 5px 0}
+#ft_ct p.dhtitle span:first-child{width: 110px; display: block; float: left; font-weight: bold}
+#ft_ct p.dhtitle a.treelink {color: blue; text-decoration: underline; font-weight: normal}
+#ft_ct p.dhtitle span:last-child {font-weight: normal; padding-left: 10px}
+#ft_ct h3 {padding: 10px 0 5px 0; border-bottom: 1px solid #BA8144}
+#ft_ct .lhyd, #ft_ct .gtdh {padding: 10px 0}
+.ftcreator p {text-align: left; font-weight: bold; padding: 5px 3px 5px 5px}
+.ftcreator p span { font-weight: normal }
+#cravatar {margin-bottom: 5px; height: 70px; border: 1px solid #fff}
+img.dhct_loading {position: relative; left: 340px; top: 100px}
+.newsitem { font-size: 16px;font-family: Tahoma }
+.news_hl {padding: 5px 0;}
+.news_hl a { font-weight: bold; color: red}
+.news_hl span { color: gray; font-style: italic }
+
+#ntdh img, #atombs img { width: 50px; height: 60px; float: left; margin: 0 8px 5px 0; border: 1px solid #fff }
+#ntdh p, #atombs p {text-align: left }
+#ntdh p:last-child, #atombs p:last-child { clear: both; text-decoration: underline }
+#ntdh p.tname, #atombs p.tname {font-weight: bold}
+#ntdh p.addr, #ntdh p:last-child, #atombs p.addr, #atombs p:last-child {color: #303030; font-style: italic; font-size: 11px}
+#ntdh { width:732px; float: left; padding-left: 16px;}
+#ntdh li, #atombs li { width: 210px; height: 85px; margin: 5px 10px; padding: 4px; float: left; overflow: hidden; background-color: #eee5c6; border: 1px solid #ba8144}
+#ntdh h3 { margin: 0 auto; width: 300px; border-top: 1px solid red; padding: 5px 0}
+#ntdh p.more {text-align: right; padding-top: 10px}
+#ntdh p.more a { text-decoration: underline; color: red; font-size: 12px;}
+.nttt {padding: 0 !important; background: url(/adv/adimgs/grass.jpg) scroll repeat center center !important}
+.ntdh_head {background: url(/adv/adimgs/ntdh_bg.png) scroll no-repeat top center; width: 100%; height: 105px; z-index: 50 }
+.ntdh_lbd, .ntdh_rbd {width: 50px; height: 800px; margin-top: -14px; z-index: 40}
+.ntdh_lbd {background: url(/adv/adimgs/tomb_ltree.png) scroll repeat-y top left; float: left}
+.ntdh_rbd {background: url(/adv/adimgs/tomb_rtree.png) scroll repeat-y top right; float: right}
+.ntdh_search_box {text-align: right; padding: 10px 23px 15px 0}
+#ntdh_search_btn { width: 70px; text-align: center; border: 1px solid #6F3218; line-height: 23px; margin-left: 5px; display: block; float: right; border-radius: 3px; background-color: #E4D197; transition: all 0.2s linear}
+#ntdh_search_btn:hover {border-color: #fff; background-color: #BA8144; color: #fff; text-decoration:none}
+
+/* new_list_paging.ascx */
+.list_newsevents { min-height: 500px; position: relative }
+.topic .item h2.title, .schedule_list h2.title { font-weight: bold; color: #029900; text-transform: uppercase; font-size: 14px }
+.topic .item, .schedule_list .item { overflow: hidden; padding: 10px }
+.topic .item.alt, .schedule_list .item.alt { background-color: #efefef }
+.topic .item .img { float: left; margin-right: 10px; border: 1px solid #ccc; width: 110px }
+.topic .item .img img { width: 100% }
+.topic .item.alt .img { border: 1px solid #fff }
+.topic .item .headline, .schedule_list .item .name { margin-bottom: 5px }
+.topic .item .headline a { font-weight: bold; color: #CB1418; font-size: 16px }
+.topic .item .date, .schedule_list .item .date { color: Gray; font-style: italic; margin-bottom: 5px }
+.topic .item .summary { font-size: 14px; line-height: 22px}
+.tintuc h2 { border-bottom: 1px solid red; padding-bottom: 4px; padding-top: 15px; margin-bottom: 5px }
+
+/* gpvn.ascx */
+.gpvn { padding: 20px 5px; min-height: 400px; background: none }
+.gpvn td { border: 1px solid #af763f}
+.gpvn td a {display: block;}
+.gpvn td a:hover, .gpvn td a:visited {color: red}
+.gpvn thead {background-color: #C9161A; color: #fff}
+.gpvn tbody tr:hover {background-color: #DAB473}
+.gpvn tbody td {text-align: left}
+.gpvn tbody td:first-child, .gpvn tbody td:last-child{text-align:center}
+.gpvn_search_box {float: right; padding: 5px 10px}
+.gpvn_search_box input { height: 16px; background: #fff; font-size: 12px; padding: 2px 3px; margin-right: 5px; width: 200px }
+.gpvn_search_box a {text-decoration: underline}
+
+/* login */
+.rb p { padding: 0 0 5px 0; text-align: center }
+.usrn, .pwd { width: 90% }
+#member_area, .member p { text-align: left; overflow: hidden}
+#member_area div { padding: 10px 5px 0 10px; overflow: hidden}
+#member_area img { width: 60px; height: 70px; float: left; margin-right: 5px; border: 1px solid #fff }
+#member_area .memname {font-weight: bold}
+.memfunc p:first-child { float: left; }
+.memfunc p:first-child a {color: yellow; text-decoration: underline}
+.memfunc p:last-child { float: right; text-decoration: underline }
+
+/* feedback */
+h2.box_title {padding: 20px 0 5px 5px; border-bottom: 1px solid #BA8144; font-size: 20px; margin: 0 10px 0 10px}
+.form_content { padding: 0 0 15px 20px }
+.form_content tr td:first-child { vertical-align: middle; text-align: right }
+.form_content td.f_require { color: red }
+.form_content .postCmPending { display: none; position: relative; left: 300px }
+img.imgCaptcha { height: 30px }
+.gopy {padding: 5px; line-height: 18px}
+.gopy .item {padding: 3px}
+.gopy .item div {padding: 3px 0}
+.gopy .item .post { color: green }
+.gopy .alt { border-top: 1px solid #ccc}
+
+/* news_detail */
+.news_detail { padding-left: 15px; font-family: Arial; font-size: 16px }
+.news_detail h2.headline { font-size: 22px; font-weight: bold; margin-top: 15px }
+.news_detail .summary { overflow: hidden; padding: 0 0 15px 0; font-weight: bold; word-spacing: 2px }
+.news_detail .dimg { float: left; width: 300px; margin-right: 10px }
+.news_detail .detail { word-spacing: 2px }
+.news_detail .detail * {font-size: 16px !important}
+.news_detail .detail p { padding: 5px 0 }
+.next_news { font-size: 16px;font-style:italic; margin: 15px 0 20px 0 }
+.next_news h4 { font-weight: bold; font-style: italic; border-bottom: 1px solid gray; padding-bottom: 3px; margin-bottom: 10px }
+.next_news p { background: url(/adv/adimgs/bullet.png) scroll no-repeat left center; padding: 3px 0 3px 18px }
+.next_news a:hover {color: red }
+.next_news span.date { color: Gray }
+
+/* gioithieu */
+.about {font-family:Arial; font-size: 16px; padding: 10px}
+.about p {padding: 10px 0 2px 0; line-height: 21px}
+.gioithieuchung, .aboutus {font-weight: bold; font-size: 18px}
+.business {font-style: italic; color: red}
+.about a { text-decoration: underline; color: blue}
+
+/* nghia trang truc tuyen */
+/*.nttt_bg {background: url(../img/utils/bg/bg11.jpg) scroll no-repeat center center; background-attachment:fixed}*/
+#nttt_header {height: 211px}
+.nttt_temple { height: 139px; background: url(/adv/adimgs/nt_bg_top.png) scroll no-repeat top center}
+.nttt_mn { position: relative; top: -139px; z-index: 10; font-family: arial;font-size: 11px;  }
+.nttt_banner { background: url(/adv/adimgs/ucp_loopbg.png) scroll repeat-x left center; margin: 0 !important}
+.nttt_mn td.subleft, .td_mn td.subleft { background: url("/adv/adimgs/subinfo_left.png") no-repeat scroll right top; min-width: 342px; }
+.nttt_mn td.subcen, .td_mn td.subcen { color: yellow; background: url("/adv/adimgs/subinfo_cen.png") no-repeat scroll center top; width: 602px; padding-top: 8px; overflow: hidden; font-size: 14px;}
+.nttt_mn td.subright, .td_mn td.subright { background: url("/adv/adimgs/subinfo_right.png") no-repeat scroll left top; min-width: 342px; text-align: center; text-transform: none; position: relative }
+.nttt_mn td, .td_mn td { color: #fff; font-weight: bold; height: 65px; padding-top: 2px; text-align: center; text-transform: uppercase; vertical-align: top; }
+.nttt_mn td a, .td_mn td a { padding: 0 5px; color: #fff; text-decoration: underline }
+
+.vip_tombs, .all_tombs {padding-bottom: 10px}
+.title_vip { background: url(/adv/adimgs/title_vip.png) scroll no-repeat center center; height: 28px;}
+.atctn {margin: 0 auto; padding-top: 15px}
+.title_all {background: url(/adv/adimgs/nttt_sonthuy.png) scroll repeat-x center center; text-align: center; height: 30px; padding: 20px 0 0 0}
+.ctrl_btns {text-align: right; padding: 10px 50px 0 0}
+.ctrl_btns a {color: red; text-decoration: underline; }
+.ctrl_btns input {margin-right: 5px}
+
+/* tomb_detail*/
+.td_body {color: #fff}
+.ts_bg {height: 550px; background: #000 url("/adv/adimgs/bg/tdbg.jpg") scroll no-repeat top center; padding-top: 50px;}
+.tomb_stone {margin: 0 auto; width: 330px; height: 550px; background: url("/adv/adimgs/biamo.png") scroll no-repeat top center; position: relative; z-index: 2}
+.td_mn {position: absolute; z-index: 25}
+.tomb_bound {width: 550px; margin: 0 auto; position: relative}
+.candle {position: absolute; width: 130px; bottom: 8px}
+.candle.right { right: 0 }
+.inner_tomb { position: relative; width: 173px; height: 140px; top: 215px; left: 68px; padding: 10px; }
+img.anhtho {z-index:1; width: 74px; height: 84px; top: 110px; left: 238px; position: absolute}
+.tomb_stone p {color: #fff; text-shadow: 0 0 5px #fff, 0 0 8px #fff; padding: 2px 0; text-align: center; font-size: 11px}
+p.tenphanmo { text-transform: uppercase; font-weight:bold; font-size: 12px}
+.data_not_found {text-align: center; padding-top: 50px; color: #fff; font-weight: bold; font-size: 18px;}
+.memorial {padding: 0 5px;}
+.visits {float: left; width: 57%; position: relative }
+.visits h3 span {color: #fff;font-weight:normal}
+.take_a_visit {float: right; width: 43%; }
+.memorial h3 {color: yellow; text-align: center; border: 1px solid #fff; padding: 5px}
+.take_a_visit h3 {border-left: none}
+.visit_gifts {border: 1px solid #fbc71e; padding: 10px }
+.choosegift {position: relative; z-index: 3; background-color: #000; padding: 0 5px; top: 5px; left: 10px}
+.visit_gifts img { float:left; width: 50px; height: 50px; border: 1px solid #ccc; margin: 3px; cursor: pointer}
+.visit_gifts img.selected {opacity: 0.5}
+.vsbound {padding-left: 30px}
+.visit_form {padding: 10px 0; position: relative}
+.visit_form td {padding: 3px 0}
+#visits_list li {padding: 5px 0; position: relative}
+#visits_list p {padding: 5px}
+#visits_list p:first-child { color: #BA8144}
+#visits_list p:last-child {border: 1px solid #6F3218; margin-left: 15px; border-radius: 0 5px 5px 5px}
+#visits_list img { position: absolute; top: 24px; left: 15px; z-index: 8}
+#frm_msg p.success {color: yellow}
+p.more_vis {text-align: right; padding-top: 10px}
+p.more_vis a {color: yellow; text-decoration: underline;}
+#canvas {position: absolute; z-index: 20; max-height: 600px}

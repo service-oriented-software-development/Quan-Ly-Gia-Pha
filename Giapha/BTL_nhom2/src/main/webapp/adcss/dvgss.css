@@ -1,0 +1,12 @@
+#dvgss { position:relative; top: 38px; left: 160px; height:250px; width: 470px; background:url(../../img/utils/tnbd.png) scroll no-repeat center center }
+#dvgss img { width: 450px; height: 230px; }
+#dvgss a.ss_item { position:absolute; top:0; left:0; z-index:8; padding: 10px; }
+#dvgss a.ss_item.active { z-index:12; }
+#dvgss a.ss_item.last-active { z-index:9; }
+#dvgss p.ss_title_bg {background-color: #000; overflow: hidden; position: absolute; top: 195px; opacity: 0.4; z-index: 10; height: 45px; width: 450px}
+#dvgss p.ss_title { overflow: hidden; position: absolute; top: 195px; height: 35px; padding: 5px; z-index: 11; width: 441px; color: white; font-size: 14px; font-weight: bold; vertical-align: middle }
+
+.ss_vlist { height:250px; width: 470px; position: absolute; top: 40px; left: 700px }
+.ss_vlist ul { padding: 0; margin: 0; list-style-type: none }
+.ss_vlist li { padding: 5px 15px; border-right: 1px solid #cb1111; border-left: 1px solid #cb1111; width: 30px; text-wrap:normal; float: left; text-align: left; margin-left: -1px }
+.ss_vlist li a { font-style: italic; line-height: 18px;  font-weight: bold; display: block }
