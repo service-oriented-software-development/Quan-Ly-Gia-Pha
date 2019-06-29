@@ -1,0 +1,148 @@
+
+/* Left panel */
+.ucpleft_group h2 {font-size: 12px; font-weight: bold; padding: 6px 5px; background-color: #090F14; margin-bottom: 1px; cursor: pointer}
+.ucpleft_group a { background-color:#9CAAC1; display: block; padding: 5px 3px; transition: all 0.2s linear; margin: 1px 0}
+.ucpleft_group a:hover {background-color: #9FD8EF; text-decoration: none}
+.ucpleft_group .gitem { padding-bottom: 10px; overflow: hidden }
+
+.page_title { background-color: #C9161A; line-height: 20px; padding: 5px; overflow: hidden }
+.page_title h2 {float: left; font-size: 14px; color: #fff; font-weight: bold; font-family: Tahoma; padding: 0 }
+.page_title .toolbox {float: right;}
+.toolbox input { margin-right: 5px }
+.toolbox .ubtn { display: block; border: 1px solid #fff; width: 70px; text-align: center; border-radius: 5px; height: 23px; float: right; color: #F0F0F0; line-height: 23px; transition: all 0.2s linear}
+.toolbox .ubtn:hover {border-color: #fff; text-decoration: none; color: #000; background-color: #F0F0F0}
+div.success { padding: 10px 10px 10px 45px; border: 1px solid #8DD420; background: url(../adimgs/success.png) no-repeat scroll 15px center; color: #009C24; font-size: 12px; margin: 0 0 15px 0 }
+div.error { padding: 10px 10px 10px 45px; border: 1px solid #D71111; background: #FDF6F2 url(../adimgs/error.gif) no-repeat scroll 15px center; color: red; font-size: 12px; margin: 0 10px 0 10px }
+div.error ul { margin: 0 }
+.error {color:red}
+.success {color:green !important}
+ul.error { margin: 0; padding: 0; list-style-type: circle; color: red }
+ul.error li {padding: 3px}
+span.required { color: Red }
+.form_ctrl { font-size: 11px; overflow: hidden }
+.form_ctrl td { vertical-align: top }
+.main_field { float: left; width: 70%; }
+.attr_field { float: right; width: 26%; padding-left: 5px; border-left: 1px solid #ccc }
+div.headline, div.summary, div.detail { float: left; width: 100%; padding-bottom: 15px }
+p.field_name { margin: 0; padding-bottom: 3px; color: Blue; font-size: 11px }
+p.field_name.require { color: Red }
+h2.list_data { font-size: 13px; font-weight: bold; margin-bottom: 5px; background-color: #ccc; padding: 5px; margin-top: 15px }
+.add_mem { padding-top: 20px; overflow: hidden }
+a.linkbtn { margin: 0 5px 0 5px; border: 1px solid #fff; padding: 3px 5px 2px 5px; text-decoration: none; color: #fff; font-size: 11px; background-color: #3954A2 }
+.progress { position: relative; z-index: 200; width: 100%; background: Gray url(../adimgs/content_loadding.gif) scroll no-repeat center center; height: 300px}
+.frm_loadstatus, .frm_takeintotomb_loadstatus, .frm_tg_loadstatus { position: absolute; left: 0px; z-index: 300; width: 100%; height: 260px; background: #fff url(../adimgs/tloading.gif) scroll no-repeat center center; opacity: 0.9}
+.frm_takeintotomb_loadstatus {  height: 220px !important}
+.frm_tg_loadstatus {  height: 450px !important}
+
+/* Right panel */
+a.btn { font-size:11px; border:1px solid #000; color: #000; line-height: 18px; padding: 0 5px 0 5px; margin-left: 5px; float:right; background: url(../adimgs/btns.gif) repeat-x scroll 0 100%; display: inline-block }
+a.btn:hover { border:1px solid #fff; background-color: #3954A2; color: #fff }
+.btns { background-color: #9CAAC1; padding: 5px; border: 1px solid #ccc; text-align:right; overflow: hidden }
+.button { font-size:11px; border:1px solid #000; color: #000; height: 20px; padding-bottom: 2px; background: url(../adimgs/btns.gif) repeat-x scroll 0 100%; display: inline-block }
+.button.w70 { width: auto; min-width: 60px }
+.button.w70.op { color: #000 }
+.button.w70.op:hover { border-color: red; color: #fff }
+.button.w2 { width: 70px }
+.button.w3 { background-color: #3954A2; width: 50px; color: #fff }
+.button:hover { border:1px solid #fff; background-color: #3954A2; color: #fff !important; cursor:pointer; }
+.button:disabled { border-color: Gray; color: Gray }
+.textbox { padding: 2px; font-size:11px;}
+.textbox.w100 { width: 100px }
+.textbox.w30 { width: 30px }
+.textbox.w2 { width: 46px }
+.textbox.w3 { width: 205px }
+.textbox.w9xpc { width: 90% }
+.textbox.w100pc { width: 95% }
+.textbox.w100pc.bold { font-weight: bold }
+.textbox.fw100pc { width: 99% }
+.textbox.w2 { width: 50%; margin-right: 3% }
+.combo { font-size:11px }
+.combo.w100 { width: 100px }
+.combo.w100pc { width: 95%; border: 1px solid #fff }
+.combo.w1 { width: 35%; }
+.combo.w2 { width: 280px; }
+.combo.w70 { width: 70px }
+img.dhct_loading { position: relative; top: 50px; left: 500px}
+.aubtn { display: block; width: 70px; line-height: 22px; text-align: center; border: 1px solid #ccc; border-radius: 5px; font-weight: bold }
+.aubtn:hover {text-decoration: none; border-color: #7C211E; background-color: rgb(228,245,252); transition: all 0.2s linear;}
+span.legend {font-style: italic; color:gray}
+
+/* DataGrid .dgrData .f_child { background: url(../adimgs/sub.gif) no-repeat scroll -2px center } */
+.dgrData { width: 100%; float:left; border-collapse: collapse; border: 1px solid #ccc; background-color: #fff }
+.dgrData tr td { padding: 3px; vertical-align: middle; border: 1px solid #ccc; font-size: 11px }
+.dgrData.nocmd tr td { padding: 5px }
+.dgrData tr td.tds1 { width: 3% }
+.dgrData { border-collapse:collapse; border-color: #CCCCCC; border-width:1px }
+.dgrData input { border: 1px solid #fff }
+.dgrData_filter { width: 100%; padding-bottom: 10px }
+.dgrData .dgr_header {font-family:Arial; font-size: 11px; color: #fff; font-weight:bold; text-align:left; padding: 4px 3px 4px 3px; vertical-align:middle; background-color: #808080 !important }
+.dgrData a { text-decoration: underline }
+
+.dgr_item { color: #000; font-family:Arial; font-size: 11px; vertical-align:middle }
+.dgr_item a { color: blue; text-decoration: underline }
+
+.dgrData a.act { color: #000; font-weight: bold; text-decoration: none }
+
+a.item_command { font-family:Arial; font-size:11px; color:Blue; text-decoration:underline }
+
+.ucp_tbl td { border: 1px solid #af763f; text-align: center}
+.ucp_tbl td a {display: block;}
+.ucp_tbl td a:hover, .gpvn td a:visited {color: red}
+.ucp_tbl thead {background-color: #C9161A; color: #fff}
+.ucp_tbl tbody tr:hover {background-color: #DAB473}
+td.all {text-align: left !important}
+.ucp_tbl.form td { text-align: left !important; border: none }
+.ucp_tbl.form tr:hover {background: none}
+.ucp_tbl td img { max-height: 60px}
+
+table.frm_data td, table.ucp_tbl_form td, .ucp_tbl td, .ucp_tbl_acc td {padding: 3px !important}
+.ucp_tbl.news td {padding: 5px 3px !important}
+#tbl_tombgroup thead td { color: #fff; font-weight: bold}
+#tbl_tombgroup td {padding: 3px}
+
+/* Dialog */
+.dialog {display: none}
+.dlg_title { color: #000; font-weight: bold; padding: 8px 5px; font-size: 14px; border-radius: 8px 8px 0 0;
+background: rgb(228,245,252); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(228,245,252,1) 0%, rgba(191,232,249,1) 50%, rgba(159,216,239,1) 51%, rgba(42,176,237,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 50%,rgba(159,216,239,1) 51%,rgba(42,176,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(228,245,252,1) 0%,rgba(191,232,249,1) 50%,rgba(159,216,239,1) 51%,rgba(42,176,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=0 ); /* IE6-9 */
+}
+
+/* nghiatrang */
+td.tombgroup { font-weight: bold; text-align: left; text-transform: uppercase; background-color: #ccc}
+a#btn_group_mgr { background: url(../adimgs/options.png) scroll no-repeat 5px center; margin-left: 5px; padding-left: 10px }
+a#btn_createnewtomb { background: url(../adimgs/wadd.png) scroll no-repeat 5px center; margin-left: 5px; padding-left: 10px }
+
+/* treemem_list */
+.dlg_content { padding: 10px; position: relative; overflow: hidden}
+.dlg_content td {color: #000}
+#thanhvien img {height: 50px}
+#frm_msg div, #frm_crt_msg div, #tg_act_msg div {padding-top: 5px; padding-bottom: 0; border: none}
+
+/*create-message.ascx*/
+.msg_sug, .gmsg_sug { display: none; position: absolute; z-index: 30; border: 1px solid #ccc; min-width: 200px; min-height: 50px }
+.msg_sug ul, .gmsg_sug ul { margin: 0; padding: 0; list-style-type: none; background-color: #fff }
+.msg_sug li, .gmsg_sug li { padding: 5px 10px 5px 10px; cursor: pointer }
+.msg_sug li:hover, .msg_sug li.cur, .gmsg_sug li:hover, .gmsg_sug li.cur { background-color: #9FD8EF } 
+
+/* msg-detail.ascx */
+.mfrom, .sfrom { font-size: 11px; margin-bottom: 5px; background-color: #fefefe; padding-bottom: 15px }
+.main_msg { padding-bottom: 10px; border-bottom: 1px solid #ccc }
+div.from_title, p.stitle { font-weight: bold; padding-bottom: 8px }
+p.stitle { font-style: italic }
+.submsg { padding: 5px 0 5px 15px; border-bottom: 1px solid #ccc; overflow: hidden }
+
+/* acc-info.ascx */
+td.ar { font-weight: bold; white-space: nowrap }
+img.avatar { border: 1px solid #ccc; height: 100px }
+
+.banner { background: url(../adimgs/ucp_loopbg.png) scroll repeat-x left center}
+.ucp_info { font-family: arial;font-size: 11px; }
+.ucp_info td.subleft { background: url("../adimgs/ucp_left.png") no-repeat scroll right top; width: 342px; }
+.ucp_info td.subcen { background: url("../adimgs/ucp_cen.png") no-repeat scroll center top; width: 463px; padding-top: 6px; overflow: hidden; font-size: 13px;}
+.ucp_info td.subright { background: url("../adimgs/ucp_right.png") no-repeat scroll left top; width: 322px; padding-left: 20px; text-align: left; text-transform: none; }
+.ucp_info td { color: #fff; font-weight: bold; height: 50px; padding-top: 2px; text-align: center; text-transform: uppercase; vertical-align: top; }
+.ucp_info td a { padding: 0 5px; color: #fff }
+.create_gp_intro p {font-weight: bold; padding: 3px 0; color: red }
