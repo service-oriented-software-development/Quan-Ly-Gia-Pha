@@ -15,7 +15,7 @@ h3.crbhead { background: url(/adv/adimgs/crbox_head.png) scroll no-repeat left t
 .rb h3.bhead { background: url(/adv/adimgs/box_head.png) scroll no-repeat right top; font-size: 14px; padding: 7px 0; margin: 0 0 -12px 0; z-index: 10; position: relative }
 
 /* utils/intro */
-.intro { background: url(/adv/adimgs/intro_bg.jpg) scroll no-repeat center top; width: 571px; height: 251px; padding: 100px 0 3px 100px  }
+.intro { background: url(/adv/adimgs/intro_bg.jpg) scroll no-repeat center top; width: 571px; height: auto; padding: 100px 0 3px 100px  }
 h3.intro_head { text-align: center; font-size: 13px; text-transform: uppercase; color: red; padding: 5px 0; width: 469px }
 .intro_content { width: 474px; height: 215px; }
 .intro_content p { line-height: 18px; font-style: italic; font-weight: bold; padding: 3px 0}

@@ -109,38 +109,7 @@
 							</div>
 						</div>
 
-						<div class="box ovh txtC menu">
-							<h3 class="bhead">HỖ TRỢ</h3>
-							<div class="grb">
-								<div class="spitem">
-									<p>
-										<a href="javascript:void(0)">Mr.Toàn</a>
-									</p>
-
-									<p>0913.676.286</p>
-								</div>
-
-								<div class="spitem">
-									<p>
-										<a href="javascript:void(0)">Mr.Quyết</a>
-									</p>
-
-									<p>0982.319.555</p>
-								</div>
-
-								<div class="spitem">
-									<p>Gmail</p>
-
-									<p>gpvn.vn@gmail.com</p>
-								</div>
-
-								<div class="spitem">
-									<p>Facebook</p>
-
-									<p>giaphavietnam.vn</p>
-								</div>
-							</div>
-						</div>
+						
 
 						<div class="box ovh txtC menu">
 							<h3 class="bhead">THỐNG KÊ</h3>
@@ -164,7 +133,7 @@
 
 						<div class="intro ovh">
 							<h3 class="intro_head">Lời nói đầu</h3>
-							<div class="intro_content mCustomScrollbar">
+							<div class="intro_content mCustomScrollbar" style="overflow: scroll;">
 								<p>Xin trân trọng cảm ơn quý khách đã ghé thăm website:
 									www.giaphavietnam.vn - Nơi lưu giữ, nối kết và tôn vinh những
 									giá trị truyền thống.</p>
@@ -340,11 +309,16 @@
 						<div class="box rb ovh txtC menu">
 							<h3 class="bhead">WEB CÁC DÒNG HỌ</h3>
 							<div class="grb">
-								<ul id="weblink"></ul>
-								<p class="see_more">
-									<a href="#">Xem thêm</a>
-								</p>
-							</div>
+        						<ul id="weblink">
+        							<li><a target="_blank" href="http://www.hophamvietnam.org/">Họ Phạm Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hohoanghuynhvietnam.vn/">Họ Hoàng - Huỳnh</a></li>
+        							<li><a target="_blank" href="http://hovuvovietnam.com/Dong-ho-Vu-Vo-Viet-Nam_t_304.html">Họ Vũ - Võ Việt</a></li>
+        							<li><a target="_blank" href="http://honinh.vn/">Họ Ninh Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hodovietnam.vn/">Họ Đỗ Việt Nam</a></li>
+        							<li><a target="_blank" href="http://www.phantocvietnam.org/">Họ Phan Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hovanvietnam.com/">Họ Văn Việt Nam</a></li>
+        						</ul>   
+    						</div>
 						</div>
 
 						<div class="box rb ovh txtC menu">
