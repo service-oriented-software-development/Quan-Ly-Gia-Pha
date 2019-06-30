@@ -17,7 +17,7 @@
 	<script type = "text/javascript" src = "adjs/jquery.modal.min.js"></script>
 	<link href="adcss/jquery.modal.css" rel="stylesheet" type="text/css" />
 	<link href="adcss/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-	
+	<link rel="stylesheet" href="adcss/bootstrap.min.css">
 
 
 	<title>Gia Phả Online</title>
@@ -51,21 +51,26 @@
 				<div class="clb ovh top_news">
 					<div id="dvgss" style="background:url(/adv/adimgs/tnbd.png) no-repeat!important;">
 						
-							
-							<div id="slider" >
-								<a href="#"><img src="adimgs/1.jpg" style="width:260px; heigh:240px" alt="" title="Giá xăng 'làm giá' đến bao giờ" /></a>
-								<a href="#"><img src="adimgs/cms.jpg"  style="width:260px; heigh:240px" alt=""  /></a>
-								<a href="#"><img src="adimgs/cloud.png"  style="width:260px; heigh:240px"  alt="" data-transition="slideInLeft" /></a>
-								<a href="#"><img src="adimgs/cen_bn.jpg" style="width:260px; heigh:240px" alt=""  /></a>
-							</div>
-											
-							<script language="javascript" type="text/javascript" src="adjs/jquery.nivo.slider.pack.js"></script>
-							<script type="text/javascript">
-								$(window).load(function() {
-									$('#slider').nivoSlider();
-								});
-							</script>
-						
+      					
+					       
+					        <div id="myCarousel" class="carousel slide border" data-ride="carousel" style="width:440px; height: 240px; margin:0 auto; padding-top:9px">
+					           <div class="carousel-inner">
+					              <div class="carousel-item active">
+					                 <img class="d-block w-100" src="adimgs/1.jpg" alt="Panther">
+					              </div>
+					              <div class="carousel-item">
+					                 <img class="d-block w-100" src="adimgs/m.jpg" alt="Black Cat">
+					              </div>
+					              <div class="carousel-item">
+					                 <img class="d-block w-100" src="adimgs/intro_bg.jpg" alt="Lion">
+					              </div>
+					           </div>
+					        </div>
+					  
+					     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+					     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+					     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 					</div>
 					<div class="ss_vlist">
 						<ul>
