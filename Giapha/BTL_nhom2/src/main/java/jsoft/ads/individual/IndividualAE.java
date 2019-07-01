@@ -84,7 +84,7 @@ public class IndividualAE extends HttpServlet {
 				System.out.println(fm);
 				request.setAttribute("indname", fm);
 			}
-
+			
 			request.setAttribute("indid", id);
 			request.setAttribute("indbirth", indo.getDate_of_birth());
 			request.setAttribute("inddeath", indo.getDate_of_death());
@@ -95,8 +95,7 @@ public class IndividualAE extends HttpServlet {
 			request.setAttribute("indorder", indo.getBranch().split("\\.").length);
 			
 			if(img!=null) {
-				if(!img.equalsIgnoreCase("")&&!img.equalsIgnoreCase("undefied")) {
-					System.out.println("Anh-------------"+img);
+				if(!img.equalsIgnoreCase("")&&!img.equalsIgnoreCase("undefied")) {					
 					request.setAttribute("indavatar", img);
 				}
 			}else {
@@ -154,10 +153,11 @@ public class IndividualAE extends HttpServlet {
 			
 			
 			
-			
+			System.out.print(imgchild);
 			///ảnh hậu duệ 
 			if (imgchild != null) {
 				if (!imgchild.equalsIgnoreCase("")&&!imgchild.equalsIgnoreCase("undefied")) {
+					
 					request.setAttribute("childavatar", imgchild);			
 				}
 			} else {
@@ -173,7 +173,7 @@ public class IndividualAE extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
 		String act = request.getParameter("action");
@@ -221,9 +221,7 @@ public class IndividualAE extends HttpServlet {
 						out.println("Add Failure, dupplicate number of indivisual!");
 					}
 				}
-			} else if (act.equalsIgnoreCase("del"))
-
-			{ // xoa
+			} else if (act.equalsIgnoreCase("del"))     { // xoa
 				IndividualObject indd = new IndividualObject();
 				indd.setIndividual_id(Integer.parseInt(id));
 				if (ind.delIndividual(indd)) {
@@ -234,6 +232,9 @@ public class IndividualAE extends HttpServlet {
 				}
 
 			}
+//					else {
+//				out.println("You need to except to change avatar!#");
+//			}
 		}else {
 			String fileimg = uploadFile(request);
 			if(request.getParameter("addchild")!=null) {

@@ -44,7 +44,7 @@
 		<div class="wrapper">
 			<a href="default.aspx" title="Bấm vào đây đề về Trang chủ">
 				<div class="banner txtC">
-					<img src="adimgs/cen_bn.jpg" style="height: 130px; width: 100%" />
+					<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px" />
 				</div>
 			</a>
 			<div class="wrappage">
@@ -56,13 +56,13 @@
 					        <div id="myCarousel" class="carousel slide border" data-ride="carousel" style="width:440px; height: 240px; margin:0 auto; padding-top:9px">
 					           <div class="carousel-inner">
 					              <div class="carousel-item active">
-					                 <img class="d-block w-100" src="adimgs/1.jpg" alt="Panther">
+					                 <img class="d-block w-100" src="adimgs/sl1.jpeg" alt="Panther">
 					              </div>
 					              <div class="carousel-item">
-					                 <img class="d-block w-100" src="adimgs/m.jpg" alt="Black Cat">
+					                 <img class="d-block w-100" src="adimgs/sl2.jpg" alt="Black Cat">
 					              </div>
 					              <div class="carousel-item">
-					                 <img class="d-block w-100" src="adimgs/intro_bg.jpg" alt="Lion">
+					                 <img class="d-block w-100" src="adimgs/sl3.jpg" alt="Lion">
 					              </div>
 					           </div>
 					        </div>
@@ -100,7 +100,7 @@
 									<li><a class="active" href="">Trang chủ</a></li>
 									<li><a href="#">Tin
 											tức</a></li>
-									<li><a href="#">Gia
+									<li><a href="/adv/view/parentage">Gia
 											phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
 									<li><a href="#">Liên hệ -

@@ -94,4 +94,14 @@
     <servlet-name>album</servlet-name>
     <url-pattern>/album</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewParentage</display-name>
+    <servlet-name>ViewParentage</servlet-name>
+    <servlet-class>jsoft.ads.main.ViewParentage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewParentage</servlet-name>
+    <url-pattern>/view/parentage</url-pattern>
+  </servlet-mapping>
 </web-app>
