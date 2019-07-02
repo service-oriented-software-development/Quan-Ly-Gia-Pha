@@ -12,10 +12,10 @@ jsoft\ads\object\ParentageObject.class
 jsoft\ads\parentage\ParentageControl.class
 jsoft\ads\image\ImageImpl.class
 jsoft\ads\individual\IndividualControl.class
+jsoft\ads\main\ViewParentage.class
 jsoft\ads\account\AccountImpl.class
 Common\ConnectionPoolImpl.class
 jsoft\ads\basic\Basic.class
-jsoft\ads\main\album.class
 jsoft\ads\main\Test.class
 jsoft\ads\individual\IndividualView.class
 jsoft\ads\account\Account.class
@@ -25,7 +25,9 @@ jsoft\ads\object\IndividualObject.class
 jsoft\ads\parentage\Parentage.class
 jsoft\ads\main\View.class
 jsoft\ads\parentage\ParentageAE.class
+jsoft\ads\image\ImageView.class
 jsoft\ads\account\AccountView.class
 jsoft\ads\object\AccountObject.class
 jsoft\ads\account\AccountControl.class
 jsoft\ads\parentage\ParentageView.class
+jsoft\ads\main\Album.class

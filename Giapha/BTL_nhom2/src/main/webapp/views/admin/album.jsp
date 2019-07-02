@@ -131,12 +131,12 @@ function __doPostBack(eventTarget, eventArgument) {
 
 				<div class="container" id="ctn"></div>
 				<div class="container">
-					<form id="album" method="post" action=""
+					<form id="album" method="post" action="http://localhost:8080/adv/album"
 						enctype="multipart/form-data">
 						<input id="img-format" type="file" onchange="changeimg(event)"
-							hidden="hidden" accept=".png, .jpg,.jpeg" /> <img id="img1"
+							 accept=".png, .jpg,.jpeg" /> <img id="img0"
 							src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose"
-							style="width: 100%"/> <a class="btn" onclick="add_img()">Add</a>
+							style="width: 100%"/> <button class="btn" type="submit()">Add</button>
 					</form>
 				</div>
 
@@ -167,9 +167,7 @@ function __doPostBack(eventTarget, eventArgument) {
 			loadimg();
 		});
 
-		function add_img() {
-			$("#img-format").click();
-		}
+		
 
 		function loadimg() {
 			var url = "http://localhost:8080/adv/album";
@@ -203,16 +201,18 @@ function __doPostBack(eventTarget, eventArgument) {
 			var files = evt.target.files;
 			var file = files[0];
 			var fileReader = new FileReader();
-			alert("hahah");
+			
 
 			fileReader.onload = function(progressEvent) {
 				var url = fileReader.result;
-				var myImg = document.getElementById("img1");
+				var myImg = document.getElementById("img0");
 				myImg.src = url;
 
 			}
 			fileReader.readAsDataURL(file);
 		}
+		
+		
 	</script>
 </body>
 </html>
