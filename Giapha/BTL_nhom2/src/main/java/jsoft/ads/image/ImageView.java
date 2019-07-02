@@ -54,13 +54,10 @@ public class ImageView extends HttpServlet {
 			ArrayList<ImageObject> item=new ArrayList<ImageObject>();
 			item=imageControl.getImages(similar, 1,(byte) 100);
 			
-			
-			
 			pr.releaseConnection();
 			
 			request.setAttribute("prname", CharacterReference.decode(prO.getParentage_name()));
 			request.setAttribute("pracname", CharacterReference.decode(prO.getAccount_name()));
-			
 			
 			RequestDispatcher rd=request.getRequestDispatcher("/views/admin/album.jsp");
 			rd.forward(request, response);

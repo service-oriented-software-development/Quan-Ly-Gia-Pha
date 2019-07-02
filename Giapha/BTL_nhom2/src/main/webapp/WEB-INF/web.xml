@@ -114,4 +114,14 @@
     <servlet-name>image/view</servlet-name>
     <url-pattern>/image/view</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ImageAE</display-name>
+    <servlet-name>ImageAE</servlet-name>
+    <servlet-class>jsoft.ads.image.ImageAE</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageAE</servlet-name>
+    <url-pattern>/image/ae</url-pattern>
+  </servlet-mapping>
 </web-app>

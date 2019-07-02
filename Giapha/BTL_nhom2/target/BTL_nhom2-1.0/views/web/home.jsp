@@ -17,7 +17,7 @@
 	<script type = "text/javascript" src = "adjs/jquery.modal.min.js"></script>
 	<link href="adcss/jquery.modal.css" rel="stylesheet" type="text/css" />
 	<link href="adcss/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-	
+	<link rel="stylesheet" href="adcss/bootstrap.min.css">
 
 
 	<title>Gia Phả Online</title>
@@ -44,28 +44,33 @@
 		<div class="wrapper">
 			<a href="default.aspx" title="Bấm vào đây đề về Trang chủ">
 				<div class="banner txtC">
-					<img src="adimgs/cen_bn.jpg" style="height: 130px; width: 100%" />
+					<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px" />
 				</div>
 			</a>
 			<div class="wrappage">
 				<div class="clb ovh top_news">
 					<div id="dvgss" style="background:url(/adv/adimgs/tnbd.png) no-repeat!important;">
 						
-							
-							<div id="slider" >
-								<a href="#"><img src="adimgs/1.jpg" style="width:260px; heigh:240px" alt="" title="Giá xăng 'làm giá' đến bao giờ" /></a>
-								<a href="#"><img src="adimgs/cms.jpg"  style="width:260px; heigh:240px" alt=""  /></a>
-								<a href="#"><img src="adimgs/cloud.png"  style="width:260px; heigh:240px"  alt="" data-transition="slideInLeft" /></a>
-								<a href="#"><img src="adimgs/cen_bn.jpg" style="width:260px; heigh:240px" alt=""  /></a>
-							</div>
-											
-							<script language="javascript" type="text/javascript" src="adjs/jquery.nivo.slider.pack.js"></script>
-							<script type="text/javascript">
-								$(window).load(function() {
-									$('#slider').nivoSlider();
-								});
-							</script>
-						
+      					
+					       
+					        <div id="myCarousel" class="carousel slide border" data-ride="carousel" style="width:440px; height: 240px; margin:0 auto; padding-top:9px">
+					           <div class="carousel-inner">
+					              <div class="carousel-item active">
+					                 <img class="d-block w-100" src="adimgs/sl1.jpeg" alt="Panther">
+					              </div>
+					              <div class="carousel-item">
+					                 <img class="d-block w-100" src="adimgs/sl2.jpg" alt="Black Cat">
+					              </div>
+					              <div class="carousel-item">
+					                 <img class="d-block w-100" src="adimgs/sl3.jpg" alt="Lion">
+					              </div>
+					           </div>
+					        </div>
+					  
+					     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+					     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+					     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 					</div>
 					<div class="ss_vlist">
 						<ul>
@@ -95,7 +100,7 @@
 									<li><a class="active" href="">Trang chủ</a></li>
 									<li><a href="#">Tin
 											tức</a></li>
-									<li><a href="#">Gia
+									<li><a href="/adv/view/parentage">Gia
 											phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
 									<li><a href="#">Liên hệ -
@@ -104,38 +109,7 @@
 							</div>
 						</div>
 
-						<div class="box ovh txtC menu">
-							<h3 class="bhead">HỖ TRỢ</h3>
-							<div class="grb">
-								<div class="spitem">
-									<p>
-										<a href="javascript:void(0)">Mr.Toàn</a>
-									</p>
-
-									<p>0913.676.286</p>
-								</div>
-
-								<div class="spitem">
-									<p>
-										<a href="javascript:void(0)">Mr.Quyết</a>
-									</p>
-
-									<p>0982.319.555</p>
-								</div>
-
-								<div class="spitem">
-									<p>Gmail</p>
-
-									<p>gpvn.vn@gmail.com</p>
-								</div>
-
-								<div class="spitem">
-									<p>Facebook</p>
-
-									<p>giaphavietnam.vn</p>
-								</div>
-							</div>
-						</div>
+						
 
 						<div class="box ovh txtC menu">
 							<h3 class="bhead">THỐNG KÊ</h3>
@@ -159,7 +133,7 @@
 
 						<div class="intro ovh">
 							<h3 class="intro_head">Lời nói đầu</h3>
-							<div class="intro_content mCustomScrollbar">
+							<div class="intro_content mCustomScrollbar" style="overflow: scroll;">
 								<p>Xin trân trọng cảm ơn quý khách đã ghé thăm website:
 									www.giaphavietnam.vn - Nơi lưu giữ, nối kết và tôn vinh những
 									giá trị truyền thống.</p>
@@ -279,7 +253,7 @@
 						</div>
 
 						<div class="dialog" id="dlg_register"
-							style="width: 550px; height: 280px">
+							style="width: 550px; height: 280px; margin:100px auto;">
 							<div class="dlg_title">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
 							<div class="dlg_content">
 								<div class="frm_loadstatus" style="display: none"></div>
@@ -310,8 +284,8 @@
 										<td></td>
 										<td>
 											<input type="text" id="captConfirm" style="width: 75px; height: 21px; float: left; margin-right: 10px"
-											placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> <img
-											id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
+											placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> 
+											<img id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
 											style="width: 80px; height: 30px" />
 											
 										</td>
@@ -335,11 +309,16 @@
 						<div class="box rb ovh txtC menu">
 							<h3 class="bhead">WEB CÁC DÒNG HỌ</h3>
 							<div class="grb">
-								<ul id="weblink"></ul>
-								<p class="see_more">
-									<a href="#">Xem thêm</a>
-								</p>
-							</div>
+        						<ul id="weblink">
+        							<li><a target="_blank" href="http://www.hophamvietnam.org/">Họ Phạm Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hohoanghuynhvietnam.vn/">Họ Hoàng - Huỳnh</a></li>
+        							<li><a target="_blank" href="http://hovuvovietnam.com/Dong-ho-Vu-Vo-Viet-Nam_t_304.html">Họ Vũ - Võ Việt</a></li>
+        							<li><a target="_blank" href="http://honinh.vn/">Họ Ninh Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hodovietnam.vn/">Họ Đỗ Việt Nam</a></li>
+        							<li><a target="_blank" href="http://www.phantocvietnam.org/">Họ Phan Việt Nam</a></li>
+        							<li><a target="_blank" href="http://hovanvietnam.com/">Họ Văn Việt Nam</a></li>
+        						</ul>   
+    						</div>
 						</div>
 
 						<div class="box rb ovh txtC menu">
