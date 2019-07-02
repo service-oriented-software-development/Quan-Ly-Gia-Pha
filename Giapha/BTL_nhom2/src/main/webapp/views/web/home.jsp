@@ -253,7 +253,7 @@
 						</div>
 
 						<div class="dialog" id="dlg_register"
-							style="width: 550px; height: 280px">
+							style="width: 550px; height: 280px; margin:0 auto">
 							<div class="dlg_title">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
 							<div class="dlg_content">
 								<div class="frm_loadstatus" style="display: none"></div>
@@ -284,8 +284,8 @@
 										<td></td>
 										<td>
 											<input type="text" id="captConfirm" style="width: 75px; height: 21px; float: left; margin-right: 10px"
-											placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> <img
-											id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
+											placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> 
+											<img id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
 											style="width: 80px; height: 30px" />
 											
 										</td>
