@@ -101,13 +101,14 @@ public class ImageControl {
 		this.us.releaseConnection();
 	}
 
-	public String viewImage(ArrayList<ImageObject> items) {
-		int doi;		
+	public String viewImage(ArrayList<ImageObject> items) {		
 		String tmp = "";
-
+		tmp+="<div>";
 		for (ImageObject item : items) {
-			tmp +="<img align=\"absmiddle\" src=\"/adv/adimgs/"+item.getUrl()+"\" ";
+			
+			tmp +="<img src=\"/adv/adimgs/"+item.getUrl()+"\" align=\"absmiddle\" id=\"img1\"/>";
 		}
+		tmp+="</div>";
 		return tmp;
 	}
 

@@ -54,7 +54,7 @@ public class ImageImpl extends BasicImpl implements Image {
 
 	public ResultSet getImages(ImageObject similar, int at, byte total) {
 		String sql = "select * from Image ";
-		sql += "where father="+similar.getParentage_id();
+		sql += "where parentage_id="+similar.getParentage_id();
 		sql += " Limit " + at + "," + total;
 		return this.get(sql);
 	}

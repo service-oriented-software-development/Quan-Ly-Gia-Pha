@@ -253,7 +253,7 @@
 						</div>
 
 						<div class="dialog" id="dlg_register"
-							style="width: 550px; height: 280px; margin:0 auto">
+							style="width: 550px; height: 280px; margin:100px auto;">
 							<div class="dlg_title">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
 							<div class="dlg_content">
 								<div class="frm_loadstatus" style="display: none"></div>

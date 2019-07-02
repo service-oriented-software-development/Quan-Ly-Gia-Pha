@@ -88,7 +88,7 @@ function __doPostBack(eventTarget, eventArgument) {
 						<a href="/adv/parentage/ae">Thông tin dòng họ</a> 
 						<a href="/adv/individual/ae">Quản lý phả đồ</a> 
 						<a href="#">Danh sách thành viên</a> 
-						<a href="/adv/album">Album ảnh</a>
+						<a href="/adv/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -129,14 +129,14 @@ function __doPostBack(eventTarget, eventArgument) {
     
 </table>-->
 
-
+				<div class="container" id="ctn"></div>
 				<div class="container">
 					<form id="album" method="post" action=""
 						enctype="multipart/form-data">
 						<input id="img-format" type="file" onchange="changeimg(event)"
 							hidden="hidden" accept=".png, .jpg,.jpeg" /> <img id="img1"
 							src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose"
-							style="width: 100%"> <a class="btn" onclick="add_img()">Add</a>
+							style="width: 100%"/> <a class="btn" onclick="add_img()">Add</a>
 					</form>
 				</div>
 
@@ -163,7 +163,8 @@ function __doPostBack(eventTarget, eventArgument) {
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-
+			//$("#ctn").html('hhh');
+			loadimg();
 		});
 
 		function add_img() {
@@ -171,7 +172,7 @@ function __doPostBack(eventTarget, eventArgument) {
 		}
 
 		function loadimg() {
-			var url = "http://localhost:8080/adv/parentage/view?name=" + name;
+			var url = "http://localhost:8080/adv/album";
 			var request;
 
 			if (window.XMLHttpRequest) {
@@ -191,7 +192,7 @@ function __doPostBack(eventTarget, eventArgument) {
 			function getInfo() {
 				if (request.readyState == 4) {
 					var val = request.responseText;
-					$("#list_gp").html(val);
+					$("#ctn").html(val);
 				}
 			}
 		}
