@@ -61,7 +61,7 @@ public class IndividualAE extends HttpServlet {
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
 			prO.setAccount_name(ac.getAccountname());
 
-			// thông tin dòng họ
+			// thÃ´ng tin dÃ²ng há»�
 			request.setAttribute("prt", prO);
 			request.setAttribute("prname", CharacterReference.decode(prO.getParentage_name()));
 			request.setAttribute("pracname", CharacterReference.decode(prO.getAccount_name()));
@@ -71,7 +71,7 @@ public class IndividualAE extends HttpServlet {
 			request.setAttribute("prhistory", CharacterReference.decode(prO.getHistory_of_parentage()));
 			request.setAttribute("pradr", CharacterReference.decode(prO.getAddress()));
 
-			// thông tin thành viên			
+			// thÃ´ng tin thÃ nh viÃªn			
 			int id = Integer.parseInt(request.getParameter("id"));
 			String img = request.getParameter("img");
 			String imgchild = request.getParameter("imgchild");
@@ -110,7 +110,7 @@ public class IndividualAE extends HttpServlet {
 			
 			
 
-			// thông tin thành viên thêm
+			// thÃ´ng tin thÃ nh viÃªn thÃªm
 			ArrayList<IndividualObject> bro = ind.getIndividuals(indo, 1, (byte) 100);
 			String tmp = "";
 			int i = 1;
@@ -128,7 +128,7 @@ public class IndividualAE extends HttpServlet {
 				parent = ind.getIndividual(indo.getFather());
 			} else {
 				parent = new IndividualObject();
-				parent.setFullname("Thủy tổ");
+				parent.setFullname("Thá»§y tá»•");
 			}
 			IndividualObject child = new IndividualObject();
 			child.setFather(indo.getIndividual_id());
@@ -154,7 +154,7 @@ public class IndividualAE extends HttpServlet {
 			
 			
 			System.out.print(imgchild);
-			///ảnh hậu duệ 
+			///áº£nh háº­u duá»‡ 
 			if (imgchild != null) {
 				if (!imgchild.equalsIgnoreCase("")&&!imgchild.equalsIgnoreCase("undefied")) {
 					
@@ -186,7 +186,7 @@ public class IndividualAE extends HttpServlet {
 		}
 		
 		if(act!=null) {
-			if (!act.equalsIgnoreCase("del") && !act.equalsIgnoreCase("undefied")) { // Thêm & Sửa
+			if (!act.equalsIgnoreCase("del") && !act.equalsIgnoreCase("undefied")) { // ThÃªm & Sá»­a
 				String data = request.getParameter("data");
 				HttpUtil util = new HttpUtil(data);
 				IndividualObject inds = util.toModel(IndividualObject.class);
@@ -232,17 +232,15 @@ public class IndividualAE extends HttpServlet {
 				}
 
 			}
-//					else {
-//				out.println("You need to except to change avatar!#");
-//			}
+			
 		}else {
 			String fileimg = uploadFile(request);
 			if(request.getParameter("addchild")!=null) {
 				request.setAttribute("childavatar", fileimg);
-				response.sendRedirect(request.getContextPath()+"/individual/ae?id="+id+"&imgchild="+fileimg); //chọn ảnh
+				response.sendRedirect(request.getContextPath()+"/individual/ae?id="+id+"&imgchild="+fileimg); //chá»�n áº£nh
 			}else {
 				request.setAttribute("indavatar", fileimg);
-				response.sendRedirect(request.getContextPath()+"/individual/ae?id="+id+"&img="+fileimg); //chọn ảnh
+				response.sendRedirect(request.getContextPath()+"/individual/ae?id="+id+"&img="+fileimg); //chá»�n áº£nh
 			}
 			
 		}

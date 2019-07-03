@@ -131,13 +131,12 @@ function __doPostBack(eventTarget, eventArgument) {
 
 				<div class="container" id="ctn"></div>
 				<div class="container">
-					<form id="album" method="post" action="http://localhost:8080/adv/album"
-						enctype="multipart/form-data">
-						<input id="img-format" type="file" onchange="changeimg(event)"
-							 accept=".png, .jpg,.jpeg" /> <img id="img0"
-							src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose"
-							style="width: 100%"/> <button class="btn" type="submit()">Add</button>
+					<form id="album" method="post" action="http://localhost:8080/adv/image/ae" enctype="multipart/form-data">
+						<input id="img-format" name="img-format" type="file" onchange="changeimg(event)" accept=".png, .jpg,.jpeg" /> 
+						<img id="img0" src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose" style="width: 100%"/>
+						<button class="btn" type="submit" >Add</button>
 					</form>
+					 
 				</div>
 
 
