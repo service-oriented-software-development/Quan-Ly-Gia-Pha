@@ -252,58 +252,7 @@
 							</div>
 						</div>
 
-						<div class="dialog" id="dlg_register" style="width: 550px; height: 280px;margin: 100px auto;">
-							<div class="dlg_title">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
-							<div class="dlg_content">
-								<div class="frm_loadstatus" style="display: none"></div>
-								<form name="frm_dk" id="frm_dk">
-								<table border="0" style="width: 100%" class="frm_data">								
-									<tr>
-										<td>Tên đăng nhập</td>
-										<td>
-											<input type="text" name="UserName" id="UserName" style="width: 200px"  />
-										 	<span class="legend">(Viết liền, không dấu, tối đa 20 ký tự)</span>
-										 </td>
-									</tr>
-									<tr>
-										<td>Mật khẩu</td>
-										<td>
-											<input type="password" style="width: 200px" name="Password" id="Password" />
-										 	<span class="legend">(Tối thiểu 6 ký tự, tối đa 12 ký tự)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>Xác nhận<br />Mật khẩu
-										</td>
-										<td>
-											<input type="password" style="width: 200px" name="ConfirmPassword" id="ConfirmPassword" />
-										</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>
-											<input type="text" id="captConfirm" style="width: 75px; height: 21px; float: left; margin-right: 10px"
-											placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> 
-											<img id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
-											style="width: 80px; height: 30px" />
-											
-										</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td style="padding-top: 15px !important; vertical-align: top"><input
-											type="button" onclick="register()" id="btn_register" value="Đăng ký"
-											style="float: left; height: 25px;" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td id="update_msg"></td>
-									</tr>
-								</table>
-								</form>
-							</div>
-							<input type="hidden" value="0" id="hdpr" name="hdpr" />
-						</div>
+						
 
 						<div class="box rb ovh txtC menu">
 							<h3 class="bhead">WEB CÁC DÒNG HỌ</h3>
@@ -457,6 +406,58 @@
 
 		}
 	</script>
-
+	<div class="dialog modal" id="dlg_register" style="width: 550px; height: 280px;margin: 100px auto;">
+		<div class="dlg_title" style="">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
+		<div class="dlg_content">
+			<div class="frm_loadstatus" style="display: none"></div>
+			<form name="frm_dk" id="frm_dk">
+			<table border="0" style="width: 100%" class="frm_data">								
+				<tr>
+					<td>Tên đăng nhập</td>
+					<td>
+						<input type="text" name="UserName" id="UserName" style="width: 200px"  />
+					 	<span class="legend">(Viết liền, không dấu, tối đa 20 ký tự)</span>
+					 </td>
+				</tr>
+				<tr>
+					<td>Mật khẩu</td>
+					<td>
+						<input type="password" style="width: 200px" name="Password" id="Password" />
+					 	<span class="legend">(Tối thiểu 6 ký tự, tối đa 12 ký tự)</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Xác nhận<br />Mật khẩu
+					</td>
+					<td>
+						<input type="password" style="width: 200px" name="ConfirmPassword" id="ConfirmPassword" />
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="text" id="captConfirm" style="width: 75px; height: 21px; float: left; margin-right: 10px"
+						placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> 
+						<img id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha" alt="Loading..."
+						style="width: 80px; height: 30px" />
+						
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="padding-top: 15px !important; vertical-align: top"><input
+						type="button" onclick="register()" id="btn_register" value="Đăng ký"
+						style="float: left; height: 25px;" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td id="update_msg"></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+		<input type="hidden" value="0" id="hdpr" name="hdpr" />
+		<a class="close-modal" style="margin-top:5.5px; height:3px; ">Close</a>
+	</div>
 </body>
 </html>
