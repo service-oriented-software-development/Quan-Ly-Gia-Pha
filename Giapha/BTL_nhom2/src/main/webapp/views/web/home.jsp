@@ -69,7 +69,7 @@
 					  
 					     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 					     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-					     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+					     <script src="adjs/bootstrap.min.js"></script>
 
 					</div>
 					<div class="ss_vlist">
@@ -100,7 +100,7 @@
 									<li><a class="active" href="">Trang chủ</a></li>
 									<li><a href="#">Tin
 											tức</a></li>
-									<li><a href="/adv/view/parentage">Gia
+									<li><a href="/adv/parentage/view">Gia
 											phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
 									<li><a href="#">Liên hệ -
@@ -364,42 +364,8 @@
 		}
 
 		$(document).ready(function() {
-			
-			
-			//if('${acExist}'!=""){
-			//	alert('${acExist}');
-			//}
+
 		});
-
-		function loadGp() {
-			//Console.log("loadgp");
-			$("#list_gp").html(
-					'<img src="<c:url value='/adimgs/loading1.gif'/>">');
-			var name = $("#name").val();
-			var url = "http://localhost:8080/adv/parentage/view?name=" + name;
-			var request;
-
-			if (window.XMLHttpRequest) {
-				request = new XMLHttpRequest();
-			} else if (window.ActiveXObject) {
-				request = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-
-			try {
-				request.onreadystatechange = getInfo;
-				request.open("GET", url, true);
-				request.send();
-			} catch (e) {
-				alert("Unable to connect to server");
-			}
-
-			function getInfo() {
-				if (request.readyState == 4) {
-					var val = request.responseText;
-					$("#list_gp").html(val);
-				}
-			}
-		}
 	
 		
 		function logout() {

@@ -63,7 +63,6 @@
         <a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a>
         <a href="<c:url value='/view/tree'/>">Quản lý phả đồ</a>
         <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=danh-sach-thanh-vien">Danh sách thành viên</a>
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=nttt">Nghĩa trang dòng họ</a>
         <a href="/adv/image/view">Album ảnh</a>
     </div>    
     <h2 class="title">Tin tức</h2>

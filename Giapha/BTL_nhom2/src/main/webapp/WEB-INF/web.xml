@@ -96,16 +96,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ViewParentage</display-name>
-    <servlet-name>ViewParentage</servlet-name>
-    <servlet-class>jsoft.ads.main.ViewParentage</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ViewParentage</servlet-name>
-    <url-pattern>/view/parentage</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>image/view</display-name>
     <servlet-name>image/view</servlet-name>
     <servlet-class>jsoft.ads.image.ImageView</servlet-class>
@@ -123,5 +113,15 @@
   <servlet-mapping>
     <servlet-name>ImageAE</servlet-name>
     <url-pattern>/image/ae</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ParentageInfoView</display-name>
+    <servlet-name>ParentageInfoView</servlet-name>
+    <servlet-class>jsoft.ads.main.ParentageInfoView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ParentageInfoView</servlet-name>
+    <url-pattern>/parentage/info/view</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -61,7 +61,7 @@ public class IndividualAE extends HttpServlet {
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
 			prO.setAccount_name(ac.getAccountname());
 
-			// thÃ´ng tin dÃ²ng há»�
+			// thông tin dòng họ
 			request.setAttribute("prt", prO);
 			request.setAttribute("prname", CharacterReference.decode(prO.getParentage_name()));
 			request.setAttribute("pracname", CharacterReference.decode(prO.getAccount_name()));
@@ -71,7 +71,7 @@ public class IndividualAE extends HttpServlet {
 			request.setAttribute("prhistory", CharacterReference.decode(prO.getHistory_of_parentage()));
 			request.setAttribute("pradr", CharacterReference.decode(prO.getAddress()));
 
-			// thÃ´ng tin thÃ nh viÃªn			
+			// thông tin thành viên		
 			int id = Integer.parseInt(request.getParameter("id"));
 			String img = request.getParameter("img");
 			String imgchild = request.getParameter("imgchild");
@@ -110,7 +110,7 @@ public class IndividualAE extends HttpServlet {
 			
 			
 
-			// thÃ´ng tin thÃ nh viÃªn thÃªm
+			// thông tin thành viên thêm
 			ArrayList<IndividualObject> bro = ind.getIndividuals(indo, 1, (byte) 100);
 			String tmp = "";
 			int i = 1;
@@ -153,8 +153,8 @@ public class IndividualAE extends HttpServlet {
 			
 			
 			
-			System.out.print(imgchild);
-			///áº£nh háº­u duá»‡ 
+			
+			///ảnh
 			if (imgchild != null) {
 				if (!imgchild.equalsIgnoreCase("")&&!imgchild.equalsIgnoreCase("undefied")) {
 					
