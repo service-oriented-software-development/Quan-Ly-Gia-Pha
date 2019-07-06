@@ -111,7 +111,7 @@ public class ParentageImpl extends BasicImpl implements Parentage {
 		String sql = "select * from parentage ";
 		if(similar!=null) {
 			String s = similar.getParentage_name();
-			sql += "where parentage_name like '%"+s+"%' or address like '%"+s+"%'";
+			sql += "where parentage_name like '%"+s+"%' or head_of_parentage_address like '%"+s+"%'";
 		}
 		sql += " Limit " + at + "," + total;
 		return this.get(sql);
