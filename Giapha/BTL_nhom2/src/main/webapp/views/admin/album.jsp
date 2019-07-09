@@ -134,7 +134,7 @@ function __doPostBack(eventTarget, eventArgument) {
 					<form id="album" method="post" action="http://localhost:8080/adv/image/ae" enctype="multipart/form-data">
 						<input id="img-format" name="img-format" type="file" onchange="changeimg(event)" accept=".png, .jpg,.jpeg" /> 
 						<img id="img0" src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose" style="width: 100%"/>
-						<button class="btn" type="submit" >Add</button>
+						<button class="btn" type="submit" >Lưu</button>
 					</form>
 					 
 				</div>

@@ -9,7 +9,10 @@
 .container img {
   width: 80%;
   height: auto;
-  opacity: 0.6;
+}
+
+#img0{
+	opacity:0.6;
 }
 
 /* Style the button and place it in the middle of the container/image */

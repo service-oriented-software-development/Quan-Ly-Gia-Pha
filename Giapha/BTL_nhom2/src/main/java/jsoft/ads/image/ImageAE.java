@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -17,14 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 import Common.ConnectionPool;
-import jsoft.ads.individual.IndividualControl;
-import jsoft.ads.library.HttpUtil;
 import jsoft.ads.object.AccountObject;
 import jsoft.ads.object.ImageObject;
-import jsoft.ads.object.IndividualObject;
-import jsoft.ads.object.ParentageObject;
-import jsoft.ads.parentage.ParentageControl;
-import net.htmlparser.jericho.CharacterReference;
 
 @MultipartConfig
 public class ImageAE extends HttpServlet {
