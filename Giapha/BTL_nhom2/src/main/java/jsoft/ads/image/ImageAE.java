@@ -72,13 +72,16 @@ public class ImageAE extends HttpServlet {
 		if (act != null && !act.equalsIgnoreCase("undefied")) {
 			item1.setUrl(act);
 			if (imgcrt.delImage(item1)) {
+				String source = request.getServletContext().getRealPath("")+File.separator+ UPLOAD_DIR + File.separator+act;
+				File file = new File(source);
+				file.delete();
 				response.sendRedirect(request.getContextPath() + "/image/view");
 			}else {
 				response.sendRedirect(request.getContextPath() + "/image/view");
 			}
 		} else {
 			if (fileimg == null || fileimg.equals("")) {
-				request.setAttribute("Error", "Chưa chọn tệp.");
+				request.setAttribute("Error", "ChÆ°a chá»�n tá»‡p.");
 				response.sendRedirect(request.getContextPath() + "/image/view");
 			} else {
 				item.setUrl(fileimg);

@@ -100,16 +100,17 @@ public class ImageControl {
 		for (ImageObject item : items) {
 			tmp += "<div class=\"col-md-12 col-lg-4\">";
 			tmp += "<div class=\"card my-2\">";
-			tmp += "<div class=\"card-header bg-primary text-light font-weight-bold\">Ảnh " + i;
+			tmp += "<div class=\"card-header bg-primary text-light font-weight-bold\">Ảnh " + (i++);
 			tmp += "</div>";
 			tmp += "<div class=\"card-body p-0\">";
 			tmp += "<img class=\"img-responsive w-100\" style='height:350px' src=\"/adv/adimgs/" + item.getUrl()
 					+ "\" align=\"absmiddle\" id=\"img1\"/>";
 			tmp += "</div>";
 			tmp += "<div class=\"card-footer h-150px\">";
-			tmp += "<form id=\"del_img\" action=\"/adv/image/ae\" method=\"post\">";
-			tmp += "<input name=\"del_img\" type=\"hidden\" value=\"" + item.getUrl() + "\"/>";
-			tmp += "<a href='javascript:del_img()' class=\"btn btn-outline-danger px-4\">Xóa Ảnh</a>";
+			tmp += "<form id=\"del_img\" action=\"/adv/image/ae?del_img="+item.getUrl()+"\" method=\"post\">";
+			//tmp += "<input name=\"del_img\" type=\"hidden\" value=\"" + item.getUrl() + "\"/>";
+			//tmp += "<a href='javascript:del_img()' class=\"btn btn-outline-danger px-4\">Xóa Ảnh</a>";
+			tmp += "<input type=\"submit\" class=\"btn btn-outline-danger px-4\" style=\"float:right\" value=\"Xóa Ảnh\"/>";
 			tmp += "</form>";
 			tmp += "</div>";
 			tmp += "</div>";
