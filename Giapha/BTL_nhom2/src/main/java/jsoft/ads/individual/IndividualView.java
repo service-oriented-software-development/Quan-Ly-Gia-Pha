@@ -56,7 +56,7 @@ public class IndividualView extends HttpServlet {
 
 				fs.releaseConnection();
 
-				out.print(fs.viewIndividual(items));
+				out.print(fs.viewIndividual(items,true));
 			}
 		}
 	}

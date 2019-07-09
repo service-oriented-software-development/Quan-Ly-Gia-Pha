@@ -83,6 +83,12 @@
 </div>
 
 <!-- content -->
+<div class="page_title" style="margin-bottom: 15px">
+    <h2>Phả đồ</h2>
+    <input type="text" placeholder="từ đời"/>
+    <input type="text" placeholder="đến đời"/>
+    <div class="toolbox"><a href="javascript:saveGiaPhaInfo()" id="btn_save" class="ubtn save">Hiển thị</a></div>
+</div>
 <div class="ucp_def_right" id="gp_phahe">
 
 </div>

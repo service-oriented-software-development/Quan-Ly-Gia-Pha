@@ -40,7 +40,7 @@ public class ParentageInfoView extends HttpServlet {
 		ArrayList<IndividualObject> items = indc.getIndividuals(prO.getParentage_id());
 		ArrayList<ImageObject> imgs = imgc.getImages(prtid);
 		ArrayList<IndividualObject> inds = indc.getIndividuals(prtid);
-		String fmtree = indc.viewIndividual(inds);
+		String fmtree = indc.viewIndividual(inds,false);
 		pr.releaseConnection();
 		
 		request.setAttribute("prt", prO);

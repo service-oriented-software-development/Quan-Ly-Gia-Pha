@@ -140,7 +140,7 @@ public class IndividualControl {
 		this.us.releaseConnection();
 	}
 
-	public String viewIndividual(ArrayList<IndividualObject> items) {
+	public String viewIndividual(ArrayList<IndividualObject> items, boolean b) {
 		int doi;		
 		String tmp = "";
 		tmp +="<div class=\"rcontent-item item3\" >";
@@ -154,8 +154,10 @@ public class IndividualControl {
 			tmp +="<img align=\"absmiddle\" src=\"/adv/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
 			tmp +="<img src=\"/adv/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
 			tmp +="<button class=\"tree\">"+ item.getFullname() +"</button>";
-			tmp +="<button class=\"tree tree1\" onclick=\"openedit("+item.getIndividual_id()+")\"><img src=\"/adv/adimgs/pencil.png\" width=\"14px\" heigh=\"14px\"></button>";
-			tmp +="<button class=\"tree tree1\" onclick=\"del("+item.getIndividual_id()+")\"><img src=\"/adv/adimgs/delete.png\" width=\"14px\" heigh=\"14px\"></button>";
+			if(b) {
+				tmp +="<button class=\"tree tree1\" onclick=\"openedit("+item.getIndividual_id()+")\"><img src=\"/adv/adimgs/pencil.png\" width=\"14px\" heigh=\"14px\"></button>";
+				tmp +="<button class=\"tree tree1\" onclick=\"del("+item.getIndividual_id()+")\"><img src=\"/adv/adimgs/delete.png\" width=\"14px\" heigh=\"14px\"></button>";
+			}
 			tmp +="</br>";
 		}
 

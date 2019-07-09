@@ -135,15 +135,14 @@ public class IndividualAE extends HttpServlet {
 			child.setParentage_id(indo.getParentage_id());
 			ArrayList<IndividualObject> childs = ind.getIndividuals(child, 1, (byte) 100);
 			String tmp1 = "";
-			int j = 1;
-
+			
 			for (IndividualObject item : childs) {
 
 				String fn = CharacterReference.decode(item.getFullname());
 				if (fn.indexOf('&') > -1) {
-					tmp1 += (j++) + ":" + fn.split("&")[0] + "; ";
+					tmp1 += item.getBranch().charAt(item.getBranch().length()-1) + ":" + fn.split("&")[0] + "; ";
 				} else {
-					tmp1 += (j++) + ":" + fn + "; ";
+					tmp1 += item.getBranch().charAt(item.getBranch().length()-1) + ":" + fn + "; ";
 				}
 			}
 
