@@ -5,23 +5,24 @@
 <html>
 <head>
 <title>Album ảnh - Gia phả Việt Nam</title>
-<script type="text/javascript"
-	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
 <link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"
 	type="text/css" />
 <link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"
 	type="text/css" />
 <link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"
 	type="text/css" />
-<link href="<c:url value='/adcss/img.css'/>" rel="stylesheet"
-	type="text/css" />
-<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>"></script>
-<script type="text/javascript" src="plugins/json2html/json2html.js"></script>
+<link rel="stylesheet"
+	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" />
 <script type="text/javascript"
-	src="plugins/json2html/jquery.json2html.js"></script>
-<script type="text/javascript" src="plugins/fckeditor/ckeditor.js"></script>
+	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
+<script type="text/javascript"
+	src="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'/>"></script>
+<script type="text/javascript"
+	src="<c:url value='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>"></script>
 <script type="text/javascript"
 	src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/adjs/action.js'/>"></script>
 </head>
 <body>
 
@@ -30,32 +31,6 @@
 		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT"
 			value="" /> <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
 			value="wEPDwUKLTg3MzMwNzE5MA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUdY3RsMDIkbGVmdF9jdHJsMCRsb2dvdXQkY3RsMDEFHWN0bDAyJGxlZnRfY3RybDAkbG9nb3V0JGN0bDAzadN+P9zhWVj2MoOhWVvrb/1oQdzCWA6YBcCm6q2/Gy4=" />
-	</div>
-
-	<!-- <script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
- -->
-
-
-	<div>
-
-		<input type="hidden" name="__VIEWSTATEGENERATOR"
-			id="__VIEWSTATEGENERATOR" value="1B1595A3" /> <input type="hidden"
-			name="__EVENTVALIDATION" id="__EVENTVALIDATION"
-			value="wEdAAKrmIrBZPxYN6fHGmL1FQBHtvbLCqqcKiHAzR+1l9mm/TAuSWXG6uBFliaH6afUAsfzl3JJ6au55HPtNm1SJU4F" />
 	</div>
 
 	<div class="main_frame">
@@ -85,10 +60,9 @@ function __doPostBack(eventTarget, eventArgument) {
 				<div class="ucpleft_group" id="lgr">
 					<h2 class="title">Dòng họ</h2>
 					<div class="gitem">
-						<a href="/adv/parentage/ae">Thông tin dòng họ</a> 
-						<a href="/adv/individual/ae">Quản lý phả đồ</a> 
-						<a href="#">Danh sách thành viên</a> 
-						<a href="/adv/image/view">Album ảnh</a>
+						<a href="/adv/parentage/ae">Thông tin dòng họ</a> <a
+							href="/adv/view/tree">Quản lý phả đồ</a> <a href="#">Danh
+							sách thành viên</a> <a href="/adv/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -119,26 +93,22 @@ function __doPostBack(eventTarget, eventArgument) {
 				<div class="page_title" style="margin-bottom: 15px">
 					<h2>Ảnh của dòng họ</h2>
 					<div class="toolbox">
-						<a href="javascript:void(0)" id="btn_save" class="ubtn save">Lưu
-							lại</a>
+						<form id="album" method="post"
+							action="http://localhost:8080/adv/image/ae"
+							enctype="multipart/form-data">
+							<input id="img-format" name="img-format" type="file"
+								onchange="changeimg(event)" accept=".png, .jpg,.jpeg" />
+							<button class="btn" type="submit">Lưu</button>
+						</form>
 					</div>
 
 				</div>
 				<div class="load_progress"></div>
-				<!--<table border="1" style="width: 100%; border-collapse: collapse" class="ucp_tbl form">
-    
-</table>-->
 
-				<div class="container" id="ctn"></div>
+
 				<div class="container">
-					<form id="album" method="post" action="http://localhost:8080/adv/image/ae" enctype="multipart/form-data">
-						<input id="img-format" name="img-format" type="file" onchange="changeimg(event)" accept=".png, .jpg,.jpeg" /> 
-						<img id="img0" src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose" style="width: 100%"/>
-						<button class="btn" type="submit" >Add</button>
-					</form>
-					 
+					<div class="row" id="ctn"></div>
 				</div>
-
 
 
 			</div>
@@ -149,11 +119,9 @@ function __doPostBack(eventTarget, eventArgument) {
 				<ul>
 					<li><a href="/adv/view">TRANG CHỦ</a></li>
 					<li><a href="#">TIN TỨC</a></li>
-					<li><a href="#">GIA PHẢ
-							VIỆT NAM</a></li>
+					<li><a href="#">GIA PHẢ VIỆT NAM</a></li>
 					<li><a href="#">GIỚI THIỆU</a></li>
-					<li><a href="#">LIÊN HỆ - GÓP
-							Ý</a></li>
+					<li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
 				</ul>
 			</div>
 			<p>&copy;</p>
@@ -165,8 +133,6 @@ function __doPostBack(eventTarget, eventArgument) {
 			//$("#ctn").html('hhh');
 			loadimg();
 		});
-
-		
 
 		function loadimg() {
 			var url = "http://localhost:8080/adv/album";
@@ -200,7 +166,6 @@ function __doPostBack(eventTarget, eventArgument) {
 			var files = evt.target.files;
 			var file = files[0];
 			var fileReader = new FileReader();
-			
 
 			fileReader.onload = function(progressEvent) {
 				var url = fileReader.result;
@@ -211,7 +176,9 @@ function __doPostBack(eventTarget, eventArgument) {
 			fileReader.readAsDataURL(file);
 		}
 		
-		
+		function del_img(){
+			$("#del_img").submit();
+		}
 	</script>
 </body>
 </html>

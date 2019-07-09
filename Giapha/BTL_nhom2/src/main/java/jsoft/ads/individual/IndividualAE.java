@@ -128,7 +128,7 @@ public class IndividualAE extends HttpServlet {
 				parent = ind.getIndividual(indo.getFather());
 			} else {
 				parent = new IndividualObject();
-				parent.setFullname("Thá»§y tá»•");
+				parent.setFullname("Thủy tổ");
 			}
 			IndividualObject child = new IndividualObject();
 			child.setFather(indo.getIndividual_id());

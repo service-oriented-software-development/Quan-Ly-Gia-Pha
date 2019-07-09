@@ -33,11 +33,11 @@ public class ImageImpl extends BasicImpl implements Image {
 	
 	public boolean delImage(ImageObject item) {
 		
-		String sql = "delete from Image where id=?";
+		String sql = "delete from image where url=?";
 		PreparedStatement pre;
 		try {
 			pre = this.con.prepareStatement(sql);
-			pre.setInt(1, item.getId());
+			pre.setString(1, item.getUrl());
 
 			return this.del(pre);
 		} catch (SQLException e) {
