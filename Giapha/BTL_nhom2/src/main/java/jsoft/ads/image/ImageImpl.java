@@ -51,6 +51,12 @@ public class ImageImpl extends BasicImpl implements Image {
 		sql += "where id = " + id;
 		return this.get(sql);
 	}
+	
+	public ResultSet getImages(int id) {
+		String sql = "select * from Image ";
+		sql += "where parentage_id = " + id;
+		return this.get(sql);
+	}
 
 	public ResultSet getImages(ImageObject similar, int at, byte total) {
 		String sql = "select * from Image ";

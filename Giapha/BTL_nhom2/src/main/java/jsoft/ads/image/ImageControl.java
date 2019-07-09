@@ -51,24 +51,24 @@ public class ImageControl {
 	}
 
 
-	public ImageObject getImages(int id) {
-		ResultSet rs = this.us.getImage(id);
-		ImageObject item = new ImageObject();
+	public ArrayList<ImageObject> getImages(int id) {
+		ResultSet rs = this.us.getImages(id);
+		ArrayList<ImageObject> items = new ArrayList<ImageObject>();
 		if (rs != null) {
 			try {
-				if (rs.next()) {
-					
+				while (rs.next()) {
+					ImageObject item = new ImageObject();
 					item.setId(rs.getInt("id"));
 					item.setParentage_id(rs.getInt("parentage_id"));
 					item.setUrl(rs.getString("url"));
-					
+					items.add(item);
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return item;
+		return items;
 	}
 
 	public ArrayList<ImageObject> getImages(ImageObject similar, int page, byte total) {

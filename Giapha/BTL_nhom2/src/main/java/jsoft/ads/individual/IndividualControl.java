@@ -151,8 +151,6 @@ public class IndividualControl {
 			for(int i = 0; i < doi; i++) {
 				tmp +="&nbsp;&nbsp;&nbsp;&nbsp;";
 			}
-			
-		
 			tmp +="<img align=\"absmiddle\" src=\"/adv/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
 			tmp +="<img src=\"/adv/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
 			tmp +="<button class=\"tree\">"+ item.getFullname() +"</button>";
