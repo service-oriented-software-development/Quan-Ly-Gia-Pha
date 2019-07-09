@@ -4,24 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Album ảnh - Gia phả Việt Nam</title>
-<script type="text/javascript"
-	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
-<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/img.css'/>" rel="stylesheet"
-	type="text/css" />
-<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>"></script>
-<script type="text/javascript" src="plugins/json2html/json2html.js"></script>
-<script type="text/javascript"
-	src="plugins/json2html/jquery.json2html.js"></script>
-<script type="text/javascript" src="plugins/fckeditor/ckeditor.js"></script>
-<script type="text/javascript"
-	src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
+	<title>Album ảnh - Gia phả Việt Nam</title>
+	<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet" type="text/css" />
+	<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet" type="text/css" />
+	<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>"/>
+	<script type="text/javascript" src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/adjs/action.js'/>"></script>
 </head>
 <body>
 
@@ -125,20 +118,72 @@ function __doPostBack(eventTarget, eventArgument) {
 
 				</div>
 				<div class="load_progress"></div>
-				<!--<table border="1" style="width: 100%; border-collapse: collapse" class="ucp_tbl form">
-    
-</table>-->
 
-				<div class="container" id="ctn"></div>
-				<div class="container">
-					<form id="album" method="post" action=""
-						enctype="multipart/form-data">
-						<input id="img-format" type="file" onchange="changeimg(event)"
-							hidden="hidden" accept=".png, .jpg,.jpeg" /> <img id="img1"
-							src="<c:url value='/adimgs/rose.jpg'/>" alt="Rose"
-							style="width: 100%"/> <a class="btn" onclick="add_img()">Add</a>
-					</form>
-				</div>
+			<div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="card my-2">
+                        <div class="card-header bg-primary text-light font-weight-bold">Ảnh 1
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="img/1.jpg" class="img-responsive w-100" style='height:350px'>
+                        </div>
+                        <div class="card-footer h-150px">
+                            <a href='#' class="btn btn-outline-danger px-4">Xóa Ảnh</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card my-2">
+                        <div class="card-header bg-primary text-light font-weight-bold">Ảnh 1
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="img/3.jpg" class="img-responsive w-100" style='height:350px'>
+                        </div>
+                        <div class="card-footer h-25">
+                            <a href='#' class="btn btn-outline-danger px-4">Xóa Ảnh</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card my-2">
+                        <div class="card-header bg-primary text-light font-weight-bold">Ảnh 1
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="img/4.jpg" class="img-responsive w-100" style='height:350px'>
+                        </div>
+                        <div class="card-footer h-25">
+                            <a href='#' class="btn btn-outline-danger px-4">Xóa Ảnh</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card my-2">
+                        <div class="card-header bg-primary text-light font-weight-bold">Ảnh 1
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="img/2.jpg" class="img-responsive w-100" style='height:350px'>
+                        </div>
+                        <div class="card-footer h-25">
+                            <a href='#' class="btn btn-outline-danger px-4">Xóa Ảnh</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Always add this Div to show Add New Room -->
+                <div class="col-md-12 col-lg-4">
+                    <div class="card my-2  ">
+                        <div class="card-header bg-dark text-light font-weight-bold text-center">Thêm Ảnh
+                        </div>
+                        <div class="card-body p-0 bg-dark d-flex align-items-center justify-content-center opacity-50-100"
+                            style="height: 350px">
+                            <span style='font-size:100px;'>&#10010;</span>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <!--END Ad New Room Div-->
+            </div>
+        </div>
 
 
 
@@ -167,10 +212,7 @@ function __doPostBack(eventTarget, eventArgument) {
 			loadimg();
 		});
 
-		function add_img() {
-			$("#img-format").click();
-		}
-
+		
 		function loadimg() {
 			var url = "http://localhost:8080/adv/album";
 			var request;
@@ -203,16 +245,18 @@ function __doPostBack(eventTarget, eventArgument) {
 			var files = evt.target.files;
 			var file = files[0];
 			var fileReader = new FileReader();
-			alert("hahah");
+			
 
 			fileReader.onload = function(progressEvent) {
 				var url = fileReader.result;
-				var myImg = document.getElementById("img1");
+				var myImg = document.getElementById("img0");
 				myImg.src = url;
 
 			}
 			fileReader.readAsDataURL(file);
 		}
+		
+		
 	</script>
 </body>
 </html>

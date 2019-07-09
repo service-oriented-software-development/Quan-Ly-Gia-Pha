@@ -23,7 +23,7 @@ public class ImageAE extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String UPLOAD_DIR = "adimgs";
 	private static final String CONTENT_TYPE = "text/html;charset=UTF-8";
-	
+
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -62,24 +62,41 @@ public class ImageAE extends HttpServlet {
 		if (cp == null) {
 			getServletContext().setAttribute("CPool", imgcrt.getCP());
 		}
-		
 
 		ImageObject item = new ImageObject();
 		String fileimg = uploadFile(request);
-		
-		item.setUrl(fileimg);
-		item.setParentage_id(1);
-		if (imgcrt.addImage(item)) {
-			response.sendRedirect(request.getContextPath() + "/image/view");
+
+		ImageObject item1 = new ImageObject();
+		String act = request.getParameter("del_img");
+
+		if (act != null && !act.equalsIgnoreCase("undefied")) {
+			item1.setUrl(act);
+			if (imgcrt.delImage(item1)) {
+				response.sendRedirect(request.getContextPath() + "/image/view");
+			}else {
+				response.sendRedirect(request.getContextPath() + "/image/view");
+			}
+		} else {
+			if (fileimg == null || fileimg.equals("")) {
+				request.setAttribute("Error", "Chưa chọn tệp.");
+				response.sendRedirect(request.getContextPath() + "/image/view");
+			} else {
+				item.setUrl(fileimg);
+				item.setParentage_id(1);
+				if (imgcrt.addImage(item)) {
+					response.sendRedirect(request.getContextPath() + "/image/view");
+				}
+			}
 		}
 		imgcrt.releaseConnection();
+
 	}
 
 	private String uploadFile(HttpServletRequest request) throws IOException, ServletException {
 
 		String fileName = "";
 		try {
-			Part filePart = request.getPart("img-format");			
+			Part filePart = request.getPart("img-format");
 			fileName = (String) getFileName(filePart);
 			String applicationPath = request.getServletContext().getRealPath("");
 			String basePath = applicationPath + File.separator + UPLOAD_DIR + File.separator;
