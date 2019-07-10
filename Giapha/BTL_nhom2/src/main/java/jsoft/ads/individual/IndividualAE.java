@@ -189,6 +189,7 @@ public class IndividualAE extends HttpServlet {
 				String data = request.getParameter("data");
 				HttpUtil util = new HttpUtil(data);
 				IndividualObject inds = util.toModel(IndividualObject.class);
+				IndividualObject indv = ind.getIndividual(Integer.parseInt(id));
 				inds.setFullname(CharacterReference.encode(inds.getFullname()));
 				File apath = new File(inds.getAvatar());
 				inds.setAvatar(apath.getName());				
@@ -200,8 +201,14 @@ public class IndividualAE extends HttpServlet {
 					if (inds.getDate_of_death() == "") {
 						inds.setDate_of_death(null);
 					}
+					
 					if (ind.editIndividual(inds)) {
 						out.println("Update Successfully");
+						if(indv.getAvatar()!=null && !indv.getAvatar().equalsIgnoreCase("default.png")) {
+							String source = request.getServletContext().getRealPath("")+File.separator+ UPLOAD_DIR + File.separator+indv.getAvatar();
+							File file = new File(source);
+							file.delete();
+						}
 
 					} else {
 						out.println("Update Failure!");
