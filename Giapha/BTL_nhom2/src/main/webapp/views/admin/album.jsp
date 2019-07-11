@@ -23,6 +23,11 @@
 <script type="text/javascript"
 	src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/adjs/action.js'/>"></script>
+<style>
+	#lgr{
+		a{color: black;!important}
+	}
+</style>
 </head>
 <body>
 
@@ -87,8 +92,6 @@
 
 			</div>
 			<div class="ucp_def_right">
-
-
 				<div class="page_title" style="margin-bottom: 15px">
 					<h2>Ảnh của dòng họ</h2>
 					<div class="toolbox">
@@ -96,8 +99,9 @@
 							action="http://localhost:8080/adv/image/ae"
 							enctype="multipart/form-data">
 							<input id="img-format" name="img-format" type="file"
-								onchange="changeimg(event)" accept=".png, .jpg,.jpeg" />
-							<button class="btn" type="submit">Lưu</button>
+								onchange="changeimg(event)" accept=".png, .jpg,.jpeg" 
+								style="color:white;cursor:pointer;"/>
+							<button class="btn" type="submit" style="color:white;border:1px solid white">Lưu</button>
 						</form>
 					</div>
 

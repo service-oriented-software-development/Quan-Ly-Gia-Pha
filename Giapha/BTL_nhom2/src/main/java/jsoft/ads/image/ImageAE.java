@@ -126,7 +126,6 @@ public class ImageAE extends HttpServlet {
 					outputStream.close();
 				}
 			}
-
 		} catch (Exception e) {
 			fileName = "";
 		}
