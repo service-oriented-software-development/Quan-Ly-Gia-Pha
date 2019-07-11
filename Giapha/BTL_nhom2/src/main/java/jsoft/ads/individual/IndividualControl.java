@@ -77,7 +77,31 @@ public class IndividualControl {
 		}
 		return item;
 	}
-
+	
+	public IndividualObject getLife(int prid) {
+		ResultSet rs = this.us.getLife(prid);
+		IndividualObject item = new IndividualObject();
+		if (rs != null) {
+			try {
+				if (rs.next()) {
+					
+					item.setIndividual_id(rs.getInt("Individual_id"));
+					item.setParentage_id(rs.getInt("parentage_id"));
+					item.setGender(rs.getInt("gender"));
+					item.setFullname(rs.getString("fullname"));
+					item.setFather(rs.getInt("father"));
+					item.setDate_of_death(rs.getString("date_of_death"));
+					item.setDate_of_birth(rs.getString("date_of_birth"));
+					item.setBranch(rs.getString("branch"));
+					item.setAvatar(rs.getString("avatar"));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return item;
+	}
 	public ArrayList<IndividualObject> getIndividuals(int prid) {
 		ResultSet rs = this.us.getIndividuals(prid);
 		ArrayList<IndividualObject> items = new ArrayList<IndividualObject>();
@@ -140,14 +164,20 @@ public class IndividualControl {
 		this.us.releaseConnection();
 	}
 
-	public String viewIndividual(ArrayList<IndividualObject> items, boolean b) {
+	public String viewIndividual(ArrayList<IndividualObject> items, boolean b, int life) {
 		int doi;		
 		String tmp = "";
 		tmp +="<div class=\"rcontent-item item3\" >";
-
+		if(b) {
+			tmp +="<h1>Từ đời 1 - Đến đời "+life+"</h1>";
+		}
 		for (IndividualObject item : items) {
 			doi = item.getBranch().split("\\.").length + 1;
-									
+			if(b) {
+				if(life+1<doi) {
+					continue;
+				}
+			}						
 			for(int i = 0; i < doi; i++) {
 				tmp +="&nbsp;&nbsp;&nbsp;&nbsp;";
 			}

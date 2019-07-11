@@ -143,5 +143,8 @@ public class IndividualImpl extends BasicImpl implements Individual {
 		String sql = "select * from individual where father=0 and parentage_id=?";
 		return this.get(sql, id);
 	}
-
+	public ResultSet getLife(int prid) {
+		String sql = "SELECT * FROM individual where parentage_id=? order by father desc limit 1 ";
+		return this.get(sql, prid);
+	}
 }

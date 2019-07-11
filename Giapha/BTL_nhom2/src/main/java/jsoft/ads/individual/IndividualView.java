@@ -49,14 +49,14 @@ public class IndividualView extends HttpServlet {
 			}
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
 
-			//int prid = Integer.parseInt(request.getParameter("prid"));
+			int life = Integer.parseInt(request.getParameter("life"));
 			if(prO.getParentage_id()>0) {
 				IndividualControl fs = new IndividualControl(cp);
 				ArrayList<IndividualObject> items = fs.getIndividuals(prO.getParentage_id());
 
 				fs.releaseConnection();
 
-				out.print(fs.viewIndividual(items,true));
+				out.print(fs.viewIndividual(items,true,life));
 			}
 		}
 	}
