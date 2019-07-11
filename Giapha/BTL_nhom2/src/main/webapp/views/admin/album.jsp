@@ -56,7 +56,6 @@
 		</div>
 		<div class="ucp_def_body">
 			<div class="ucp_def_left">
-
 				<div class="ucpleft_group" id="lgr">
 					<h2 class="title">Dòng họ</h2>
 					<div class="gitem">
