@@ -8,11 +8,13 @@
 <link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"
 	type="text/css" />
 <link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"
-	type="text/css" />
+	type="text/css"/>
 <link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"
 	type="text/css" />
-<link rel="stylesheet"
-	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" />
+<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"
+	type="text/css" />
+<!-- <link rel="stylesheet"
+	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" /> -->
 <script type="text/javascript"
 	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
 <script type="text/javascript"
@@ -24,9 +26,7 @@
 	src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/adjs/action.js'/>"></script>
 <style>
-	#lgr{
-		a{color: black;!important}
-	}
+	#lgr a{color: #19191a}
 </style>
 </head>
 <body>
@@ -50,7 +50,7 @@
 				<tbody>
 					<tr>
 						<td></td>
-						<td class="subleft"><a href="/adv/view">TRANG CHỦ</a> |</td>
+						<td class="subleft"><a href="/adv/view">TRANG CHỦ</a></td>
 						<td class="subcen"><c:out value="${prname}"></c:out></td>
 						<td class="subright">Người tạo: <c:out value="${pracname}"></c:out></td>
 						<td></td>

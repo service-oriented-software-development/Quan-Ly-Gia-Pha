@@ -108,8 +108,6 @@ public class ImageControl {
 			tmp += "</div>";
 			tmp += "<div class=\"card-footer h-150px\">";
 			tmp += "<form id=\"del_img\" action=\"/adv/image/ae?del_img="+item.getUrl()+"\" method=\"post\">";
-			//tmp += "<input name=\"del_img\" type=\"hidden\" value=\"" + item.getUrl() + "\"/>";
-			//tmp += "<a href='javascript:del_img()' class=\"btn btn-outline-danger px-4\">Xóa Ảnh</a>";
 			tmp += "<input type=\"submit\" class=\"btn btn-outline-danger px-4\" style=\"float:right\" value=\"Xóa Ảnh\"/>";
 			tmp += "</form>";
 			tmp += "</div>";
