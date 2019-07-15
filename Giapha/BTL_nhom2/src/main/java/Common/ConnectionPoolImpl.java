@@ -20,7 +20,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 		this.getDriver();
 		this.username = "root";
 		//this.userpass = "123";
-		this.userpass = "Anh1002";
+		this.userpass = "1234";
 		this.pool = new Stack<Connection>();
 	}
 	

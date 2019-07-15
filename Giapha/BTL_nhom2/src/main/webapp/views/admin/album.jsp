@@ -5,14 +5,10 @@
 <html>
 <head>
 <title>Album ảnh - Gia phả Việt Nam</title>
-<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"
-	type="text/css"/>
-<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"type="text/css" />
+<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"type="text/css"/>
+<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"type="text/css" />
+<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"type="text/css" />
 <!-- <link rel="stylesheet"
 	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" /> -->
 <script type="text/javascript"
