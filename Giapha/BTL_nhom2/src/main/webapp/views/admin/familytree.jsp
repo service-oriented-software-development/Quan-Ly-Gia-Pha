@@ -117,6 +117,7 @@ function loadPhaHe(){
 	if($("#life").val()=='0'){
 		if(parseInt("${prlife}")<5){
 			life=Math.floor(parseInt("${prlife}")/2);
+			if(life==0){life=1;}
 		}else{
 			life=5;
 		}

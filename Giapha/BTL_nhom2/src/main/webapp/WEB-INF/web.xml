@@ -124,4 +124,24 @@
     <servlet-name>ParentageInfoView</servlet-name>
     <url-pattern>/parentage/info/view</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SystemAdmin</display-name>
+    <servlet-name>SystemAdmin</servlet-name>
+    <servlet-class>jsoft.ads.main.SystemAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SystemAdmin</servlet-name>
+    <url-pattern>/system/admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerAE</display-name>
+    <servlet-name>ManagerAE</servlet-name>
+    <servlet-class>jsoft.ads.system.ManagerAE</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerAE</servlet-name>
+    <url-pattern>/manager/ae</url-pattern>
+  </servlet-mapping>
 </web-app>

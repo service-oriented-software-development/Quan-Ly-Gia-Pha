@@ -19,7 +19,10 @@ public class IndividualControl {
 	public boolean addIndividual(IndividualObject item) {
 		return this.us.addIndividual(item);
 	}
-
+	
+	public boolean addIndividualWeb(int i, int id) {
+		return this.us.addIndividualWeb(i,id);
+	} 
 	public boolean editIndividual(IndividualObject item) {
 
 		return this.us.editIndividual(item);

@@ -42,7 +42,7 @@
 	<form name="form1"  id="form1">
 		
 		<div class="wrapper">
-			<a href="default.aspx" title="Bấm vào đây đề về Trang chủ">
+			<a href="/adv/view" title="Bấm vào đây đề về Trang chủ">
 				<div class="banner txtC">
 					<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px" />
 				</div>

@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import Common.ConnectionPool;
 import jsoft.ads.basic.BasicImpl;
+import jsoft.ads.library.ListParentageWeb;
 import jsoft.ads.object.IndividualObject;
 
 public class IndividualImpl extends BasicImpl implements Individual {
@@ -58,6 +59,21 @@ public class IndividualImpl extends BasicImpl implements Individual {
 		}
 		return false;
 	}
+	
+	public boolean addIndividualWeb(int n, int id) {
+		ListParentageWeb view = new ListParentageWeb();
+		String sql = "insert into individual (branch,fullname,parentage_id) values";
+		sql += view.ViewIndividuals(n,id);
+		PreparedStatement pre;
+		try {
+			pre = this.con.prepareStatement(sql);
+			return this.add(pre);
+		} catch (SQLException e) {			  
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 
 	public boolean editIndividual(IndividualObject item) {
 		String sql = "update individual set fullname=?,gender=?,date_of_birth=?,date_of_death=? "

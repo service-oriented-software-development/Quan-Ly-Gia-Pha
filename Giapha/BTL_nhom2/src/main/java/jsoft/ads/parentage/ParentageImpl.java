@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import Common.ConnectionPool;
 import jsoft.ads.basic.BasicImpl;
+import jsoft.ads.library.ListParentageWeb;
 import jsoft.ads.object.ParentageObject;
 
 public class ParentageImpl extends BasicImpl implements Parentage {
@@ -37,6 +38,22 @@ public class ParentageImpl extends BasicImpl implements Parentage {
 			pre.setString(11, item.getConvention_of_parentage());
 			pre.setString(12, item.getCult_portion_land());
 			pre.setString(13, item.getAccount_name());
+			return this.add(pre);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	
+	public boolean addParentageWeb(int n) {
+		ListParentageWeb view = new ListParentageWeb();
+		String sql = "insert into parentage(parentage_name,account_name) values";
+		sql+=view.ParentageQuery(n);
+		PreparedStatement pre;
+		try {
+			pre = this.con.prepareStatement(sql);
 			return this.add(pre);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -97,6 +114,12 @@ public class ParentageImpl extends BasicImpl implements Parentage {
 		String sql = "select * from parentage where parentage_id=?";
 		return this.get(sql, id);
 	}
+	
+	public ResultSet getParentageid() {
+		String sql = "select max(parentage_id) from parentage";
+		return this.get(sql);
+	}
+	
 	public ResultSet getParentage(String value) {
 		String sql = "select * from parentage where account_name=?";
 		return this.get(sql, value);
