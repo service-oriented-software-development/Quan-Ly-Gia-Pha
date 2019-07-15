@@ -53,6 +53,7 @@ public class AccountControl {
 				if(rs.next()) {
 					item.setAccountname(rs.getString("account_name"));
 					item.setAccountpass(rs.getString("password"));
+					item.setRole(rs.getInt("role"));
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

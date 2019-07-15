@@ -12,6 +12,7 @@ import jsoft.ads.object.ParentageObject;
 public class ParentageControl {
 	ParentageImpl us;
 	IndividualControl indc;
+
 	public ParentageControl(ConnectionPool cp) {
 		super();
 		this.us = new ParentageImpl(cp);
@@ -22,6 +23,10 @@ public class ParentageControl {
 		return this.us.addParentage(item);
 	}
 
+	public boolean addParentageWeb(int n) {
+		return this.us.addParentageWeb(n);
+	}
+
 	public boolean editParentage(ParentageObject item) {
 
 		return this.us.editParentage(item);
@@ -29,6 +34,23 @@ public class ParentageControl {
 
 	public boolean delParentage(ParentageObject item) {
 		return this.us.delParentage(item);
+	}
+
+	public int getParentageid() {
+		ResultSet rs = this.us.getParentageid();
+		if (rs != null) {
+			try {
+				if (rs.next()) {
+
+					return rs.getInt(1);
+
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return 0;
 	}
 
 	public ParentageObject getParentage(int id) {
@@ -142,7 +164,7 @@ public class ParentageControl {
 					item.setAncestor(rs.getString("Ancestor"));
 					item.setHistory_of_parentage(rs.getString("History_of_parentage"));
 					item.setConvention_of_parentage(rs.getString("Convention_of_parentage"));
-					item.setCult_portion_land(it.size()+"");
+					item.setCult_portion_land(it.size() + "");
 					item.setAccount_name(rs.getString("Account_name"));
 					items.add(item);
 				}
@@ -166,15 +188,15 @@ public class ParentageControl {
 	public String viewParentage(ArrayList<ParentageObject> items) {
 
 		String tmp = "";
-		
+
 		for (ParentageObject item : items) {
 			ArrayList<IndividualObject> it = indc.getIndividuals(item.getParentage_id());
 			tmp += "<tr>";
 			tmp += "<td>1</td>";
-			tmp += "<td><a href=\"default.aspx?cp=dongho&amp;id=28220\">"+item.getParentage_name()+"</a></td>";
-			tmp += "<td>"+item.getHead_of_parentage_address()+"</td>";
-			tmp += "<td>"+item.getAncestor()+"</td>";
-			tmp += "<td>"+it.size()+"</td>";
+			tmp += "<td><a href=\"default.aspx?cp=dongho&amp;id=28220\">" + item.getParentage_name() + "</a></td>";
+			tmp += "<td>" + item.getHead_of_parentage_address() + "</td>";
+			tmp += "<td>" + item.getAncestor() + "</td>";
+			tmp += "<td>" + it.size() + "</td>";
 			tmp += "</tr>";
 		}
 		return tmp;

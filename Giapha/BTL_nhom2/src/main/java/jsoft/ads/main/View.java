@@ -66,8 +66,6 @@ public class View extends HttpServlet {
 		String accountpass = request.getParameter("pass");
 		String data = request.getParameter("data");
 
-		
-
 		if (data != null) {
 			System.out.println(data);
 			if (!data.equalsIgnoreCase("undefined")) {
@@ -92,13 +90,16 @@ public class View extends HttpServlet {
 
 			if (!accountname.equalsIgnoreCase("") && !accountpass.equalsIgnoreCase("")) {
 				AccountObject b = us.getAccount(accountname, accountpass);
-
 				us.releaseConnection();
 				if (b.getAccountname() != null) {
-					request.getSession().setAttribute("Loginned", b);
-					request.getSession().setAttribute("acname", accountname);
-					response.sendRedirect(request.getContextPath() + "/view");
-					
+					if (b.getRole() == 2) {						
+						response.sendRedirect(request.getContextPath() + "/system/admin");
+						request.getSession().setAttribute("Loginned", b);
+					} else {
+						request.getSession().setAttribute("Loginned", b);
+						request.getSession().setAttribute("acname", accountname);
+						response.sendRedirect(request.getContextPath() + "/view");
+					}
 				} else {
 					response.sendRedirect(request.getContextPath() + "/view?err=notok");
 				}
