@@ -203,15 +203,15 @@ public class IndividualAE extends HttpServlet {
 					}
 					
 					if (ind.editIndividual(inds)) {
-						out.println("Update Successfully");
-						if(indv.getAvatar()!=null && !indv.getAvatar().equalsIgnoreCase("default.png")) {
+						out.println("Update Successfully.");
+		 				if(indv.getAvatar()!=null && !indv.getAvatar().equalsIgnoreCase("default.png")) {
 							String source = request.getServletContext().getRealPath("")+File.separator+ UPLOAD_DIR + File.separator+indv.getAvatar();
 							File file = new File(source);
 							file.delete();
 						}
 
 					} else {
-						out.println("Update Failure!");
+						out.println("Update Failure.");
 					}
 				} else if (act.equalsIgnoreCase("add")) { // them
 					if (inds.getDate_of_birth() == "") {
@@ -221,7 +221,7 @@ public class IndividualAE extends HttpServlet {
 						inds.setDate_of_death(null);
 					}
 					if (ind.addIndividual(inds)) {
-						out.println("Add Successfully");
+						out.println("Add Successfully.");
 					} else {
 						System.out.print("fuck");
 						out.println("Add Failure, dupplicate number of indivisual!");

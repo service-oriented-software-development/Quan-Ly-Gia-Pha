@@ -113,18 +113,7 @@
 			</div>
 		</div>
 		<div class="ucp_def_footer"></div>
-		<div class="footer txtC w100">
-			<div class="clb ovh fw100 navBottom fonts ul-none">
-				<ul>
-					<li><a href="/adv/view">TRANG CHỦ</a></li>
-					<li><a href="#">TIN TỨC</a></li>
-					<li><a href="#">GIA PHẢ VIỆT NAM</a></li>
-					<li><a href="#">GIỚI THIỆU</a></li>
-					<li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
-				</ul>
-			</div>
-			<p>&copy;</p>
-		</div>
+		<%@include file="/views/common/footer.jsp" %>
 	</div>
 
 	<script type="text/javascript">

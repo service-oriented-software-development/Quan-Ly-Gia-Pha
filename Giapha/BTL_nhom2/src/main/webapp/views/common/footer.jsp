@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <div class="footer txtC w100">
 	<div class="col-sm-12 clb ovh navBottom fonts ul-none">
@@ -8,7 +7,6 @@
 			<li><a href="#">TRANG CHỦ</a></li>
 			<li><a href="#">TIN TỨC</a></li>
 			<li><a href="#">GIA PHẢ VIỆT NAM</a></li>
-			<li><a href="#">NGHĨA TRANG TRỰC TUYẾN</a></li>
 			<li><a href="#">GIỚI THIỆU</a></li>
 			<li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
 		</ul>
