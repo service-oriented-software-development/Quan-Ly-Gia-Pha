@@ -13,6 +13,7 @@
 <link href="/adv/adcss/layout.css" rel="stylesheet" type="text/css" />
 <link href="/adv/adcss/common.css" rel="stylesheet" type="text/css" />
 <link href="/adv/adcss/default.css" rel="stylesheet" type="text/css" />
+<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	 
@@ -88,17 +89,8 @@
         </div>
     </div>
 
-    <div class="footer txtC w100">
-<div class="clb ovh fw100 navBottom fonts ul-none">
-    <ul>
-        <li><a href="/adv/view">TRANG CHỦ</a></li>
-        <li><a href="#">TIN TỨC</a></li>
-        <li><a href="#">GIA PHẢ VIỆT NAM</a></li>
-        <li><a href="#">GIỚI THIỆU</a></li>
-        <li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
-    </ul>
-</div>
-<p>&copy; </p></div>
+    <!-- Footer -->
+	<%@include file="/views/common/footer.jsp" %>
 
 </div>
    

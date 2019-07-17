@@ -9,8 +9,6 @@
 <link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"type="text/css"/>
 <link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"type="text/css" />
 <link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"type="text/css" />
-<!-- <link rel="stylesheet"
-	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" /> -->
 <script type="text/javascript"
 	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
 <script type="text/javascript"
@@ -108,14 +106,13 @@
 				<div class="container">
 					<div class="row" id="ctn"></div>
 				</div>
-
-
 			</div>
 		</div>
-		<div class="ucp_def_footer"></div>
-		<%@include file="/views/common/footer.jsp" %>
 	</div>
 
+	<!-- Footer -->
+	<%@include file="/views/common/footer.jsp" %>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//$("#ctn").html('hhh');
@@ -159,7 +156,6 @@
 				var url = fileReader.result;
 				var myImg = document.getElementById("img0");
 				myImg.src = url;
-
 			}
 			fileReader.readAsDataURL(file);
 		}

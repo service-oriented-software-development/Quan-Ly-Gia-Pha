@@ -23,7 +23,11 @@
 </script>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/adcss/editor.css'/>" />
-
+<style>
+#lgr a {
+	color: #19191a
+}
+</style>
 
 
 </head>
@@ -83,38 +87,38 @@
 				</div>
 
 				<!--Content-->
-				<div class="ucp_def_right" style="overflow: scroll;height:480px">
-					
+				<div class="ucp_def_right" style="overflow: scroll; height: 480px">
+
 					<div class="page_title" style="margin-bottom: 15px">
 						<h2>Dòng họ Việt Nam</h2>
 					</div>
-					
-					<div class="ofnews" style="width:100%;">
-						<ul >
-							<%out.print(request.getAttribute("prts")); %>	
-						</ul>						
+
+					<div class="ofnews" style="width: 100%;">
+						<ul>
+							<%
+								out.print(request.getAttribute("prts"));
+							%>
+						</ul>
 					</div>
-					
-					</div>
-					<input style="margin-left:170px;" type="button" onclick="search()" value="Tìm kiếm.."/>
-					<input type="hidden" name="src" id = "src" value="${src}"/>
+
 				</div>
-				<div class="ucp_def_footer"></div>
+				<input style="margin-left: 170px;" type="button" onclick="search()"
+					value="Tìm kiếm.." /> <input type="hidden" name="src" id="src"
+					value="${src}" />
 			</div>
+			<div class="ucp_def_footer"></div>
+		</div>
 	</form>
 
+	<!-- Footer -->
+	<%@include file="/views/common/footer.jsp"%>
 
 	<script type="text/javascript">
-		function search(){
-			$("#form1").method="post";
-			$("#form1").action="/adv/system/admin";
+		function search() {
+			$("#form1").method = "post";
+			$("#form1").action = "/adv/system/admin";
 			$("#form1").submit();
 		}
-
-		
-
-		
-			
 
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
@@ -122,7 +126,6 @@
 				window.location.href = "/adv/view?action=logout";
 			}
 		}
-		
 	</script>
 
 

@@ -17,6 +17,8 @@ import javax.servlet.http.Part;
 import Common.ConnectionPool;
 import jsoft.ads.object.AccountObject;
 import jsoft.ads.object.ImageObject;
+import jsoft.ads.object.ParentageObject;
+import jsoft.ads.parentage.ParentageControl;
 
 @MultipartConfig
 public class ImageAE extends HttpServlet {
@@ -69,6 +71,8 @@ public class ImageAE extends HttpServlet {
 		ImageObject item1 = new ImageObject();
 		String act = request.getParameter("del_img");
 
+		ParentageControl pr = new ParentageControl(cp);
+		ParentageObject prO = pr.getParentage(ac.getAccountname());
 		if (act != null && !act.equalsIgnoreCase("undefied")) {
 			item1.setUrl(act);
 			if (imgcrt.delImage(item1)) {
@@ -81,11 +85,11 @@ public class ImageAE extends HttpServlet {
 			}
 		} else {
 			if (fileimg == null || fileimg.equals("")) {
-				request.setAttribute("Error", "ChÆ°a chá»�n tá»‡p.");
+				request.setAttribute("Error", "Chưa chọn tệp.");
 				response.sendRedirect(request.getContextPath() + "/image/view");
 			} else {
 				item.setUrl(fileimg);
-				item.setParentage_id(1);
+				item.setParentage_id(prO.getParentage_id());
 				if (imgcrt.addImage(item)) {
 					response.sendRedirect(request.getContextPath() + "/image/view");
 				}

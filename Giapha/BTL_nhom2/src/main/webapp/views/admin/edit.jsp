@@ -150,9 +150,7 @@
 </tbody></table>
         </div>
     </div>
-    <div class="ucp_def_footer">
-        
-    </div>
+    <%@include file="/views/common/footer.jsp" %>
 </div>
     </form>
 	

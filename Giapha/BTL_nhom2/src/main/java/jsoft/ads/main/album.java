@@ -57,7 +57,7 @@ public class album extends HttpServlet {
 			ImageObject similar = new ImageObject();
 
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
-			similar.setParentage_id(1);
+			similar.setParentage_id(prO.getParentage_id());
 			ImageControl imageControl = new ImageControl(cp);
 			ArrayList<ImageObject> item = new ArrayList<ImageObject>();
 			item = imageControl.getImages(similar, 1, (byte) 100);

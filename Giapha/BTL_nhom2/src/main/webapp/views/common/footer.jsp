@@ -21,9 +21,9 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-4 pb-3 text-center">
                         <h5>Phạm Văn Hiểu</h5>
-                        <h5>1141360000</h5>
-                        <p>0123 456 789</p>
-                        <p>abc@gmail.com</p>
+                        <h5>114136232</h5>
+                        <p>0965 930 913</p>
+                        <p>phamvanhieu300198@gmail.com</p>
                     </div>
                     <div class="col-sm-6 col-md-4 pb-3 text-center border-left border-right">
                         <h5>Phạm Quốc Cường</h5>
@@ -33,9 +33,9 @@
                     </div>
                     <div class="col-sm-6 col-md-4 pb-3 text-center">
                         <h5>Đào Hữu Dương</h5>
-                        <h5>1141360000</h5>
-                        <p>0123 456 789</p>
-                        <p>abc@gmail.com</p>
+                        <h5>1141360220</h5>
+                        <p>0333 369 933</p>
+                        <p>daohuuduong97@gmail.com</p>
                     </div>
                 </div>
             </div>
