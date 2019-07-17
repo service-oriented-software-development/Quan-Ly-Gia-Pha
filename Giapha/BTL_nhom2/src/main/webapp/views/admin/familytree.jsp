@@ -25,17 +25,12 @@
 <title>Quản lý phả đồ - Gia phả Việt Nam</title>
 <style>
 #lgr a {
-	color: #19191a
+	color: #19191a;
 }
 </style>
-
 </head>
 <body>
-
-
-
 	<div>
-
 		<input type="hidden" name="state" id="state"
 			value="<c:out value="${state}"></c:out>"> <input
 			type="hidden" name="idpr" id="idpr"
@@ -54,8 +49,7 @@
 				<tbody>
 					<tr>
 						<td></td>
-						<td class="subleft"><a href="<c:url value='/view'/>">TRANG
-								CHỦ</a> |</td>
+						<td class="subleft"><a href="<c:url value='/view'/>">TRANG CHỦ</a></td>
 						<td class="subcen"><c:out value="${prname}"></c:out></td>
 						<td class="subright">Người tạo: <c:out value="${pracname}"></c:out>
 

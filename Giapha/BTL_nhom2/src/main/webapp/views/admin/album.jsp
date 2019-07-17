@@ -58,9 +58,10 @@
 				<div class="ucpleft_group" id="lgr">
 					<h2 class="title">Dòng họ</h2>
 					<div class="gitem">
-						<a href="/adv/parentage/ae">Thông tin dòng họ</a> <a
-							href="/adv/view/tree">Quản lý phả đồ</a> <a href="#">Danh
-							sách thành viên</a> <a href="/adv/image/view">Album ảnh</a>
+						<a href="/adv/parentage/ae">Thông tin dòng họ</a> 
+						<a href="/adv/view/tree">Quản lý phả đồ</a> 
+						<a href="#">Danh sách thành viên</a> 
+						<a href="/adv/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -75,10 +76,10 @@
 					</div>
 					<h2 class="title">Account</h2>
 					<div class="gitem">
-						<a href="ucp.aspx?cp=accinfo">Thông tin tài khoản</a> <a
-							href="ucp.aspx?cp=change_pwd">Đổi mật khẩu</a> <a
+						<a href="#">Thông tin tài khoản</a> <a
+							href="#">Đổi mật khẩu</a> <a
 							id="ctl02_left_ctrl0_logout"
-							href="javascript:__doPostBack(&#39;ctl02$left_ctrl0$logout$ctl00&#39;,&#39;&#39;)">Đăng
+							href="#">Đăng
 							xuất</a>
 					</div>
 				</div>

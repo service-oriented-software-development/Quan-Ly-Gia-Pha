@@ -28,8 +28,6 @@
 	color: #19191a
 }
 </style>
-
-
 </head>
 <body>
 	<form name="form1" method="" action="" id="form1">
@@ -43,10 +41,9 @@
 					<tbody>
 						<tr>
 							<td></td>
-							<td class="subleft"><a href="<c:url value='/view'/>">TRANG
-									CHỦ</a> |</td>
+							<td class="subleft"><a href="<c:url value='/view'/>">TRANG CHỦ</a></td>
 							<td class="subcen">QUẢN TRỊ HỆ THỐNG</td>
-							<td class="subright">WELLCOME BACK!</td>
+							<td class="subright">CHÀO MỪNG QUAY TRỞ LẠI!</td>
 							<td></td>
 						</tr>
 					</tbody>
@@ -63,10 +60,8 @@
 						</div>
 						<h2 class="title">Tin tức</h2>
 						<div class="gitem">
-							<a href="http://www.giaphavietnam.vn/ucp.aspx?cp=news-detail">Viết
-								bài mới</a> <a
-								href="http://www.giaphavietnam.vn/ucp.aspx?cp=created-news">Tin
-								bài đã tạo</a>
+							<a href="#">Viết bài mới</a> 
+							<a href="#">Tin bài đã tạo</a>
 						</div>
 						<h2 class="title">Tin nhắn</h2>
 						<div class="gitem">
@@ -77,9 +72,9 @@
 						</div>
 						<h2 class="title">Account</h2>
 						<div class="gitem">
-							<a href="http://www.giaphavietnam.vn/ucp.aspx?cp=accinfo">Thông
+							<a href="#">Thông
 								tin tài khoản</a> <a
-								href="http://www.giaphavietnam.vn/ucp.aspx?cp=change_pwd">Đổi
+								href="#">Đổi
 								mật khẩu</a> <a id="ctl02_left_ctrl0_logout"
 								href="javascript:logout()">Đăng xuất</a>
 						</div>

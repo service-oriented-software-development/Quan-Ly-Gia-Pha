@@ -42,7 +42,7 @@
 <table width="100%" cellspacing="0" cellpadding="0" border="0" class="ucp_info" >
     <tbody><tr><td></td>
         <td class="subleft">
-            <a href="<c:url value='/view'/>">TRANG CHỦ</a> | 
+            <a href="<c:url value='/view'/>">TRANG CHỦ</a>
         </td>
         <td class="subcen">
             <c:out value="${prname}"></c:out>
@@ -62,13 +62,13 @@
     <div class="gitem">
         <a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a>
         <a href="<c:url value='/view/tree'/>">Quản lý phả đồ</a>
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=danh-sach-thanh-vien">Danh sách thành viên</a>
+        <a href="#">Danh sách thành viên</a>
         <a href="/adv/image/view">Album ảnh</a>
     </div>    
     <h2 class="title">Tin tức</h2>
     <div class="gitem">
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=news-detail">Viết bài mới</a>
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=created-news">Tin bài đã tạo</a>
+        <a href="#">Viết bài mới</a>
+        <a href="#">Tin bài đã tạo</a>
     </div>
     <h2 class="title">Tin nhắn</h2>
     <div class="gitem">
@@ -79,8 +79,8 @@
     </div>
     <h2 class="title">Account</h2>
     <div class="gitem">
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=accinfo">Thông tin tài khoản</a>
-        <a href="http://www.giaphavietnam.vn/ucp.aspx?cp=change_pwd">Đổi mật khẩu</a>
+        <a href="#">Thông tin tài khoản</a>
+        <a href="#">Đổi mật khẩu</a>
         <a id="ctl02_left_ctrl0_logout" href="javascript:logout()">Đăng xuất</a>
     </div>
 </div>
@@ -309,9 +309,5 @@ function lastVisit() {
 		window.location.href = "/adv/individual/ae?id="+id;
 	}
 </script>
-
-    
-   
-	
-  </body>
+</body>
 </html>

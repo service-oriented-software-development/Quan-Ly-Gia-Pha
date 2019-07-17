@@ -4,9 +4,9 @@
 <div class="footer txtC w100">
 	<div class="col-sm-12 clb ovh navBottom fonts ul-none">
 		<ul>
-			<li><a href="#">TRANG CHỦ</a></li>
+			<li><a href="/adv/view">TRANG CHỦ</a></li>
 			<li><a href="#">TIN TỨC</a></li>
-			<li><a href="#">GIA PHẢ VIỆT NAM</a></li>
+			<li><a href="/adv/parentage/view">GIA PHẢ VIỆT NAM</a></li>
 			<li><a href="#">GIỚI THIỆU</a></li>
 			<li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
 		</ul>
@@ -20,16 +20,16 @@
                 <br />
                 <div class="row">
                     <div class="col-sm-6 col-md-4 pb-3 text-center">
+                    	<h5>Phạm Quốc Cường</h5>
+                        <h5>1141360205</h5>
+                        <p>0333 385 398</p>
+                        <p>quoc.cuong.yb.dhtb@gmail.com</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 pb-3 text-center border-left border-right">
                         <h5>Phạm Văn Hiểu</h5>
                         <h5>114136232</h5>
                         <p>0965 930 913</p>
                         <p>phamvanhieu300198@gmail.com</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 pb-3 text-center border-left border-right">
-                        <h5>Phạm Quốc Cường</h5>
-                        <h5>1141360205</h5>
-                        <p>0333 385 398</p>
-                        <p>quoc.cuong.yb.dhtb@gmail.com</p>
                     </div>
                     <div class="col-sm-6 col-md-4 pb-3 text-center">
                         <h5>Đào Hữu Dương</h5>

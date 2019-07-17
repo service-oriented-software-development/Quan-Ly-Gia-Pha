@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
-<link rel="shortcut icon" href="img/utils/favicon.ico"
+<link rel="shortcut icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico"
 	type="image/x-icon" />
-<link rel="icon" href="img/utils/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon" />
 
 <script type="text/javascript" src="adjs/jquery.min.1.7.1.js"></script>
 <link href="adcss/layout.css" rel="stylesheet" type="text/css" />
@@ -17,18 +17,16 @@
 <link href="adcss/dvgss.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="adjs/jquery.modal.min.js"></script>
 <link href="adcss/jquery.modal.css" rel="stylesheet" type="text/css" />
-<link href="adcss/jquery.mCustomScrollbar.css" rel="stylesheet"
-	type="text/css" />
-<!-- <link rel="stylesheet" href="adcss/bootstrap.css"> -->
-<link rel="stylesheet" href="adcss/bootstrap.min.css">
-
+<link href="adcss/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="adcss/bootstrap.css">
+<style>
+	.ss_vlist li{width:62px;}
+	.intro{width:670px;}
+</style>
 
 <title>Gia Phả Việt Nam</title>
 <style>
-.col-sm-6 {
-	padding-right: 0px!important;
-	color: white;
-}
+
 </style>
 </head>
 <body>
@@ -36,7 +34,7 @@
 
 		<div class="wrapper">
 			<a href="/adv/view" title="Bấm vào đây đề về Trang chủ">
-				<div class="banner txtC">
+				<div class="banner txtC" id="heading-page">
 					<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px" />
 				</div>
 			</a>
@@ -71,15 +69,15 @@
 					</div>
 					<div class="ss_vlist">
 						<ul>
-							<li><a href="default.aspx?lang=vi-VN&cp=news-detail&cid=59">5
+							<li><a href="#">5
 									cách dạy con nhận tiền lì xì sao cho đúng</a></li>
-							<li><a href="default.aspx?lang=vi-VN&cp=news-detail&cid=35">Chuyên
+							<li><a href="#">Chuyên
 									gia lên tiếng trước lễ hội đang gây tranh cãi ở Lạng Sơn</a></li>
-							<li><a href="default.aspx?lang=vi-VN&cp=news-detail&cid=36">Sách
+							<li><a href="#">Sách
 									về gia phả Việt được trưng bày</a></li>
-							<li><a href="default.aspx?lang=vi-VN&cp=news-detail&cid=37">Dựng
+							<li><a href="#">Dựng
 									gia phả, giải tỏa khúc mắc lịch sử</a></li>
-							<li><a href="default.aspx?lang=vi-VN&cp=news-detail&cid=38">Gia
+							<li><a href="#">Gia
 									Phả là gì? Hình thức lập Gia Phả và Tộc Phả</a></li>
 						</ul>
 					</div>
@@ -94,7 +92,7 @@
 							<h3 class="bhead">DANH MỤC</h3>
 							<div class="grb">
 								<ul id="menu">
-									<li><a class="active" href="">Trang chủ</a></li>
+									<li><a class="active" href="/adv/view">Trang chủ</a></li>
 									<li><a href="#">Tin tức</a></li>
 									<li><a href="/adv/parentage/view">Gia phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
@@ -184,7 +182,7 @@
 								<div class="fnews fll">
 									<h4></h4>
 									<p class="headline">
-										<a href="default.aspx?lang=vi-VN&cp=news-detail&cid=5118">Tết
+										<a href="#">Tết
 											Thanh minh và tục tảo mộ của người Việt</a>
 									</p>
 									<div class="summary"></div>
@@ -277,7 +275,7 @@
 							<div class="grb">
 								<ul id="newtree"></ul>
 								<p class="see_more">
-									<a href="">Xem thêm</a>
+									<a href="#">Xem thêm</a>
 								</p>
 							</div>
 						</div>
@@ -289,9 +287,9 @@
 	</form>
 
 	<!-- Footer -->
-	<%@include file="/views/common/footer.jsp"%>
-
-	<a href="javascript:void(0)" id="toTop">to Top</a>
+	<%@include file="/views/common/footer.jsp" %>
+	
+	<a href="#heading-page" id="toTop">to Top</a>
 
 	<script type="text/javascript">
 		function ucFirstAllWords(str) {

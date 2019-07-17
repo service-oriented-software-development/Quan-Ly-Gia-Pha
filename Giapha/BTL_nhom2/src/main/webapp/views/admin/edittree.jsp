@@ -21,10 +21,10 @@
 	href="<c:url value='/adcss/editor.css'/>" />
 <link rel="stylesheet" href="adcss/bootstrap.css">
 
-<title>Quản Lý Phả Đồ - Gia Phả Việt Nam</title>
+<title>Quản Lý Phả Đồ</title>
 <style>
 #lgr a {
-	color: #19191a
+	color: #19191a;
 }
 </style>
 </head>
@@ -47,8 +47,7 @@
 				<tbody>
 					<tr>
 						<td></td>
-						<td class="subleft"><a href="<c:url value='/view'/>">TRANG
-								CHỦ</a> |</td>
+						<td class="subleft"><a href="<c:url value='/view'/>">TRANG CHỦ</a></td>
 						<td class="subcen"><c:out value="${prname}"></c:out></td>
 						<td class="subright">Người tạo: <c:out value="${pracname}"></c:out>
 
@@ -71,9 +70,9 @@
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
-						<a href="http://www.giaphavietnam.vn/ucp.aspx?cp=news-detail">Viết
+						<a href="#">Viết
 							bài mới</a> <a
-							href="http://www.giaphavietnam.vn/ucp.aspx?cp=created-news">Tin
+							href="#">Tin
 							bài đã tạo</a>
 					</div>
 					<h2 class="title">Tin nhắn</h2>
@@ -85,9 +84,9 @@
 					</div>
 					<h2 class="title">Account</h2>
 					<div class="gitem">
-						<a href="http://www.giaphavietnam.vn/ucp.aspx?cp=accinfo">Thông
+						<a href="#">Thông
 							tin tài khoản</a> <a
-							href="http://www.giaphavietnam.vn/ucp.aspx?cp=change_pwd">Đổi
+							href="#">Đổi
 							mật khẩu</a> <a id="ctl02_left_ctrl0_logout"
 							href="javascript:logout()">Đăng xuất</a>
 					</div>

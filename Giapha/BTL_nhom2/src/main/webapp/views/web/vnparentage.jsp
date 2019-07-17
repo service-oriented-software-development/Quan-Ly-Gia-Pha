@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
-<link rel="shortcut icon" href="adimgs/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="adimgs/favicon.ico" type="image/x-icon" />
-<title>Gia phả Việt Nam - Gia phả Việt Nam</title>
+<link rel="shortcut icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon">
+<link rel="icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon">
+<title>Gia Phả Việt Nam</title>
 <script type = "text/javascript" src = "/adv/adjs/jquery.min.1.7.1.js"></script>
 <link href="/adv/adcss/layout.css" rel="stylesheet" type="text/css" />
 <link href="/adv/adcss/common.css" rel="stylesheet" type="text/css" />

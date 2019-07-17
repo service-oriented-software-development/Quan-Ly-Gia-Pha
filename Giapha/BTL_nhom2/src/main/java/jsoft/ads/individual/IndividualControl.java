@@ -204,7 +204,7 @@ public class IndividualControl {
 		}
 		for (IndividualObject item : items) {
 			doi = item.getBranch().split("\\.").length + 1;
-			int doi1 = Integer.parseInt(item.getBranch().split("\\.")[0]);
+			int doi1 = Integer.parseInt(item.getBranch().split("\\-")[0]);
 			
 			if (b) {
 				if (life + 1 < doi) {

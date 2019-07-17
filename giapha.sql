@@ -1,6 +1,7 @@
-﻿create database genealogy_management;
+﻿--
+-- create database genealogy_management;
 
-USE genealogy_management;
+-- USE genealogy_management;
 
 -- Table Account
 CREATE TABLE account(
