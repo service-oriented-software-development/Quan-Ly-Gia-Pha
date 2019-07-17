@@ -1,6 +1,8 @@
 package jsoft.ads.system;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,17 +18,12 @@ import jsoft.ads.parentage.ParentageControl;
 public class ManagerAE extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public ManagerAE() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = 0;
 		if (request.getParameter("id") != null && !request.getParameter("id").equalsIgnoreCase("")) {
@@ -38,8 +35,9 @@ public class ManagerAE extends HttpServlet {
 		if(cp==null) {
 			request.getServletContext().setAttribute("CPool", inc.getCP());
 		}
-		prc.addParentageWeb(id);
-		inc.addIndividualWeb(id, 4);
+		if(prc.addParentageWeb(id)&&inc.addIndividualWeb(id, prc.getParentageid())) {
+			response.sendRedirect("/adv/system/admin");
+		}
 	}
 
 	/**

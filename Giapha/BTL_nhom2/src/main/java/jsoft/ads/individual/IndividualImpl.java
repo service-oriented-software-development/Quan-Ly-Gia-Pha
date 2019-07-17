@@ -140,6 +140,11 @@ public class IndividualImpl extends BasicImpl implements Individual {
 		sql += " order by branch";
 		return this.get(sql);
 	}
+	public ResultSet getIndividualWebs(int id) {
+		String sql = "select * from individual ";
+		sql += "where parentage_id = " + id;		
+		return this.get(sql);
+	}
 
 	public ResultSet getIndividuals(IndividualObject similar, int at, byte total) {
 		String sql = "select * from individual ";

@@ -66,12 +66,16 @@ public class ListParentageWeb {
 
 		for (int i = 0; i < elm.size(); i++) {
 			if (elm.get(i).ownText().split("\\.").length == 2) {
-				tmp += "(\'" + elm.get(i).ownText().split(" ")[0]+"\',\'"+elm.get(i).ownText().replaceAll(elm.get(i).ownText().split(" ")[0], "")+"\', "+id+"),";
-			}
-			
-			
+				tmp += "('" + elm.get(i).ownText().split(" ")[0]+"','"+CharacterReference.encode(elm.get(i).ownText().replaceAll(elm.get(i).ownText().split(" ")[0], ""))+"', "+id+")";
+				if(i==elm.size()-2) {
+					tmp+=";";
+				}else {
+					tmp+=",";
+				}
+			}						
 		}
-		tmp +=";";
+		
+		
 		return tmp;
 	}
 	
@@ -89,7 +93,7 @@ public class ListParentageWeb {
 	        e.printStackTrace();
 	    }
 		Element title = doc.select("font[color=red]").first();
-		tmp+="(\'"+CharacterReference.encode(title.ownText())+"\',\'systemadmin\')";
+		tmp+="('"+CharacterReference.encode(title.ownText())+"','systemadmin')";
 		
 		return tmp;
 	}
