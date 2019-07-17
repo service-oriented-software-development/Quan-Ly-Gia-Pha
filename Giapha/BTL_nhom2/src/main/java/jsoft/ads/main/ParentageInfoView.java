@@ -36,10 +36,15 @@ public class ParentageInfoView extends HttpServlet {
 			getServletContext().setAttribute("CPool", pr.getCP());
 		}
 		int prtid = Integer.parseInt(request.getParameter("prtid"));
+		ArrayList<IndividualObject> inds;
 		ParentageObject prO = pr.getParentage(prtid);
 		ArrayList<IndividualObject> items = indc.getIndividuals(prO.getParentage_id());
 		ArrayList<ImageObject> imgs = imgc.getImages(prtid);
-		ArrayList<IndividualObject> inds = indc.getIndividuals(prtid);
+		if(prO.getAccount_name().equalsIgnoreCase("systemadmin")) {
+			inds = indc.getIndividualWebs(prtid);
+		}else {
+			inds = indc.getIndividuals(prtid);
+		}
 		String fmtree = indc.viewIndividual(inds,false,0);
 		pr.releaseConnection();
 		
