@@ -5,14 +5,10 @@
 <html>
 <head>
 <title>Album ảnh - Gia phả Việt Nam</title>
-<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"
-	type="text/css"/>
-<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"type="text/css" />
+<link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"type="text/css"/>
+<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"type="text/css" />
+<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"type="text/css" />
 <!-- <link rel="stylesheet"
 	href="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>" /> -->
 <script type="text/javascript"
@@ -117,18 +113,7 @@
 			</div>
 		</div>
 		<div class="ucp_def_footer"></div>
-		<div class="footer txtC w100">
-			<div class="clb ovh fw100 navBottom fonts ul-none">
-				<ul>
-					<li><a href="/adv/view">TRANG CHỦ</a></li>
-					<li><a href="#">TIN TỨC</a></li>
-					<li><a href="#">GIA PHẢ VIỆT NAM</a></li>
-					<li><a href="#">GIỚI THIỆU</a></li>
-					<li><a href="#">LIÊN HỆ - GÓP Ý</a></li>
-				</ul>
-			</div>
-			<p>&copy;</p>
-		</div>
+		<%@include file="/views/common/footer.jsp" %>
 	</div>
 
 	<script type="text/javascript">

@@ -19,8 +19,13 @@ public class ConnectionPoolImpl implements ConnectionPool {
 		this.driver = "com.mysql.jdbc.Driver";
 		this.getDriver();
 		this.username = "root";
+<<<<<<< HEAD
 		this.userpass = "123";
 		//this.userpass = "Anh1002";
+=======
+		//this.userpass = "123";
+		this.userpass = "1234";
+>>>>>>> 8866d183c387b9dca88e2536c22cd8388a6f1f88
 		this.pool = new Stack<Connection>();
 	}
 	
