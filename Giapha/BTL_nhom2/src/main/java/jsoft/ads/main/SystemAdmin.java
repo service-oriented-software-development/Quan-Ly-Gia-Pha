@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import jsoft.ads.library.ListParentageWeb;
+import jsoft.ads.object.AccountObject;
 
 public class SystemAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,18 +21,25 @@ public class SystemAdmin extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ListParentageWeb view = new ListParentageWeb();
-		int n = 0;
-		if (request.getParameter("src") != null && !request.getParameter("src").equalsIgnoreCase("")) {
-			n = Integer.parseInt(request.getParameter("src"));
-		}else {
-			n=10;
+		AccountObject ac = (AccountObject) request.getSession().getAttribute("Loginned");
+		if (ac == null) {
+			response.sendRedirect(request.getContextPath() + "/view");
+		} else {
+
+			ListParentageWeb view = new ListParentageWeb();
+			int n = 0;
+			if (request.getParameter("src") != null && !request.getParameter("src").equalsIgnoreCase("")) {
+				n = Integer.parseInt(request.getParameter("src"));
+			} else {
+				n = 10;
+			}
+			String listprt = view.ViewParentages(n);
+			request.setAttribute("prts", listprt);
+			request.setAttribute("src", n + 10);
+			RequestDispatcher rd = request.getRequestDispatcher("/views/sys-admin/index.jsp");
+			rd.forward(request, response);
 		}
-		String listprt = view.ViewParentages(n);
-		request.setAttribute("prts", listprt);
-		request.setAttribute("src", n+10);
-		RequestDispatcher rd = request.getRequestDispatcher("/views/sys-admin/index.jsp");
-		rd.forward(request, response);
+
 	}
 
 	/**
@@ -40,7 +48,7 @@ public class SystemAdmin extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 	}
 
 }

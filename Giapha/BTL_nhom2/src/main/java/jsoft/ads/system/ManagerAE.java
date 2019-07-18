@@ -36,7 +36,7 @@ public class ManagerAE extends HttpServlet {
 			request.getServletContext().setAttribute("CPool", inc.getCP());
 		}
 		if(prc.addParentageWeb(id)&&inc.addIndividualWeb(id, prc.getParentageid())) {
-			response.sendRedirect("/adv/system/admin");
+			response.sendRedirect("/home/system/admin");
 		}
 	}
 

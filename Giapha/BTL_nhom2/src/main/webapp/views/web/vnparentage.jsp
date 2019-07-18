@@ -9,10 +9,10 @@
 <link rel="shortcut icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon">
 <link rel="icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon">
 <title>Gia Phả Việt Nam</title>
-<script type = "text/javascript" src = "/adv/adjs/jquery.min.1.7.1.js"></script>
-<link href="/adv/adcss/layout.css" rel="stylesheet" type="text/css" />
-<link href="/adv/adcss/common.css" rel="stylesheet" type="text/css" />
-<link href="/adv/adcss/default.css" rel="stylesheet" type="text/css" />
+<script type = "text/javascript" src = "/home/adjs/jquery.min.1.7.1.js"></script>
+<link href="/home/adcss/layout.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/common.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/default.css" rel="stylesheet" type="text/css" />
 <link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,9 +20,9 @@
               
 <div class = "wrapper">
     
-<a href="/adv/view" title="Bấm vào đây đề về Trang chủ">
+<a href="/home/view" title="Bấm vào đây đề về Trang chủ">
 <div class="banner ovh txtC">
-    <img src="/adv/adimgs/cen_bn.jpg" style="height:150px" />
+    <img src="/home/adimgs/cen_bn.jpg" style="height:150px" />
 </div></a>
     
     <div class="wrappage">
@@ -35,9 +35,9 @@
 
 <div class="box ovh txtC menu">
     <h3 class="bhead">DANH MỤC</h3>
-    <div class="grb"><ul id="menu"><li><a  href="/adv/view">Trang chủ</a></li>
+    <div class="grb"><ul id="menu"><li><a  href="/home/view">Trang chủ</a></li>
     <li><a  href="#">Tin tức</a></li>
-    <li><a class="active" href="/adv/parentage/view">Gia phả Việt Nam</a></li>
+    <li><a class="active" href="/home/parentage/view">Gia phả Việt Nam</a></li>
     <li><a  href="#">Giới thiệu</a></li>
     <li><a  href="#">Liên hệ - Góp ý</a></li>
     </ul>
@@ -74,7 +74,7 @@
             		<% %>
             		<tr>
 					<td><%=(i++)%></td>
-					<td><a href="/adv/parentage/info/view?prtid=${item.parentage_id}">${item.parentage_name}</a></td>
+					<td><a href="/home/parentage/info/view?prtid=${item.parentage_id}">${item.parentage_name}</a></td>
 					<td>${item.head_of_parentage_address}</td>
 					<td>${item.ancestor}</td>
 					<td>${item.cult_portion_land}</td>
@@ -100,7 +100,7 @@
     
 	    function loadgp(){
 	    	$("#frm").method="post";
-			$("#frm").action = "http://localhost:8080/adv/parentage/view";
+			$("#frm").action = "http://localhost:8080/home/parentage/view";
 	    	$("#frm").submit();
 		}	    
     </script>

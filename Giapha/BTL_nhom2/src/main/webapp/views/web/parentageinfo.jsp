@@ -11,9 +11,9 @@
 <title>Trang dòng họ - Gia phả Việt Nam</title>
 <script type="text/javascript"
 	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
-<link href="/adv/adcss/layout.css" rel="stylesheet" type="text/css">
-<link href="/adv/adcss/common.css" rel="stylesheet" type="text/css">
-<link href="/adv/adcss/default.css" rel="stylesheet" type="text/css">
+<link href="/home/adcss/layout.css" rel="stylesheet" type="text/css">
+<link href="/home/adcss/common.css" rel="stylesheet" type="text/css">
+<link href="/home/adcss/default.css" rel="stylesheet" type="text/css">
 <link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"
 	type="text/css" />
 <style>
@@ -24,9 +24,9 @@
 </head>
 <body>
 	<div class="wrapper">
-		<a href="/adv/view" title="Bấm vào đây đề về Trang chủ">
+		<a href="/home/view" title="Bấm vào đây đề về Trang chủ">
 			<div class="banner ovh txtC">
-				<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px">
+				<img src="/home/adimgs/cen_bn.jpg" style="height: 150px">
 			</div>
 		</a>
 
@@ -55,7 +55,7 @@
 						<h3 class="bhead">TÁC GIẢ</h3>
 						<div class="grb ftcreator">
 							<img id="cravatar" alt="Ảnh đại diện"
-								src="/adv/adimgs/default.png">
+								src="/home/adimgs/default.png">
 							<p>
 								Họ tên: <span id="cre_fn">${prhead}</span>
 							</p>
@@ -89,7 +89,7 @@
 								</p>
 								<p class="dhtitle">
 									<span>Số thành viên</span><b>:</b><span>${prnumber_individual}(<a
-										href="/adv/parentage/info/view" class="treelink">Xem Phả
+										href="/home/parentage/info/view" class="treelink">Xem Phả
 											đồ tại đây</a>)
 									</span>
 								</p>
@@ -110,14 +110,14 @@
 							<div class="grb" id="ft_ct">
 								<div class="row" style="height: 400px; overflow: scroll">
 									<c:forEach items="${list_imgs}" var="item">
-										<img alt="" src="/adv/adimgs/${item.url}"
+										<img alt="" src="/home/adimgs/${item.url}"
 											style="max-height: 200px;">
 									</c:forEach>
 								</div>
 							</div>
 						</div>
 						<div id="prtfmtree">
-							<h3 class="crbhead" id="dhfrmtit">Album Ảnh</h3>
+							<h3 class="crbhead" id="dhfrmtit">Phả Đồ</h3>
 							<div class="grb" id="ft_ct"
 								style="height: 100px; overflow: scroll">
 								<%
@@ -161,7 +161,7 @@
 			tmp += " <p class=\"dhtitle\"><span>Tên dòng họ</span><b>:</b><span>${prname}</span></p> ";
 			tmp += " <p class=\"dhtitle\"><span>Quê gốc</span><b>:</b><span>${prheadadr}</span></p> ";
 			tmp += " <p class=\"dhtitle\"><span>Ngày giỗ họ</span><b>:</b><span>15/1</span></p> ";
-			tmp += " <p class=\"dhtitle\"><span>Số thành viên</span><b>:</b><span>${prnumber_individual}(<a href=\"/adv/parentage/info/view\" class=\"treelink\">Xem Phả đồ tại đây</a>)</span></p> ";
+			tmp += " <p class=\"dhtitle\"><span>Số thành viên</span><b>:</b><span>${prnumber_individual}(<a href=\"/home/parentage/info/view\" class=\"treelink\">Xem Phả đồ tại đây</a>)</span></p> ";
 			tmp += " <p class=\"dhtitle\"><span>Ngày lập gia phả</span><b>:</b><span>17/05/2019</span></p> ";
 			tmp += " <p class=\"dhtitle\"><span>Người lâp gia phả</span><b>:</b><span>${prhead}</span></p> ";
 			tmp += " <h3>LỜI HAY Ý ĐẸP</h3><div class=\"lhyd\">${pradvise}</div> ";

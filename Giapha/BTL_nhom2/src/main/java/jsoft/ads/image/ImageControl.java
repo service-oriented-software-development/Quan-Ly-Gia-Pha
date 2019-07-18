@@ -103,11 +103,11 @@ public class ImageControl {
 			tmp += "<div class=\"card-header bg-primary text-light font-weight-bold\">Ảnh " + (i++);
 			tmp += "</div>";
 			tmp += "<div class=\"card-body p-0\">";
-			tmp += "<img class=\"img-responsive w-100\" style='height:350px' src=\"/adv/adimgs/" + item.getUrl()
+			tmp += "<img class=\"img-responsive w-100\" style='height:350px' src=\"/home/adimgs/" + item.getUrl()
 					+ "\" align=\"absmiddle\" id=\"img1\"/>";
 			tmp += "</div>";
 			tmp += "<div class=\"card-footer h-150px\">";
-			tmp += "<form id=\"del_img\" action=\"/adv/image/ae?del_img="+item.getUrl()+"\" method=\"post\">";
+			tmp += "<form id=\"del_img\" action=\"/home/image/ae?del_img="+item.getUrl()+"\" method=\"post\">";
 			tmp += "<input type=\"submit\" class=\"btn btn-outline-danger px-4\" style=\"float:right\" value=\"Xóa Ảnh\"/>";
 			tmp += "</form>";
 			tmp += "</div>";

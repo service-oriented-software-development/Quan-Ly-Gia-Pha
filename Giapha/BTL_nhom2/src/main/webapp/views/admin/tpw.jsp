@@ -4,33 +4,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Album ảnh - Gia phả Việt Nam</title>
+<title>Đổi mật khẩu - Gia phả Việt Nam</title>
+
 <link href="<c:url value='/adcss/layout.css'/>" rel="stylesheet"type="text/css" />
 <link href="<c:url value='/adcss/common.css'/>" rel="stylesheet"type="text/css"/>
 <link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet"type="text/css" />
-<link href="<c:url value='/adcss/bootstrap.css'/>" rel="stylesheet"type="text/css" />
-<script type="text/javascript"
-	src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
-<script type="text/javascript"
-	src="<c:url value='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'/>"></script>
-<script type="text/javascript"
-	src="<c:url value='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>"></script>
-<script type="text/javascript"
-	src="<c:url value='/adjs/ucp_treeinf.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/adjs/action.js'/>"></script>
+
+<script type="text/javascript" src="<c:url value='/adjs/jquery.min.1.7.1.js'/>"></script>
+
 <style>
 	#lgr a{color: #19191a}
+	
 </style>
+
 </head>
 <body>
+	
 
-	<div>
-		<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT"
-			value="" /> <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-			value="wEPDwUKLTg3MzMwNzE5MA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUdY3RsMDIkbGVmdF9jdHJsMCRsb2dvdXQkY3RsMDEFHWN0bDAyJGxlZnRfY3RybDAkbG9nb3V0JGN0bDAzadN+P9zhWVj2MoOhWVvrb/1oQdzCWA6YBcCm6q2/Gy4=" />
-	</div>
+	
 
 	<div class="main_frame">
 		<div class="ucp_def_header">
@@ -87,27 +78,34 @@
 
 			</div>
 			<div class="ucp_def_right">
-				<div class="page_title" style="margin-bottom: 15px">
-					<h2>Ảnh của dòng họ</h2>
-					<div class="toolbox">
-						<form id="album" method="post"
-							action="http://localhost:8080/home/image/ae"
-							enctype="multipart/form-data">
-							<input id="img-format" name="img-format" type="file"
-								onchange="changeimg(event)" accept=".png, .jpg,.jpeg" 
-								style="color:white;cursor:pointer;"/>
-							<button class="btn" type="submit" style="color:white;border:1px solid white">Lưu</button>
-						</form>
-					</div>
+            
 
-				</div>
-				<div class="load_progress"></div>
+<div class="page_title" style="margin-bottom: 15px">
+    <h2>Đổi mật khẩu đăng nhập</h2>
+</div>
+<div class="message"></div>
 
-
-				<div class="container">
-					<div class="row" id="ctn"></div>
-				</div>
-			</div>
+<div class="form_ctrl">
+    <table border="0" cellpadding="0" cellspacing="10" class="compose">
+        <tbody><tr>
+            <td class="ar" style="width: 100px">Mật khẩu cũ</td>
+            <td class="al" style="width: 300px"><input name="ctl02$right_ctrl0$txtOldPwd" type="password" id="ctl02_right_ctrl0_txtOldPwd" style="width:200px;"></td>
+        </tr>
+        <tr>
+            <td class="ar">Mật khẩu mới</td>
+            <td class="al"><input name="ctl02$right_ctrl0$txtNewPwd" type="password" id="ctl02_right_ctrl0_txtNewPwd" style="width:200px;"></td>
+        </tr>
+        <tr>
+            <td class="ar">Xác nhận Mật khẩu mới</td>
+            <td class="al"><input name="ctl02$right_ctrl0$txtConfirm" type="password" id="ctl02_right_ctrl0_txtConfirm" style="width:200px;"></td>
+        </tr>
+        <tr>
+            <td class="ar"></td>
+            <td class="al"><input type="submit" name="ctl02$right_ctrl0$btnOK" value="Đồng ý" id="ctl02_right_ctrl0_btnOK" class="button w70 op" style="height:28px;"></td>
+        </tr>
+    </tbody></table>
+</div>
+        </div>
 		</div>
 	</div>
 

@@ -196,7 +196,7 @@ public class IndividualControl {
 	}
 
 	public String viewIndividual(ArrayList<IndividualObject> items, boolean b, int life) {
-		int doi;
+		int doi, doi1;
 		String tmp = "";
 		tmp += "<div class=\"rcontent-item item3\" >";
 		if (b) {
@@ -204,34 +204,39 @@ public class IndividualControl {
 		}
 		for (IndividualObject item : items) {
 			doi = item.getBranch().split("\\.").length + 1;
-			int doi1 = Integer.parseInt(item.getBranch().split("\\-")[0]);
+			if(item.getBranch().split("\\.").length==1 && item.getFather()==0) {
+				doi1 = 0;
+			}else {
+				doi1 = Integer.parseInt(item.getBranch().split("\\.")[0]);
+			}
+			 
 			
 			if (b) {
 				if (life + 1 < doi) {
 					continue;
 				}
 			}
-			if (item.getFather() > 0) {
+			if (item.getFather()>0) {
 				for (int i = 0; i < doi; i++) {
 					tmp += "&nbsp;&nbsp;&nbsp;&nbsp;";
 				}
-				tmp += "<img align=\"absmiddle\" src=\"/adv/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
-				tmp += "<img src=\"/adv/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
+				tmp += "<img align=\"absmiddle\" src=\"/home/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
+				tmp += "<img src=\"/home/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
 				tmp += "<button class=\"tree\">" + item.getFullname() + "</button>";
 			} else {
 				for (int i = 0; i < doi1; i++) {
 					tmp += "&nbsp;&nbsp;&nbsp;&nbsp;";
 				}
-				tmp += "<img align=\"absmiddle\" src=\"/adv/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
-				tmp += "<img src=\"/adv/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
+				tmp += "<img align=\"absmiddle\" src=\"/home/adimgs/plus4.gif\" style=\"padding: 0px; margin: 0px; width: 18px; height: 18px;\" id=\"img0\" onclick=\"img1()\">";
+				tmp += "<img src=\"/home/adimgs/m.jpg\" align=\"absmiddle\" style=\"width: 18px; height: 18px;\" id=\"img1\">";
 				tmp += "<button class=\"tree\">" + item.getFullname() + "</button>";
 			}
 
 			if (b) {
 				tmp += "<button class=\"tree tree1\" onclick=\"openedit(" + item.getIndividual_id()
-						+ ")\"><img src=\"/adv/adimgs/pencil.png\" width=\"14px\" heigh=\"14px\"></button>";
+						+ ")\"><img src=\"/home/adimgs/pencil.png\" width=\"14px\" heigh=\"14px\"></button>";
 				tmp += "<button class=\"tree tree1\" onclick=\"del(" + item.getIndividual_id()
-						+ ")\"><img src=\"/adv/adimgs/delete.png\" width=\"14px\" heigh=\"14px\"></button>";
+						+ ")\"><img src=\"/home/adimgs/delete.png\" width=\"14px\" heigh=\"14px\"></button>";
 			}
 			tmp += "</br>";
 		}

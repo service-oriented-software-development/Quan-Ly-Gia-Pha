@@ -33,15 +33,15 @@
 	<form name="form1" id="form1">
 
 		<div class="wrapper">
-			<a href="/adv/view" title="Bấm vào đây đề về Trang chủ">
+			<a href="/home/view" title="Bấm vào đây đề về Trang chủ">
 				<div class="banner txtC" id="heading-page">
-					<img src="/adv/adimgs/cen_bn.jpg" style="height: 150px" />
+					<img src="/home/adimgs/cen_bn.jpg" style="height: 150px" />
 				</div>
 			</a>
 			<div class="wrappage">
 				<div class="clb ovh top_news">
 					<div id="dvgss"
-						style="background: url(/adv/adimgs/tnbd.png) no-repeat !important;">
+						style="background: url(/home/adimgs/tnbd.png) no-repeat !important;">
 
 
 
@@ -92,9 +92,9 @@
 							<h3 class="bhead">DANH MỤC</h3>
 							<div class="grb">
 								<ul id="menu">
-									<li><a class="active" href="/adv/view">Trang chủ</a></li>
+									<li><a class="active" href="/home/view">Trang chủ</a></li>
 									<li><a href="#">Tin tức</a></li>
-									<li><a href="/adv/parentage/view">Gia phả Việt Nam</a></li>
+									<li><a href="/home/parentage/view">Gia phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
 									<li><a href="#">Liên hệ - Góp ý</a></li>
 								</ul>
@@ -219,12 +219,12 @@
 								<%
 									if (request.getSession().getAttribute("Loginned") != null) {
 										out.print("<div class=\"member\">");
-										out.print("<img src=\"/adv/adimgs/default.png\">");
+										out.print("<img src=\"/home/adimgs/default.png\">");
 										out.print("<p>Xin chào:</p><p class=\"memname\">" + request.getSession().getAttribute("acname")
 												+ "</p>");
 										out.print("</div>");
 										out.print("<div class=\"memfunc\">");
-										out.print("<p><a href=\"http://localhost:8080/adv/parentage/ae\">Quản lý</a></p>");
+										out.print("<p><a href=\"http://localhost:8080/home/parentage/ae\">Quản lý</a></p>");
 										out.print("<p><a href=\"javascript:logout()\">Đăng xuất</a></p>");
 										out.print("</div>");
 									} else {
@@ -308,7 +308,7 @@
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
 			if (window.confirm(mess)) {
-				window.location.href = "/adv/view?action=logout";
+				window.location.href = "/home/view?action=logout";
 			}
 		}
 
@@ -331,7 +331,7 @@
 				return;
 			}
 			$("#form1")[0].method = "POST";
-			$("#form1")[0].action = "/adv/view";
+			$("#form1")[0].action = "/home/view";
 			$("#form1")[0].submit();
 		}
 
@@ -375,7 +375,7 @@
 				};
 
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/adv/view?data="
+				var url = "http://localhost:8080/home/view?data="
 						+ encodeURIComponent(datastr);
 
 				request.onreadystatechange = function() {
@@ -427,7 +427,7 @@
 						<td><input type="text" id="captConfirm"
 							style="width: 75px; height: 21px; float: left; margin-right: 10px"
 							placeholder="Mã bảo mật" title="Nhập mã trong ảnh bên" /> <img
-							id="imgSec" src="/adv/adimgs/CapGenerator.jpg" class="imgCaptcha"
+							id="imgSec" src="/home/adimgs/CapGenerator.jpg" class="imgCaptcha"
 							alt="Loading..." style="width: 80px; height: 30px" /></td>
 					</tr>
 					<tr>

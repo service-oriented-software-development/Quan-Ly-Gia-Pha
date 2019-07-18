@@ -40,7 +40,7 @@ public class ListParentageWeb {
 				if (title != null) {
 					tmp += "<li style=\"float:left; height:80px; width:270px\">";
 					tmp += title.ownText();
-					tmp += "<div><a href=\"/adv/manager/ae?id="+i+"\" id=\"btn_save\" style=\"color:blue\"></br><i>Lưu lại</i></a></div>";
+					tmp += "<div><a href=\"/home/manager/ae?id="+i+"\" id=\"btn_save\" style=\"color:blue\"></br><i>Lưu lại</i></a></div>";
 					tmp += "</li>";
 					tmp += "\n";
 				}

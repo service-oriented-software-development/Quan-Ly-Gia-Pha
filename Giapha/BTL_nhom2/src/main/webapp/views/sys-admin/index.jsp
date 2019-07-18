@@ -111,14 +111,14 @@
 	<script type="text/javascript">
 		function search() {
 			$("#form1").method = "post";
-			$("#form1").action = "/adv/system/admin";
+			$("#form1").action = "/home/system/admin";
 			$("#form1").submit();
 		}
 
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
 			if (window.confirm(mess)) {
-				window.location.href = "/adv/view?action=logout";
+				window.location.href = "/home/view?action=logout";
 			}
 		}
 	</script>

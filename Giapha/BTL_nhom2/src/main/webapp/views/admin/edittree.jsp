@@ -66,7 +66,7 @@
 					<div class="gitem">
 						<a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a> <a
 							href="<c:url value='/view/tree'/>">Quản lý phả đồ</a> <a href="#">Danh
-							sách thành viên</a> <a href="/adv/image/view">Album ảnh</a>
+							sách thành viên</a> <a href="/home/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -120,11 +120,11 @@
 											name="FullName" id="FullName"></td>
 										<td rowspan="4" style="width: 110px; vertical-align: top">
 											<form id="frm1" method="POST"
-												action="http://localhost:8080/adv/individual/ae?id=<c:out value="${indid }"/>"
+												action="http://localhost:8080/home/individual/ae?id=<c:out value="${indid }"/>"
 												enctype="multipart/form-data">
 												<img id="avatar" name="avatar"
 													style="width: 100%; border: 1px solid #ccc; max-height: 130px"
-													src="/adv/adimgs/${childavatar}"> <input type="file"
+													src="/home/adimgs/${childavatar}"> <input type="file"
 													onchange="changeimg(event)" id="real" name="real"
 													accept=".png, .jpg, .jpeghidden " hidden="hidden">
 												<input type="text" name="addchild" value="1" hidden="hidden" />
@@ -220,11 +220,11 @@
 											value="<c:out value="${indname }"/>"></td>
 										<td rowspan="4" style="width: 110px; vertical-align: top">
 											<form id="frm" method="POST"
-												action="http://localhost:8080/adv/individual/ae?id=<c:out value="${indid }"/>"
+												action="http://localhost:8080/home/individual/ae?id=<c:out value="${indid }"/>"
 												enctype="multipart/form-data">
 												<img id="avatar1" name="avatar1"
 													style="width: 100%; border: 1px solid #ccc; max-height: 130px"
-													src="/adv/adimgs/${indavatar }"> <input type="file"
+													src="/home/adimgs/${indavatar }"> <input type="file"
 													onchange="changeimg1(event)" id="real1" name="real1"
 													accept=".png, .jpg, .jpeg" hidden="hidden" />
 
@@ -404,7 +404,7 @@
 				};
 
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/adv/individual/ae?id=<c:out value='${indid}'/>&action=edit&data="
+				var url = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>&action=edit&data="
 						+ encodeURIComponent(datastr);
 				request.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
@@ -488,12 +488,12 @@
 					avatar : document.getElementById("avatar").src
 				};
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/adv/individual/ae?id=<c:out value='${indid}'/>&action=add&data="
+				var url = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>&action=add&data="
 						+ encodeURIComponent(datastr);
 				request.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						alert(request.responseText);
-						location.href = "http://localhost:8080/adv/individual/ae?id=<c:out value='${indid}'/>";
+						location.href = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>";
 						$("#frm_msg").html('');
 
 					}
@@ -519,17 +519,17 @@
 		}
 
 		function openedit(id) {
-			window.location.href = "/adv/individual/ae?id=" + id;
+			window.location.href = "/home/individual/ae?id=" + id;
 		}
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
 			if (window.confirm(mess)) {
-				window.location.href = "/adv/view?action=logout";
+				window.location.href = "/home/view?action=logout";
 			}
 		}
 
 		function back() {
-			window.location.href = "/adv/view/tree";
+			window.location.href = "/home/view/tree";
 		}
 	</script>
 </body>

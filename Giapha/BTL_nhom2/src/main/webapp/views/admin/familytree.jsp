@@ -68,7 +68,7 @@
 					<div class="gitem">
 						<a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a> <a
 							href="<c:url value='/view/tree'/>">Quản lý phả đồ</a> <a href="#">Danh
-							sách thành viên</a> <a href="/adv/image/view">Album ảnh</a>
+							sách thành viên</a> <a href="/home/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -83,7 +83,8 @@
 					</div>
 					<h2 class="title">Account</h2>
 					<div class="gitem">
-						<a href="#">Thông tin tài khoản</a> <a href="#">Đổi mật khẩu</a> <a
+						<a href="<c:url value = '/account/ae'/>">Thông tin tài khoản</a> 
+						<a href="<c:url value = '/account/tpw'/>">Đổi mật khẩu</a> <a
 							id="ctl02_left_ctrl0_logout" href="#">Đăng xuất</a>
 					</div>
 				</div>
@@ -95,7 +96,12 @@
 				<select>
 					<option value="0">Từ đời 1</option>
 					<%
-						int doi = (int) request.getAttribute("prlife");
+						int doi;
+						if(request.getAttribute("prlife")!=null){
+							doi = (int) request.getAttribute("prlife");
+						}else{
+							doi=0;
+						}
 					%>
 				</select> <select id="life">
 					<option value="0">Đến đời</option>
@@ -110,7 +116,9 @@
 						thị</a>
 				</div>
 			</div>
-			<div class="ucp_def_right" id="gp_phahe"></div>
+			<div class="ucp_def_right" id="gp_phahe">
+				<%out.print(request.getAttribute("mess")); %>
+			</div>
 		</div>
 	</div>
 
@@ -138,7 +146,7 @@
 				life = $("#life").val();
 			}
 			var request;
-			var url = "http://localhost:8080/adv/individual/view?life=" + life;
+			var url = "http://localhost:8080/home/individual/view?life=" + life;
 
 			if (window.XMLHttpRequest) {
 				request = new XMLHttpRequest();
@@ -165,7 +173,7 @@
 			var mess = "Bạn có thực sự muốn xóa thành viên";
 			if (window.confirm(mess)) {
 				var request;
-				var url = "/adv/individual/ae?action=del&id=" + id;
+				var url = "/home/individual/ae?action=del&id=" + id;
 
 				if (window.XMLHttpRequest) {
 					request = new XMLHttpRequest();
@@ -191,12 +199,12 @@
 			}
 		}
 		function openedit(id) {
-			window.location.href = "/adv/individual/ae?id=" + id;
+			window.location.href = "/home/individual/ae?id=" + id;
 		}
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
 			if (window.confirm(mess)) {
-				window.location.href = "/adv/view?action=logout";
+				window.location.href = "/home/view?action=logout";
 			}
 		}
 	</script>

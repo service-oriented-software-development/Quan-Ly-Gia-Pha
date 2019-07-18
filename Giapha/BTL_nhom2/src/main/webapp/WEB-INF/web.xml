@@ -144,4 +144,24 @@
     <servlet-name>ManagerAE</servlet-name>
     <url-pattern>/manager/ae</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AccountTpw</display-name>
+    <servlet-name>AccountTpw</servlet-name>
+    <servlet-class>jsoft.ads.account.AccountTpw</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccountTpw</servlet-name>
+    <url-pattern>/account/tpw</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AccountAE</display-name>
+    <servlet-name>AccountAE</servlet-name>
+    <servlet-class>jsoft.ads.account.AccountAE</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccountAE</servlet-name>
+    <url-pattern>/account/ae</url-pattern>
+  </servlet-mapping>
 </web-app>

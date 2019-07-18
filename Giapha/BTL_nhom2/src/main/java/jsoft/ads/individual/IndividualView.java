@@ -48,15 +48,14 @@ public class IndividualView extends HttpServlet {
 				getServletContext().setAttribute("CPool", pr.getCP());
 			}
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
-
 			int life = Integer.parseInt(request.getParameter("life"));
 			if(prO.getParentage_id()>0) {
 				IndividualControl fs = new IndividualControl(cp);
 				ArrayList<IndividualObject> items = fs.getIndividuals(prO.getParentage_id());
-
 				fs.releaseConnection();
-
-				out.print(fs.viewIndividual(items,true,life));
+				out.print(fs.viewIndividual(items,true,life));				
+			}else {
+				out.print("<h3 style=\"color:red\">Chưa tạo thông tin dòng họ<h3>");
 			}
 		}
 	}

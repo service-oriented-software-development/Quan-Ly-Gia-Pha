@@ -63,7 +63,7 @@
         <a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a>
         <a href="<c:url value='/view/tree'/>">Quản lý phả đồ</a>
         <a href="#">Danh sách thành viên</a>
-        <a href="/adv/image/view">Album ảnh</a>
+        <a href="/home/image/view">Album ảnh</a>
     </div>    
     <h2 class="title">Tin tức</h2>
     <div class="gitem">
@@ -280,7 +280,7 @@ function lastVisit() {
         			convention_of_parentage : "update soon"			
         	};        	
         	var datastr = JSON.stringify(data);        	
-        	var url = "http://localhost:8080/adv/parentage/ae?data="+ encodeURIComponent(datastr);
+        	var url = "http://localhost:8080/home/parentage/ae?data="+ encodeURIComponent(datastr);
             request.onreadystatechange = function(){
             	var val = request.responseText;
             	if(this.readyState == 4&& this.status == 200){
@@ -302,11 +302,11 @@ function lastVisit() {
 	{	
 		var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
 		if(window.confirm(mess)){
-			window.location.href = "/adv/view?action=logout";
+			window.location.href = "/home/view?action=logout";
 		}
 	}
 	function openedit(id){
-		window.location.href = "/adv/individual/ae?id="+id;
+		window.location.href = "/home/individual/ae?id="+id;
 	}
 </script>
 </body>

@@ -69,7 +69,7 @@
 					<div class="gitem">
 						<a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a> <a
 							href="<c:url value='/view/tree'/>">Quản lý phả đồ</a> <a href="#">Danh
-							sách thành viên</a> <a href="/adv/image/view">Album ảnh</a>
+							sách thành viên</a> <a href="/home/image/view">Album ảnh</a>
 					</div>
 					<h2 class="title">Tin tức</h2>
 					<div class="gitem">
@@ -106,7 +106,7 @@
 		function loadPhaHe() {
 
 			var request;
-			var url = "http://localhost:8080/adv/individual/view";
+			var url = "http://localhost:8080/home/individual/view";
 
 			if (window.XMLHttpRequest) {
 				request = new XMLHttpRequest();
@@ -133,7 +133,7 @@
 			var mess = "Bạn có thực sự muốn xóa thành viên";
 			if (window.confirm(mess)) {
 				var request;
-				var url = "/adv/individual/ae?action=del&id=" + id;
+				var url = "/home/individual/ae?action=del&id=" + id;
 
 				if (window.XMLHttpRequest) {
 					request = new XMLHttpRequest();
@@ -159,12 +159,12 @@
 			}
 		}
 		function openedit(id) {
-			window.location.href = "/adv/individual/ae?id=" + id;
+			window.location.href = "/home/individual/ae?id=" + id;
 		}
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống?";
 			if (window.confirm(mess)) {
-				window.location.href = "/adv/view?action=logout";
+				window.location.href = "/home/view?action=logout";
 			}
 		}
 	</script>
