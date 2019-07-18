@@ -79,8 +79,7 @@
 						<a href="#">Thông tin tài khoản</a> <a
 							href="#">Đổi mật khẩu</a> <a
 							id="ctl02_left_ctrl0_logout"
-							href="#">Đăng
-							xuất</a>
+							href="javascript:logout()">Đăng xuất</a>
 					</div>
 				</div>
 

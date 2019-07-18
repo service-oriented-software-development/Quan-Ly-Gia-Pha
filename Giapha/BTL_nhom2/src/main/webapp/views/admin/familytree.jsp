@@ -84,7 +84,7 @@
 					<h2 class="title">Account</h2>
 					<div class="gitem">
 						<a href="#">Thông tin tài khoản</a> <a href="#">Đổi mật khẩu</a> <a
-							id="ctl02_left_ctrl0_logout" href="#">Đăng xuất</a>
+							id="ctl02_left_ctrl0_logout" href="javascript:logout()">Đăng xuất</a>
 					</div>
 				</div>
 			</div>
