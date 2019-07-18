@@ -1,4 +1,4 @@
-package jsoft.ads.individual;
+﻿package jsoft.ads.individual;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -209,7 +209,7 @@ public class IndividualControl {
 			}else {
 				doi1 = Integer.parseInt(item.getBranch().split("\\.")[0]);
 			}
-			 
+			int doi1 = Integer.parseInt(item.getBranch().split("\\.")[0]);
 			
 			if (b) {
 				if (life + 1 < doi) {
