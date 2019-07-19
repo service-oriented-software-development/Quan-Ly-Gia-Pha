@@ -111,6 +111,38 @@ public class ParentageControl {
 		}
 		return item;
 	}
+	
+	
+	public ArrayList<ParentageObject> getParentageWeb(String acName) {
+		ResultSet rs = this.us.getParentage(acName);
+		ArrayList<ParentageObject> items = new ArrayList<ParentageObject>();
+		if (rs != null) {
+			try {
+				while(rs.next()) {
+					ArrayList<IndividualObject> it = indc.getIndividuals(rs.getInt("parentage_id"));
+					ParentageObject item = new ParentageObject();
+					item.setParentage_id(rs.getInt("parentage_id"));
+					item.setParentage_name(rs.getString("Parentage_name"));
+					item.setHead_of_parentage_name(rs.getString("Head_of_parentage_name"));
+					item.setAddress(rs.getString("Address"));
+					item.setCultural_spring_day(rs.getString("Cultural_spring_day"));
+					item.setCultural_autumn_day(rs.getString("Cultural_autumn_day"));
+					item.setHead_of_parentage_number(rs.getString("Head_of_parentage_number"));
+					item.setHead_of_parentage_email(rs.getString("Head_of_parentage_email"));
+					item.setHead_of_parentage_address(rs.getString("Head_of_parentage_address"));
+					item.setAncestor(rs.getString("Ancestor"));
+					item.setHistory_of_parentage(rs.getString("History_of_parentage"));
+					item.setConvention_of_parentage(rs.getString("Convention_of_parentage"));
+					item.setCult_portion_land(it.size()+"");
+					item.setAccount_name(rs.getString("Account_name"));
+					items.add(item);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return items;
+	}
 
 	public ArrayList<ParentageObject> getParentages() {
 		ResultSet rs = this.us.getParentages();

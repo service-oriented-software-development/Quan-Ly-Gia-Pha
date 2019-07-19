@@ -164,4 +164,14 @@
     <servlet-name>AccountAE</servlet-name>
     <url-pattern>/account/ae</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerParentage</display-name>
+    <servlet-name>ManagerParentage</servlet-name>
+    <servlet-class>jsoft.ads.system.ManagerParentage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerParentage</servlet-name>
+    <url-pattern>/manager/parentage</url-pattern>
+  </servlet-mapping>
 </web-app>
