@@ -69,16 +69,11 @@
 					</div>
 					<div class="ss_vlist">
 						<ul>
-							<li><a href="#">5
-									cách dạy con nhận tiền lì xì sao cho đúng</a></li>
-							<li><a href="#">Chuyên
-									gia lên tiếng trước lễ hội đang gây tranh cãi ở Lạng Sơn</a></li>
-							<li><a href="#">Sách
-									về gia phả Việt được trưng bày</a></li>
-							<li><a href="#">Dựng
-									gia phả, giải tỏa khúc mắc lịch sử</a></li>
-							<li><a href="#">Gia
-									Phả là gì? Hình thức lập Gia Phả và Tộc Phả</a></li>
+							<li><a href="#">Lộc biếc, mai vàng, xuân hạnh phúc Đời vui, sức khoẻ, tết an khang</a></li>
+							<li><a href="#">Văn vô sơn thủy phi kỳ khí. Nhân bất phong sương vị lão tài</a></li>
+							<li><a href="#">Tu nhân tích đức do tiên tổ. Ẩm thủy tư nguyên phận tử tôn</a></li>
+							<li><a href="#">Đức thụ tài bồi thiên tải thịnh. Tử tôn kế thế vạn niên trường</a></li>
+							<li><a href="#">Tổ công tông đức thiên niên thịnh. Tử hiếu tôn hiền vạn đại vinh.</a></li>
 						</ul>
 					</div>
 				</div>

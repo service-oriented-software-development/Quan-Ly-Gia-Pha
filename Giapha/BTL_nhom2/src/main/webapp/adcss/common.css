@@ -1,4 +1,4 @@
-﻿html, body{ font-family:arial; font-size:12px; font-size-adjust:inherit; font-stretch:normal; font-variant:normal; font-style:normal; margin:0; padding:0; height:100%}
+html, body{ font-family:arial; font-size:12px; font-size-adjust:inherit; font-stretch:normal; font-variant:normal; font-style:normal; margin:0; padding:0; height:100%}
 
 a {color:#19191a; text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -100,9 +100,9 @@ input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hove
 .btnRed{background:#c81e1e; border:none; color:#fff; font-weight:bold; padding:5px 15px;}
 a.btnRed{display:inline-block}
 
-.icon1{background:url(/adv/adimgs/icon1.png) no-repeat; width:0; height:36px; display:inline-block; padding-left:36px; overflow:hidden; vertical-align:middle}
-.icon2{background:url(/adv/adimgs/icon2.png) no-repeat; width:0; height:41px; display:inline-block; padding-left:21px; overflow:hidden; vertical-align:middle}
-.icon3{background:url(/adv/adimgs/icon3.png) no-repeat; width:0; height:14px; display:inline-block; padding-left:14px; overflow:hidden; vertical-align:middle}
+.icon1{background:url(/home/adimgs/icon1.png) no-repeat; width:0; height:36px; display:inline-block; padding-left:36px; overflow:hidden; vertical-align:middle}
+.icon2{background:url(/home/adimgs/icon2.png) no-repeat; width:0; height:41px; display:inline-block; padding-left:21px; overflow:hidden; vertical-align:middle}
+.icon3{background:url(/home/adimgs/icon3.png) no-repeat; width:0; height:14px; display:inline-block; padding-left:14px; overflow:hidden; vertical-align:middle}
 .heading{font-size:20px; font-weight:normal; padding:0; margin-bottom:7px; text-transform:uppercase; color:#cf2121;font-family: Arial;}
 .heading a{color:#cf2121}
 .heading .icon3{margin-left:3px}
@@ -111,7 +111,7 @@ a.btnRed{display:inline-block}
 .wrapper{min-height:100%; position:relative; overflow:hidden;}
 .wrappage{width:1069px; margin:0 auto; position: relative; z-index: 1 }
 
-.header{height:80px; background: url(/adv/adimgs/top_bn.png) no-repeat top center; }
+.header{height:80px; background: url(/home/adimgs/top_bn.png) no-repeat top center; }
 .header .logo{margin-top:20px;}
 .top{margin-top:50px; border-radius: 3px; padding: 1px 2px 2px 2px;
 background: rgb(246,230,180); /* Old browsers */
@@ -124,8 +124,8 @@ background: linear-gradient(to bottom,  rgba(246,230,180,1) 0%,rgba(237,144,23,1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */ }
 .top a { display: inline-block; text-align: left; color: #000; text-decoration: none; font-size: 11px }
 .top a.active { font-weight: bold; color: #fff}
-.top .lang_eng { background:url(/adv/adimgs/eng.png) no-repeat left center;padding: 0 5px  0 28px}
-.top .lang_khmer { background:url(/adv/adimgs/cam.png) no-repeat right center;padding: 0 28px 0 5px }
+.top .lang_eng { background:url(/home/adimgs/eng.png) no-repeat left center;padding: 0 5px  0 28px}
+.top .lang_khmer { background:url(/home/adimgs/cam.png) no-repeat right center;padding: 0 28px 0 5px }
 .top .lang_sep { color: gray }
 
 .navMain{background:#13817E; padding-top:1px;}
@@ -137,14 +137,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', end
 	-ms-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out
 }
-.navMain > ul{background:#13817E url(/adv/adimgs/menu-gradient.png) repeat-x top center; width:100%; height:46px;}
+.navMain > ul{background:#13817E url(/home/adimgs/menu-gradient.png) repeat-x top center; width:100%; height:46px;}
 .navMain > ul > li{float:left; font-size:18px;}
 .navMain ul li:hover{position:relative;}
 .navMain > ul > li > a{display:block; padding:10px 35px; line-height:24px; text-transform:uppercase; color:#fff;}
 .navMain > ul > li.li-first > a, .navMain > ul > li.li-last > a{padding:17px 34px;}
 .navMain > ul > li.li-last > a{padding-right:35px}
 .navMain > ul > li > a img{vertical-align:middle; margin-top:1px;}
-.navMain > ul > li > a:hover, .navMain > ul > li > a.active{background:#ad1c1c url(/adv/adimgs/menu-active-gradient.png) repeat-x top center; }
+.navMain > ul > li > a:hover, .navMain > ul > li > a.active{background:#ad1c1c url(/home/adimgs/menu-active-gradient.png) repeat-x top center; }
 .navMain > ul ul{background:#232323; position:absolute; top:100%; left:0; width:180px;border-bottom:3px solid #cf2121; display:none; z-index: 200 }
 .navMain > ul ul li{float:none;}
 .navMain > ul ul li a{display:block; color:#C1C1C1; padding:5px 15px; font-size:16px; font-family:Arial, Helvetica, sans-serif}
@@ -280,11 +280,11 @@ table tr td img{vertical-align:middle}
 
 .topone{width:320px}
 
-#toTop{background:url(/adv/adimgs/toTop.png) no-repeat; display:inline-block; overflow:hidden; height:32px; width:0; padding-left:32px; position:fixed; bottom:20px; right:20px; cursor:pointer;}
+#toTop{background:url(/home/adimgs/toTop.png) no-repeat; display:inline-block; overflow:hidden; height:32px; width:0; padding-left:32px; position:fixed; bottom:20px; right:20px; cursor:pointer;}
 
 .searchleft{margin:10px 0; position:relative;}
 .searchleft input[type="text"]{width:648px}
-.searchleft input[type="submit"]{background:url(/adv/adimgs/search.png) no-repeat!important; border:none; padding:0; text-indent:-1000px; width:12px; height:12px; position:absolute; top:12px; right:20px;}
+.searchleft input[type="submit"]{background:url(/home/adimgs/search.png) no-repeat!important; border:none; padding:0; text-indent:-1000px; width:12px; height:12px; position:absolute; top:12px; right:20px;}
 
 .question p{padding:0 0 10px}
 
@@ -298,7 +298,7 @@ table tr td img{vertical-align:middle}
    position:absolute;
    width: 7px;
    height: 12px;
-   background:url(/adv/adimgs/comment-icon.jpg) no-repeat;
+   background:url(/home/adimgs/comment-icon.jpg) no-repeat;
    margin: 3px 0 0 -17px;
 }
 

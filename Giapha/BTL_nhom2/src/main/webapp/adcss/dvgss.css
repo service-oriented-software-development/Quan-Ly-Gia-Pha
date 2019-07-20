@@ -1,4 +1,4 @@
-#dvgss { position:relative; top: 38px; left: 160px; height:250px; width: 470px; background:url(../../img/utils/tnbd.png) scroll no-repeat center center }
+#dvgss { position:relative; top: 38px; left: 160px; height:250px; width: 470px; background:url(/home/adimgs/tnbd.png) scroll no-repeat center center }
 #dvgss img { width: 450px; height: 230px; }
 #dvgss a.ss_item { position:absolute; top:0; left:0; z-index:8; padding: 10px; }
 #dvgss a.ss_item.active { z-index:12; }

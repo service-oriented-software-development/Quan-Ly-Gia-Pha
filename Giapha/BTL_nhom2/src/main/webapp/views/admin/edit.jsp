@@ -13,7 +13,7 @@
 	<link href="<c:url value='/adcss/ucp.css'/>" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="<c:url value='/adjs/ucp.js'/>" > </script>
 	<link rel="stylesheet" type="text/css" href="<c:url value='/adcss/editor.css'/>" />
-
+	<script type="text/javascript" src="<c:url value='/ckediter/ckediter.js'/>" > </script>
 	
   
   </head>
@@ -240,7 +240,6 @@ function lastVisit() {
 		if(cultural_spring_day!=""){			
 			if(!cultural_spring_day.match(/\d{4}[/-]\d{1,2}[/-]\d{1,2}/)){	
 				mess += "Sai định dạng ngày tế xuân(Năm/Tháng/Ngày). \n";
-				alert("hhaha");
 			}
 		}
 		if(cultural_autumn_day!=""){

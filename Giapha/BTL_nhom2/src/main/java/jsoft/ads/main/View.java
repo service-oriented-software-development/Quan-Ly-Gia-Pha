@@ -95,6 +95,7 @@ public class View extends HttpServlet {
 					if (b.getRole() == 2) {						
 						response.sendRedirect(request.getContextPath() + "/system/admin");
 						request.getSession().setAttribute("Loginned", b);
+						request.getSession().setAttribute("acname", accountname);
 					} else {
 						request.getSession().setAttribute("Loginned", b);
 						request.getSession().setAttribute("acname", accountname);
