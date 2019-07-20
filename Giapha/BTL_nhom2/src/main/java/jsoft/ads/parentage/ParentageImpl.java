@@ -95,7 +95,7 @@ public class ParentageImpl extends BasicImpl implements Parentage {
 	}
 
 	public boolean delParentage(ParentageObject item) {
-		String sql = "delete parentage where Parentage_id=?";
+		String sql = "delete from parentage where Parentage_id=?";
 		PreparedStatement pre;
 		try {
 			pre = this.con.prepareStatement(sql);

@@ -90,8 +90,7 @@
             <thead style="color:#fff; background:red;">
                 <tr>
                     <td style="width: 30px">STT</td>
-                    <td>Tên dòng họ</td>                   
-                    <td>Thủy tổ</td>
+                    <td>Tên dòng họ</td>                                      
                     <td>Số thành viên</td>
                     <td>Thực hiện</td>
                 </tr>
@@ -102,10 +101,9 @@
             		<% %>
             		<tr>
 					<td><%=(i++)%></td>
-					<td><a href="/home/parentage/info/view?prtid=${item.parentage_id}">${item.parentage_name}</a></td>
-					<td>${item.ancestor}</td>
+					<td><a href="/home/parentage/info/view?prtid=${item.parentage_id}">${item.parentage_name}</a></td>					
 					<td>${item.cult_portion_land}</td>
-					<td style="width: 70px;"><a href="#">Xóa</a></td>
+					<td style="width: 70px;"><a href="javascript:del(${item.parentage_id})">Xóa</a></td>
 					</tr>
             	</c:forEach>
             </tbody>
@@ -122,7 +120,12 @@
 	<%@include file="/views/common/footer.jsp"%>
 
 	<script type="text/javascript">
-		
+		function del(id) {
+			var mess = "Bạn có thực sự muốn xóa dòng họ";
+			if (window.confirm(mess)) {
+				window.location.href = "/home/manager/ae?prtid="+id;
+			}
+		}
 
 		function logout() {
 			var mess = "Bạn có thực sự muốn đăng xuất khỏi hệ thống";
