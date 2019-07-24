@@ -1,6 +1,7 @@
 package jsoft.ads.account;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,15 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import Common.ConnectionPool;
 import jsoft.ads.individual.IndividualControl;
+import jsoft.ads.library.HttpUtil;
 import jsoft.ads.object.AccountObject;
+import jsoft.ads.object.IndividualObject;
 import jsoft.ads.object.ParentageObject;
 import jsoft.ads.parentage.ParentageControl;
+import net.htmlparser.jericho.CharacterReference;
 
 /**
  * Servlet implementation class AccountTpw
  */
 public class AccountTpw extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String CONTENT_TYPE = "text/html;charset=UTF-8";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -55,7 +60,77 @@ public class AccountTpw extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter out = response.getWriter();
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType(CONTENT_TYPE);
+		response.setCharacterEncoding("UTF-8");
+
+		AccountObject ac = (AccountObject) request.getSession().getAttribute("Loginned");
+
+		ConnectionPool cp = (ConnectionPool) getServletContext().getAttribute("CPool");
+		ParentageControl pr = new ParentageControl(cp);
+		IndividualControl ind = new IndividualControl(cp);
+		if (cp == null) {
+			getServletContext().setAttribute("CPool", pr.getCP());
+		}
+
+		ParentageObject prO = pr.getParentage(ac.getAccountname());
+		String data = request.getParameter("data");
+		if (data != null && !data.equalsIgnoreCase("")) {
+			HttpUtil util = new HttpUtil(data);
+			ParentageObject item = util.toModel(ParentageObject.class);
+			item.setParentage_name(CharacterReference.encode(item.getParentage_name()));
+			item.setAccount_name(CharacterReference.encode(item.getAccount_name()));
+			item.setAncestor(CharacterReference.encode(item.getAncestor()));
+			item.setHead_of_parentage_name(CharacterReference.encode(item.getHead_of_parentage_name()));
+			item.setHead_of_parentage_address(CharacterReference.encode(item.getHead_of_parentage_address()));
+			item.setHistory_of_parentage(CharacterReference.encode(item.getHistory_of_parentage()));
+			item.setAddress(CharacterReference.encode(item.getAddress()));
+			if (item.getCultural_autumn_day() == "") {
+				item.setCultural_autumn_day(null);
+			}
+			if (item.getCultural_spring_day() == "") {
+				item.setCultural_spring_day(null);
+			}
+
+			IndividualObject indo = new IndividualObject();
+
+			if (prO.getParentage_id() > 0) {
+				item.setParentage_id(prO.getParentage_id());
+				if (pr.editParentage(item)) {
+					IndividualObject ind1 = ind.getAncestor(prO.getParentage_id());					
+					ind1.setFullname(item.getAncestor());
+					if(ind.editIndividual(ind1)) {
+						out.print("Update Successfully");
+					}
+				} else {
+					out.print("Update Failure");
+				}
+			} else {
+				if (pr.addParentage(item)) {
+					ParentageObject pr1 = pr.getParentage(ac.getAccountname());
+					indo.setParentage_id(pr1.getParentage_id());
+					indo.setFather(0);
+					indo.setFullname(pr1.getAncestor());
+					if (ind.addIndividual(indo)) {
+						IndividualObject ind1 = ind.getAncestor(pr1.getParentage_id());
+						ind1.setBranch(ind1.getIndividual_id()+"");
+						if(ind.editIndividual(ind1)) {
+							out.print("Add Successfully");
+						}
+					} else {
+						out.print("Add Failure");
+					}
+				} else {
+					out.print("Add Failure");
+				}
+			}
+			pr.releaseConnection();
+
+		} else {
+			out.print(CharacterReference.encode("System error"));
+			response.sendRedirect("/parentage/ae");
+		}
 	}
 
 }

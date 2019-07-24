@@ -51,30 +51,7 @@
 				<div style="clear: both"></div>
 			</div>
 			<div class="ucp_def_body">
-				<div class="ucp_def_left">
-
-					<div class="ucpleft_group" id="lgr">
-						<h2 class="title">Dòng họ</h2>
-						<div class="gitem">
-							<a href="<c:url value='/system/admin'/>">Thông tin dòng họ</a>
-							<a href="<c:url value='/manager/parentage'/>">Danh sách dòng họ đang quản lý</a>
-						</div>
-						
-						<h2 class="title">Tin nhắn</h2>
-						<div class="gitem">
-
-							<a href="javascript:void(0)">Soạn tin nhắn</a> <a
-								href="javascript:void(0)">Hộp thư đến</a> <a
-								href="javascript:void(0)">Tin đã gửi</a>
-						</div>
-						<h2 class="title">Account</h2>
-						<div class="gitem">
-							<a href="#">Quản lý tài khoản</a> <a
-								href="#">Tài khoản admin</a> <a id="ctl02_left_ctrl0_logout"
-								href="javascript:logout()">Đăng xuất</a>
-						</div>
-					</div>
-				</div>
+				<%@include file="/views/common/menu-left.jsp"%>
 
 				<!--Content-->
 				<div class="ucp_def_right" style="overflow: scroll; height: 480px">

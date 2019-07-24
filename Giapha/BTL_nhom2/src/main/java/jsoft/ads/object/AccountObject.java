@@ -4,6 +4,13 @@ public class AccountObject {
 	private String Accountname;
 	private String Accountpass;
 	private int role;
+	private String Accountpassn;
+	public String getAccountpassn() {
+		return Accountpassn;
+	}
+	public void setAccountpassn(String accountpassn) {
+		Accountpassn = accountpassn;
+	}
 	public int getRole() {
 		return role;
 	}

@@ -31,7 +31,18 @@ public class AccountImpl extends BasicImpl implements Account {
 	}
 
 	public boolean editAccount(AccountObject item) {
-		
+		String sql = "update account set password = md5(?) where account_name = ?";
+		PreparedStatement pre;
+		try {
+			pre = this.con.prepareStatement(sql);
+			pre.setString(1, item.getAccountpassn());
+			pre.setString(2, item.getAccountname());
+			
+			return this.edit(pre);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
 

@@ -61,39 +61,7 @@
 			<div style="clear: both"></div>
 		</div>
 		<div class="ucp_def_body">
-			<div class="ucp_def_left">
-
-				<div class="ucpleft_group" id="lgr">
-					<h2 class="title">Dòng họ</h2>
-					<div class="gitem">
-						<a href="<c:url value='/parentage/ae'/>">Thông tin dòng họ</a> <a
-							href="<c:url value='/view/tree'/>">Quản lý phả đồ</a> <a href="#">Danh
-							sách thành viên</a> <a href="/home/image/view">Album ảnh</a>
-					</div>
-					<h2 class="title">Tin tức</h2>
-					<div class="gitem">
-						<a href="#">Viết bài mới</a> <a href="#">Tin bài đã tạo</a>
-					</div>
-					<h2 class="title">Tin nhắn</h2>
-					<div class="gitem">
-
-						<a href="javascript:void(0)">Soạn tin nhắn</a> <a
-							href="javascript:void(0)">Hộp thư đến</a> <a
-							href="javascript:void(0)">Tin đã gửi</a>
-					</div>
-					<h2 class="title">Account</h2>
-					<div class="gitem">
-
-						<a href="<c:url value = '/account/ae'/>">Thông tin tài khoản</a> 
-						<a href="<c:url value = '/account/tpw'/>">Đổi mật khẩu</a> <a
-							id="ctl02_left_ctrl0_logout" href="#">Đăng xuất</a>
-
-						<a href="#">Thông tin tài khoản</a> <a href="#">Đổi mật khẩu</a> <a
-							id="ctl02_left_ctrl0_logout" href="javascript:logout()">Đăng xuất</a>
-
-					</div>
-				</div>
-			</div>
+			<jsp:include page="/views/common/menu-left.jsp"></jsp:include>
 
 			<!-- content -->
 			<div class="page_title" style="margin-bottom: 15px">
