@@ -11,12 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import Common.ConnectionPool;
 import jsoft.ads.individual.IndividualControl;
-import jsoft.ads.library.HttpUtil;
 import jsoft.ads.object.AccountObject;
-import jsoft.ads.object.IndividualObject;
 import jsoft.ads.object.ParentageObject;
 import jsoft.ads.parentage.ParentageControl;
-import net.htmlparser.jericho.CharacterReference;
 
 /**
  * Servlet implementation class AccountTpw

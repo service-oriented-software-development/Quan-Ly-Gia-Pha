@@ -14,7 +14,6 @@
 
 <style>
 	#lgr a{color: #19191a}
-	
 </style>
 
 </head>
