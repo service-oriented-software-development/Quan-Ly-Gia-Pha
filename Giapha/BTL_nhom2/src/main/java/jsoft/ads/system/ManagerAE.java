@@ -42,7 +42,7 @@ public class ManagerAE extends HttpServlet {
 		
 		
 		String id1 = request.getParameter("prtid");
-		if(id1!=null||!id1.equalsIgnoreCase("")) {
+		if(id1!=null&&!id1.equalsIgnoreCase("")) {
 			ConnectionPool cp = (ConnectionPool) getServletContext().getAttribute("CPool");
 			ParentageControl pr = new ParentageControl(cp);
 			if (cp == null) {

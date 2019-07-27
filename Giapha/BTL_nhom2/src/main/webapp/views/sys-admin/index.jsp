@@ -51,7 +51,35 @@
 				<div style="clear: both"></div>
 			</div>
 			<div class="ucp_def_body">
-				<%@include file="/views/common/menu-left.jsp"%>
+				<div class="ucp_def_left">
+
+				<div class="ucpleft_group" id="lgr">
+					<h2 class="title">Dòng họ</h2>
+					<div class="gitem">
+						<a href="<c:url value='/system/admin'/>">Dòng họ Việt Name</a> <a
+							href="<c:url value='/manager/parentage'/>">Các dòng họ đang quản lý</a>
+					</div>
+					<h2 class="title">Tin tức</h2>
+					<div class="gitem">
+						<a href="#">Viết bài mới</a> <a href="#">Tin bài đã tạo</a>
+					</div>
+					<h2 class="title">Tin nhắn</h2>
+					<div class="gitem">
+
+						<a href="javascript:void(0)">Soạn tin nhắn</a> <a
+							href="javascript:void(0)">Hộp thư đến</a> <a
+							href="javascript:void(0)">Tin đã gửi</a>
+					</div>
+					<h2 class="title">Account</h2>
+					<div class="gitem">
+
+						<a href="<c:url value = '/account/ae'/>">Thông tin tài khoản</a> 
+						<a href="<c:url value = '/account/tpw'/>">Đổi mật khẩu</a> <a
+							id="ctl02_left_ctrl0_logout" href="javascript:logout()">Đăng xuất</a>
+
+					</div>
+				</div>
+			</div>
 
 				<!--Content-->
 				<div class="ucp_def_right" style="overflow: scroll; height: 480px">
