@@ -97,10 +97,29 @@ public class ListParentageWeb {
 		
 		return tmp;
 	}
+	
+	public String viewNews(String url, String regex) {
+		String tmp = "";
+		Document doc = null;
+		try {
+			doc = Jsoup.connect(url).get();
+		}catch (NullPointerException e) {	      
+	        e.printStackTrace();
+	    } catch (HttpStatusException e) {
+	        e.printStackTrace();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		Element title = doc.select(regex).first();
+		tmp+=title.html().replaceAll("src=\"", "src=\"http://"+url.split("/")[2]);
+		
+		return tmp;
+	}
 
 	public static void main(String[] args) {
 		ListParentageWeb view = new ListParentageWeb();
-		System.out.println(view.ViewIndividuals(8,1));
+		//System.out.println(view.viewNews("http://hovanvietnam.com/thuyen-nhan-ai/hanh-trinh-ho-van-viet-nam-237.html"));
+		//System.out.println("http://hovanvietnam.com/thuyen-nhan-ai/".split("/")[2]);
 	}
 
 }

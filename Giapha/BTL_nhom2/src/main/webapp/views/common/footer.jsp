@@ -16,6 +16,7 @@
                 <h4>Nhóm thực hiện: Nhóm 02 ĐH-KTPM3-K11</h4>
                 <h4>Giảng viên hướng dẫn: <span class="text-info font-weight-bold">ThS. Hoàng Quang Huy</span>
                 </h4>
+                <h4>Website có tham khảo giao diện của <a href="http://www.giaphavietnam.vn" class="text-info font-weight-bold">giaphavietnam.vn</a></h4>
 				<div class="text-center lead" style="font-weight: bold;font-size: 18px">Các thành viên trong nhóm</div>
                 <br />
                 <div class="row">
@@ -27,7 +28,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 pb-3 text-center border-left border-right">
                         <h5>Phạm Văn Hiểu</h5>
-                        <h5>114136232</h5>
+                        <h5>1141360232</h5>
                         <p>0965 930 913</p>
                         <p>phamvanhieu300198@gmail.com</p>
                     </div>

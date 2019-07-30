@@ -14,6 +14,7 @@ import jsoft.ads.individual.IndividualControl;
 import jsoft.ads.object.AccountObject;
 import jsoft.ads.object.ParentageObject;
 import jsoft.ads.parentage.ParentageControl;
+import net.htmlparser.jericho.CharacterReference;
 
 /**
  * Servlet implementation class AccountTpw
@@ -49,6 +50,12 @@ public class AccountTpw extends HttpServlet {
 				getServletContext().setAttribute("CPool", pr.getCP());
 			}
 			ParentageObject prO = pr.getParentage(ac.getAccountname());
+			request.setAttribute("prname", CharacterReference.decode(prO.getParentage_name()));
+			request.setAttribute("pracname", CharacterReference.decode(prO.getAccount_name()));
+			request.setAttribute("prheadname", CharacterReference.decode(prO.getHead_of_parentage_name()));
+			request.setAttribute("prheadnumber", CharacterReference.decode(prO.getHead_of_parentage_number()));
+			request.setAttribute("prheademail", CharacterReference.decode(prO.getHead_of_parentage_email()));
+			request.setAttribute("prheadaddress", CharacterReference.decode(prO.getHead_of_parentage_address()));
 			RequestDispatcher rd = request.getRequestDispatcher("/views/admin/tpw.jsp");
 			rd.forward(request, response);
 		}

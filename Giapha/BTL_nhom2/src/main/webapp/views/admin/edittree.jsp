@@ -112,7 +112,7 @@
 										<td>Ngày sinh</td>
 										<td><input type="text" style="width: 100px"
 											name="BirdDate" id="BirdDate"> <span class="legend">(Định
-												dạng Ngày/Tháng/Năm)</span></td>
+												dạng Năm/Tháng/Ngày)</span></td>
 									</tr>
 									<tr>
 										<td>Con thứ</td>

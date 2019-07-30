@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="jsoft.ads.library.*, jsoft.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +11,15 @@
 	type="image/x-icon" />
 <link rel="icon" href="http://www.giaphavietnam.vn/img/utils/favicon.ico" type="image/x-icon" />
 
-<script type="text/javascript" src="adjs/jquery.min.1.7.1.js"></script>
-<link href="adcss/layout.css" rel="stylesheet" type="text/css" />
-<link href="adcss/common.css" rel="stylesheet" type="text/css" />
-<link href="adcss/default.css" rel="stylesheet" type="text/css" />
-<link href="adcss/dvgss.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="adjs/jquery.modal.min.js"></script>
-<link href="adcss/jquery.modal.css" rel="stylesheet" type="text/css" />
-<link href="adcss/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="adcss/bootstrap.css">
+<script type="text/javascript" src="/home/adjs/jquery.min.1.7.1.js"></script>
+<link href="/home/adcss/layout.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/common.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/default.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/dvgss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/home/adjs/jquery.modal.min.js"></script>
+<link href="/home/adcss/jquery.modal.css" rel="stylesheet" type="text/css" />
+<link href="/home/adcss/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/home/adcss/bootstrap.css">
 <style>
 	.ss_vlist li{width:62px;}
 	.intro{width:670px;}
@@ -50,13 +51,13 @@
 							style="width: 440px; height: 240px; margin: 0 auto; padding-top: 9px">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="adimgs/sl1.jpeg" alt="Panther">
+									<img class="d-block w-100" src="/home/adimgs/sl1.jpeg" alt="Panther">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="adimgs/sl2.jpg" alt="Black Cat">
+									<img class="d-block w-100" src="/home/adimgs/sl2.jpg" alt="Black Cat">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="adimgs/sl3.jpg" alt="Lion">
+									<img class="d-block w-100" src="/home/adimgs/sl3.jpg" alt="Lion">
 								</div>
 							</div>
 						</div>
@@ -88,7 +89,7 @@
 							<div class="grb">
 								<ul id="menu">
 									<li><a class="active" href="/home/view">Trang chủ</a></li>
-									<li><a href="/home/views/web/news.jsp">Tin tức</a></li>
+									<li><a href="#">Tin tức</a></li>
 									<li><a href="/home/parentage/view">Gia phả Việt Nam</a></li>
 									<li><a href="#">Giới thiệu</a></li>
 									<li><a href="#">Liên hệ - Góp ý</a></li>
@@ -101,60 +102,40 @@
 						
 					</div>
 
-					<div class="main-center fll">
-
-						<div class="intro ovh">
-							<h3 class="intro_head">Lời nói đầu</h3>
-							<div class="intro_content mCustomScrollbar"
-								style="overflow: scroll;">
-								<p>Xin trân trọng cảm ơn quý khách đã ghé thăm website:
-									www.giaphavietnam.online - Nơi lưu giữ, nối kết và tôn vinh
-									những giá trị truyền thống.</p>
-								<p style="text-align: justify">Đây là một công trình nhằm
-									phục vụ cho việc học tập môn hướng dịch vụ, website là thành quả của sự hướng dẫn nhiệt tình của thầy 
-									Hoàng Quang Huy cùng bên cung cấp giao diện là anh Toàn, anh Quyết và nếu không có được điều đó thì
-									nhóm em khó có thể hoàn thành được</p>	
-								<p style="text-align: justify">Vì không thể tránh khỏi những thiếu sót và hạn chế nên chúng em mong được nhận
-									những phản hồi để cải thiện sản phảm này tốt hơn</p>							
-
-								<p style="text-align: justify">Trân trọng cảm ơn!</p>
-							</div>
-						</div>
-
-
+					<div class="main-center fll" style="padding:20px 20px; font-size:16px;background: url(/home/adimgs/ct_bg.png) repeat !important;">
+						<%
+							String url = request.getParameter("src");
+							String regex = request.getParameter("regex");
+							if(url!=null&&regex!=null){
+								out.print(new ListParentageWeb().viewNews(url,regex));
+							}else{
+								out.print("<div class=\"grb cencol\">");
+								out.print("<div class=\"ofnews flr \" style=\"width:100%\">");
+								out.print("<ul>");
+								out.print("<li style=\"float:left\">");
+								out.print("<a href=\"/home/views/web/news.jsp?src=http://hovanvietnam.com/thuyen-nhan-ai/hanh-trinh-ho-van-viet-nam-237.html&regex=div[class=panel-body]\">Hành Trình Thuyền Nhân Ái Họ Văn Việt Nam<span>- <i>02/01/2018</i></span></a>");
+								out.print("<p class=\"source\">Tin dòng họ:</p>");
+								out.print("</li>");
+								out.print("<li style=\"float:left\">");
+								out.print("<a href=\"/home/views/web/news.jsp?src=http://hovuvovietnam.com/Cu-Vu-XuanTron-tron-viec-nuoc-viec-nha_tc_304_311_1532.html&regex=td[colspan=3][id=noidung]\">Cụ Vũ XuânTròn trọn việc nước, việc nhà");
+								out.print("<span>- <i>24/03/2019</i></span>");
+								out.print("</a>");
+								out.print("<p class=\"source\">Tin dòng họ:</p></li>");
+								out.print("<li style=\"float:left\"><a href=\"/home/views/web/news.jsp?src=http://hovuvovietnam.com/Khai-quoc-cong-than-Tuy-quoc-cong-Vu-Uy-1390-1424-_tc_304_309_1529.html&regex=td[colspan=3][id=noidung]\"> Khai quốc công thần, Tuy quốc công Vũ Uy (1390 - 1424)<span>- <i>18/03/2019</i>");
+								out.print("</span>");
+								out.print("</a>");
+								out.print("<p class=\"source\">Tin dòng họ:</p></li>");
+								out.print("<li style=\"float:left\">");
+								out.print("<a href=\"/home/views/web/news.jsp?src=http://hovuvovietnam.com/Ho-Vu-lang-Phu-Hau-thanh-dat-nho-khuyen-hoc_tc_293_327_1193.html&regex=td[colspan=3][id=noidung]\">Họ Vũ làng Phú Hậu thành đạt nhờ khuyến học</a>");
+								out.print("<span>- <i>24/03/2019</i></span>");
+								out.print("</a>");
+								out.print("<p class=\"source\">Tin dòng họ:</p></li>");
+								out.print("</ul>");
+								out.print("</div>");
+								out.print("</div>");
+							}
+						%>
 						
-						<div class="box ovh">
-							<h3 class="cbhead txtC">TIN TỨC DÒNG HỌ</h3>
-							<div class="grb cencol">
-								<div class="fnews fll">
-									<h4></h4>
-									<p class="headline">
-										<a href="/home/views/web/news.jsp?src=http://hovuvovietnam.com/Ho-Vu-lang-Phu-Hau-thanh-dat-nho-khuyen-hoc_tc_293_327_1193.html&regex=td[colspan=3][id=noidung]">Họ Vũ làng Phú Hậu thành đạt nhờ khuyến học</a>
-									</p>
-									<div class="summary"></div>
-									<p class="ndate">Đăng ngày: 25/04/2019</p>
-								</div>
-								<div class="ofnews flr">
-									<ul>
-										<li>
-											<a href="/home/views/web/news.jsp?src=http://hovanvietnam.com/thuyen-nhan-ai/hanh-trinh-ho-van-viet-nam-237.html&regex=div[class=panel-body]">Hành Trình Thuyền Nhân Ái Họ Văn Việt Nam<span>- <i>02/01/2018</i></span></a>
-											<p class="source">Tin dòng họ:</p>
-										</li>
-										<li>
-											<a href="/home/views/web/news.jsp?src=http://hovuvovietnam.com/Cu-Vu-XuanTron-tron-viec-nuoc-viec-nha_tc_304_311_1532.html&regex=td[colspan=3][id=noidung]">Cụ Vũ XuânTròn trọn việc nước, việc nhà
-												<span>- <i>24/03/2019</i></span>
-										</a>
-											<p class="source">Tin dòng họ:</p></li>
-										<li><a href="/home/views/web/news.jsp?src=http://hovuvovietnam.com/Khai-quoc-cong-than-Tuy-quoc-cong-Vu-Uy-1390-1424-_tc_304_309_1529.html&regex=td[colspan=3][id=noidung]"> Khai quốc công thần, Tuy quốc công Vũ Uy (1390 - 1424)<span>- <i>18/03/2019</i>
-											</span>
-										</a>
-											<p class="source">Tin dòng họ:</p></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-
 					</div>
 
 					<div class="main-right flr">
