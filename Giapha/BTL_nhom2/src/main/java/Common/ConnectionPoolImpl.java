@@ -19,9 +19,11 @@ public class ConnectionPoolImpl implements ConnectionPool {
 		this.url = "jdbc:mysql://localhost:3306/genealogy_management";
 		this.driver = "com.mysql.jdbc.Driver";
 		this.getDriver();
-		this.username = "root";
-		this.userpass = "123";
+		//this.username = "root";
+		this.username = "giaphavi_user";
+		//this.userpass = "123";
 		//this.userpass = "1234";
+		this.userpass = "VgDUB9Oc+*EM";
 		this.pool = new Stack<Connection>();
 	}
 	
