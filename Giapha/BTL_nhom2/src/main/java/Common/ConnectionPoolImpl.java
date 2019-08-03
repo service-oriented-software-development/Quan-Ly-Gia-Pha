@@ -16,7 +16,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 	
 	
 	public ConnectionPoolImpl() {
-		this.url = "jdbc:mysql://localhost:3306/genealogy_management";
+		this.url = "jdbc:mysql://localhost:3306/giaphavi_data";
 		this.driver = "com.mysql.jdbc.Driver";
 		this.getDriver();
 		//this.username = "root";
