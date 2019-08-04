@@ -17,7 +17,7 @@ public class ImageImpl extends BasicImpl implements Image {
 
 	public boolean addImage(ImageObject item) {
 		
-		String sql = "insert into Image (url,parentage_id) values(?,?)";
+		String sql = "insert into image (url,parentage_id) values(?,?)";
 		PreparedStatement pre;
 		try {
 			pre = this.con.prepareStatement(sql);
@@ -47,19 +47,19 @@ public class ImageImpl extends BasicImpl implements Image {
 	}
 
 	public ResultSet getImage(int id) {
-		String sql = "select * from Image ";
+		String sql = "select * from image ";
 		sql += "where id = " + id;
 		return this.get(sql);
 	}
 	
 	public ResultSet getImages(int id) {
-		String sql = "select * from Image ";
+		String sql = "select * from image ";
 		sql += "where parentage_id = " + id;
 		return this.get(sql);
 	}
 
 	public ResultSet getImages(ImageObject similar, int at, byte total) {
-		String sql = "select * from Image ";
+		String sql = "select * from image ";
 		sql += "where parentage_id="+similar.getParentage_id();
 		sql += " Limit " + at + "," + total;
 		return this.get(sql);
