@@ -119,7 +119,7 @@
 				life = $("#life").val();
 			}
 			var request;
-			var url = "http://localhost:8080/home/individual/view?life=" + life;
+			var url = "/home/individual/view?life=" + life;
 
 			if (window.XMLHttpRequest) {
 				request = new XMLHttpRequest();

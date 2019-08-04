@@ -80,7 +80,7 @@
 		function loadPhaHe() {
 
 			var request;
-			var url = "http://localhost:8080/home/individual/view";
+			var url = "/home/individual/view";
 
 			if (window.XMLHttpRequest) {
 				request = new XMLHttpRequest();

@@ -16,11 +16,12 @@ public class ConnectionPoolImpl implements ConnectionPool {
 	
 	
 	public ConnectionPoolImpl() {
-		this.url = "jdbc:mysql://localhost:3306/giaphavi_data";
+		this.url = "jdbc:mysql://103.104.117.157:2083/giaphavi_data";
+		//this.url = "jdbc:mysql://localhost:3306/genealogy_management";
 		this.driver = "com.mysql.jdbc.Driver";
 		this.getDriver();
 		//this.username = "root";
-		this.username = "giaphavi_user";
+		//this.username = "giaphavi_user";
 		//this.userpass = "123";
 		//this.userpass = "1234";
 		this.userpass = "VgDUB9Oc+*EM";

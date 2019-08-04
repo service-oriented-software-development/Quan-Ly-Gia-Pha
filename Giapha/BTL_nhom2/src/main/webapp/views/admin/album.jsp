@@ -60,7 +60,7 @@
 					<h2>Ảnh của dòng họ</h2>
 					<div class="toolbox">
 						<form id="album" method="post"
-							action="http://localhost:8080/home/image/ae"
+							action="/home/image/ae"
 							enctype="multipart/form-data">
 							<input id="img-format" name="img-format" type="file"
 								onchange="changeimg(event)" accept=".png, .jpg,.jpeg" 
@@ -90,7 +90,7 @@
 		});
 
 		function loadimg() {
-			var url = "http://localhost:8080/home/album";
+			var url = "/home/album";
 			var request;
 
 			if (window.XMLHttpRequest) {

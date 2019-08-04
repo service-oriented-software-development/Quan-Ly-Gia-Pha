@@ -170,7 +170,7 @@
 												+ "</p>");
 										out.print("</div>");
 										out.print("<div class=\"memfunc\">");
-										out.print("<p><a href=\"http://localhost:8080/home/parentage/ae\">Quản lý</a></p>");
+										out.print("<p><a href=\"/home/parentage/ae\">Quản lý</a></p>");
 										out.print("<p><a href=\"javascript:logout()\">Đăng xuất</a></p>");
 										out.print("</div>");
 									} else {
@@ -311,7 +311,7 @@
 				};
 
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/home/view?data="
+				var url = "/home/view?data="
 						+ encodeURIComponent(datastr);
 
 				request.onreadystatechange = function() {

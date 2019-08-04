@@ -88,7 +88,7 @@
 											name="FullName" id="FullName"></td>
 										<td rowspan="4" style="width: 110px; vertical-align: top">
 											<form id="frm1" method="POST"
-												action="http://localhost:8080/home/individual/ae?id=<c:out value="${indid }"/>"
+												action="/home/individual/ae?id=<c:out value="${indid }"/>"
 												enctype="multipart/form-data">
 												<img id="avatar" name="avatar"
 													style="width: 100%; border: 1px solid #ccc; max-height: 130px"
@@ -188,7 +188,7 @@
 											value="<c:out value="${indname }"/>"></td>
 										<td rowspan="4" style="width: 110px; vertical-align: top">
 											<form id="frm" method="POST"
-												action="http://localhost:8080/home/individual/ae?id=<c:out value="${indid }"/>"
+												action="/home/individual/ae?id=<c:out value="${indid }"/>"
 												enctype="multipart/form-data">
 												<img id="avatar1" name="avatar1"
 													style="width: 100%; border: 1px solid #ccc; max-height: 130px"
@@ -372,7 +372,7 @@
 				};
 
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>&action=edit&data="
+				var url = "/home/individual/ae?id=<c:out value='${indid}'/>&action=edit&data="
 						+ encodeURIComponent(datastr);
 				request.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
@@ -456,12 +456,12 @@
 					avatar : document.getElementById("avatar").src
 				};
 				var datastr = JSON.stringify(data);
-				var url = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>&action=add&data="
+				var url = "/home/individual/ae?id=<c:out value='${indid}'/>&action=add&data="
 						+ encodeURIComponent(datastr);
 				request.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						alert(request.responseText);
-						location.href = "http://localhost:8080/home/individual/ae?id=<c:out value='${indid}'/>";
+						location.href = "/home/individual/ae?id=<c:out value='${indid}'/>";
 						$("#frm_msg").html('');
 
 					}

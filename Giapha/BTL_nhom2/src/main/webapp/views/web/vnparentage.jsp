@@ -100,7 +100,7 @@
     
 	    function loadgp(){
 	    	$("#frm").method="post";
-			$("#frm").action = "http://localhost:8080/home/parentage/view";
+			$("#frm").action = "/home/parentage/view";
 	    	$("#frm").submit();
 		}	    
     </script>

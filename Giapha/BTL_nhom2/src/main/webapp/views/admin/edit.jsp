@@ -250,7 +250,7 @@ function lastVisit() {
         			convention_of_parentage : "update soon"			
         	};        	
         	var datastr = JSON.stringify(data);        	
-        	var url = "http://localhost:8080/home/parentage/ae?data="+ encodeURIComponent(datastr);
+        	var url = "/home/parentage/ae?data="+ encodeURIComponent(datastr);
             request.onreadystatechange = function(){
             	var val = request.responseText;
             	if(this.readyState == 4&& this.status == 200){

@@ -95,7 +95,7 @@
 		});
 
 		function loadimg() {
-			var url = "http://localhost:8080/home/album";
+			var url = "/home/album";
 			var request;
 
 			if (window.XMLHttpRequest) {
