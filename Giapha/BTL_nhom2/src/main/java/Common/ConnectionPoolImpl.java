@@ -19,7 +19,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 		this.driver = "com.mysql.jdbc.Driver";
 		this.getDriver();
 		
-		this.url = "jdbc:mysql://103.104.117.157:2083/giaphavi_data";
+		this.url = "jdbc:mysql://103.104.117.157:3306/giaphavi_data";
 		this.username = "giaphavi_user";
 		this.userpass = "VgDUB9Oc+*EM";
 		
