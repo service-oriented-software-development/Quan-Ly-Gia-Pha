@@ -22,6 +22,9 @@ public class ConnectionPoolImpl implements ConnectionPool {
 //		this.url = "jdbc:mysql://103.104.117.157:2083/giaphavi_data";
 //		this.username = "giaphavi_user";
 //		this.userpass = "VgDUB9Oc+*EM";
+		this.url = "jdbc:mysql://103.104.117.157:3306/giaphavi_data";
+		this.username = "giaphavi_user";
+		this.userpass = "VgDUB9Oc+*EM";
 		
 		this.url = "jdbc:mysql://localhost:3306/genealogy_management";
 		this.username = "root";
